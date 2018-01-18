@@ -5,25 +5,35 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class CharacterMovement : MonoBehaviour
 {
-
+    [Header("Movement Parameters")]
     [Tooltip("The fastest the player goes under normal movement")]
-    public float maxSpeed = 0.1f;
+    public float maxSpeed = 0.05f;
     [Tooltip("Added to the maximum speed when the player is dashing")]
-    public float dashMod = 0.05f;
+    public float dashAdd = 0.09f;
     [Tooltip("When any input is supplied, player will move at least this fast")]
     public float minSpeed = 0.01f;
 
+    [Header("Movement Feel")]
+    [Space(-8)]
+    [Header(" - Acceleration")]
     [Tooltip("Defines the shape of the player's acceleration")]
     public AnimationCurve accelerationCurve;
     [Tooltip("Amount of time in seconds that the above curve takes")]
-    public float accelerationTime = 1.0f;
-
+    public float accelerationTime = 0.4f;
+    [Space(-8)]
+    [Header(" - Dash")]
     [Tooltip("Defines the shape of the dash movement")]
     public AnimationCurve dashCurve;
     [Tooltip("Amount of time in seconds that the above curve takes")]
     public float dashTime = 0.5f;
     [Tooltip("How long it takes until the dash will be available again")]
     public float dashCooldownTime = 0.5f;
+
+    [Header("Encumbrance")]
+    [Tooltip("The rampiong of the slowdown created by encumbrance")]
+    public AnimationCurve encumbranceCurve;
+    [Tooltip("The maximum multiplier for the encumbrance")]
+    public float encumbranceMultiplier = 0.5f;
 
     CapsuleCollider2D _capsule;
 
@@ -40,6 +50,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         _capsule = GetComponent<CapsuleCollider2D>();
+        GameManager.Instance.avatar = this.gameObject;
     }
 
     // Update is called once per frame
@@ -82,7 +93,7 @@ public class CharacterMovement : MonoBehaviour
 		case MoveState.MOVING:
 			
 			// Compute dash speed
-			vel_dash = dashCurve.Evaluate(_timeDashing / dashTime) * dashMod;
+			vel_dash = dashCurve.Evaluate(_timeDashing / dashTime) * dashAdd;
 
 			if (_timeDashing >= dashTime) {
 				// Dashed long enough
