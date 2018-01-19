@@ -56,7 +56,7 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), Input.GetButton("Dash"));
+        Move(Input.GetAxisRaw(Constants.InputNames.HORIZONTAL), Input.GetAxisRaw(Constants.InputNames.VERTICAL), Input.GetButton(Constants.InputNames.DASH));
     }
 
     void Move(float horizontal, float vertical, bool shouldDash)

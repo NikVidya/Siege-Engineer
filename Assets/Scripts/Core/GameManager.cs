@@ -5,6 +5,5 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager> {
 
     public GameObject avatar;
-    public List<GameObject> activeResources = new List<GameObject>();
-    
+    public List<CharacterInventory.IHoldable> holdables = new List<CharacterInventory.IHoldable>();
 }
