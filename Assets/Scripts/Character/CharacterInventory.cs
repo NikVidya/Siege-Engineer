@@ -31,6 +31,14 @@ public class CharacterInventory : MonoBehaviour
     [Tooltip("The GameObject or prefab to use as indication that an object can be picked up")]
     public GameObject interactionPrompt;
 
+    public int NumHeldItems
+    {
+        get
+        {
+            return heldInventory.Count;
+        }
+    }
+
     private List<IHoldable> heldInventory = new List<IHoldable>();
 
     private void Start()
