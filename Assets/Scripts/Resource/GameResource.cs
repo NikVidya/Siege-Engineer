@@ -40,28 +40,16 @@ public class GameResource : MonoBehaviour, CharacterInventory.IHoldable {
         GameManager.Instance.holdables.Add(this);
     }
 
-    public void Pickup(GameObject container)
+    public void Pickup()
     {
         oldParent = transform.parent;
         _holdState = CharacterInventory.HoldState.Held;
-        if (container)
-        {
-            // TODO: Implement a handler for something being added to the inventory. i.e. play an animation, or handle placement
-            transform.position = container.transform.position;
-            transform.parent = container.transform;
-        }
-        else
-        {
-            // TODO: Hide the object since we aren't attaching it to a world container
-            throw new System.NotImplementedException();
-        }
     }
 
-    public void Drop(Vector3 dropOrigin)
+    public void Drop()
     {
         _holdState = CharacterInventory.HoldState.Dropped;
         transform.parent = oldParent;
-        transform.position = dropOrigin;
     }
 
     public void SetBlocked(bool blocked)

@@ -15,8 +15,8 @@ public class CharacterInventory : MonoBehaviour
     }
     public interface IHoldable
     {
-        void Pickup(GameObject container);
-        void Drop(Vector3 dropOrigin);
+        void Pickup();
+        void Drop();
         void SetBlocked(bool blocked);
         HoldState State { get; }
         GameObject gameObject { get; }
@@ -26,7 +26,7 @@ public class CharacterInventory : MonoBehaviour
     [Tooltip("Maximum distance that a resource can be picked up")]
     public float pickupDistance = 1.0f;
     [Tooltip("The in world container for the inventory. Leave as none to have no visible inventory")]
-    public GameObject worldContainer;
+    public ResourceWorldContainer worldContainer;
 
     [Tooltip("The GameObject or prefab to use as indication that an object can be picked up")]
     public GameObject interactionPrompt;
@@ -65,14 +65,16 @@ public class CharacterInventory : MonoBehaviour
     }
 
     void TakeHoldable(IHoldable holdable)
-    {
-        holdable.Pickup(worldContainer);
+	{
+		holdable.Pickup();
+		worldContainer.PlaceInContainer (holdable.gameObject);
         heldInventory.Add(holdable);
     }
 
     void DropHoldable()
-    {
-        heldInventory[0].Drop(transform.position);
+	{
+		worldContainer.RemoveFromContainer (heldInventory[0].gameObject, transform.position);
+        heldInventory[0].Drop();
         heldInventory.RemoveAt(0);
     }
 
