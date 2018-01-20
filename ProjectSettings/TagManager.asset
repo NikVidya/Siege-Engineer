@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GameResource
   layers:
   - Default
   - TransparentFX
@@ -41,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: character
+  - name: Character
     uniqueID: 2622774609
+    locked: 0
+  - name: UI Elements
+    uniqueID: 2784525731
     locked: 0
