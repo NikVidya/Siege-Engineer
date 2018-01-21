@@ -9,6 +9,7 @@ public static class Constants {
         public const string VERTICAL = "Vertical";
         public const string DASH = "Dash";
         public const string INTERACT = "Interact";
+        public const string REPAIR = "Repair";
     }
     public static class Tags
     {
