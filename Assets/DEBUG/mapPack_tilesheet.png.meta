@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c322ac6b1226ab540baf145b77f6eacb
-timeCreated: 1515861297
+timeCreated: 1516154920
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -276,10 +276,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 6}
+        - {x: -32, y: -29}
+        - {x: -31, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 7.062866}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_1
@@ -290,10 +295,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -27, y: 32}
+        - {x: -32, y: 30}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 28}
+        - {x: 16, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_2
@@ -304,10 +315,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: -32}
+        - {x: 28, y: -32}
+        - {x: 28, y: -2}
+        - {x: 26, y: 17}
+        - {x: 0, y: 32}
+        - {x: -26, y: 32}
+        - {x: -32, y: 30}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_3
@@ -318,10 +336,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_4
@@ -332,10 +355,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -28, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_5
@@ -346,10 +374,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 6}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 28}
+        - {x: 1, y: 28}
+        - {x: -20, y: 25}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_6
@@ -360,10 +394,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -27, y: 32}
+        - {x: -32, y: 31}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 28}
+        - {x: 14, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_7
@@ -374,10 +414,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -30, y: 32}
+        - {x: -32, y: 31}
+        - {x: -32, y: -32}
+        - {x: 28, y: -32}
+        - {x: 28, y: 13}
+        - {x: 5, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_8
@@ -388,10 +434,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_9
@@ -402,10 +453,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -28, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_10
@@ -416,10 +472,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 8}
+        - {x: -32, y: -28}
+        - {x: -31, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 8.194641}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_11
@@ -430,10 +491,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 7.7994385}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 7.1018066}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_12
@@ -444,10 +509,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 4.404236}
+        - {x: -32, y: -32}
+        - {x: 28, y: -32}
+        - {x: 26.30243, y: 5.512024}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_13
@@ -458,10 +527,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_14
@@ -472,10 +546,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -28, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_15
@@ -486,10 +565,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -29, y: 32}
+        - {x: -32, y: 19}
+        - {x: -32, y: -28}
+        - {x: -31, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_16
@@ -500,10 +585,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_17
@@ -514,10 +603,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -17}
+        - {x: 32, y: 28}
+        - {x: 31, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_18
@@ -528,10 +623,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 29}
+        - {x: 29, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_19
@@ -542,10 +642,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -32, y: 28}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_20
@@ -556,10 +661,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -29, y: 32}
+        - {x: -32, y: 18}
+        - {x: -32, y: -28}
+        - {x: -31, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_21
@@ -570,10 +681,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_22
@@ -584,10 +699,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -16}
+        - {x: 32, y: 27}
+        - {x: 31, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_23
@@ -598,10 +719,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 29}
+        - {x: 29, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_24
@@ -612,10 +738,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -32, y: 28}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_25
@@ -626,10 +757,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -27, y: 28}
+        - {x: -32, y: -9}
+        - {x: -32, y: -23}
+        - {x: -30, y: -29}
+        - {x: -28, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_26
@@ -640,10 +779,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_27
@@ -654,10 +797,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -17}
+        - {x: 32, y: 28}
+        - {x: 31, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_28
@@ -668,10 +817,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 29}
+        - {x: 29, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_29
@@ -682,10 +836,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -32, y: 28}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_30
@@ -696,10 +855,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -9}
+        - {x: -12, y: -30}
+        - {x: 3, y: -32}
+        - {x: 28, y: -32}
+        - {x: 32, y: -30}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_31
@@ -710,10 +876,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -30, y: -28}
+        - {x: 1, y: -32}
+        - {x: 23, y: -32}
+        - {x: 29, y: -30}
+        - {x: 32, y: -28}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_32
@@ -724,10 +898,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 28, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: 7, y: -28}
+        - {x: 25, y: -21}
+        - {x: 32, y: 5}
+        - {x: 32, y: 28}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_33
@@ -738,10 +919,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: 14}
+        - {x: -16, y: 3}
+        - {x: -16, y: -10}
+        - {x: -3, y: -15}
+        - {x: 9, y: -15}
+        - {x: 17, y: -8}
+        - {x: 17, y: 3}
+        - {x: 13, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_34
@@ -752,10 +941,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 17, y: 21}
+        - {x: 4, y: 32}
+        - {x: -5, y: 32}
+        - {x: -8, y: 31}
+        - {x: -18, y: 18}
+        - {x: -18, y: -8}
+        - {x: -10, y: -23}
+        - {x: 6, y: -23}
+        - {x: 9, y: -18}
+        - {x: 17, y: 4}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_35
@@ -766,10 +965,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -21}
+        - {x: -8, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_36
@@ -780,10 +984,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -29}
+        - {x: -20, y: -32}
+        - {x: 28, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_37
@@ -794,10 +1004,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 30, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -10, y: -28}
+        - {x: 10, y: -27}
+        - {x: 27, y: -10}
+        - {x: 32, y: -3}
+        - {x: 32, y: 27}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_38
@@ -808,10 +1026,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 17}
+        - {x: -21, y: 10}
+        - {x: -21, y: -11}
+        - {x: -13, y: -12}
+        - {x: 19, y: -12}
+        - {x: 22, y: -7}
+        - {x: 22, y: 12}
+        - {x: 6, y: 17}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_39
@@ -822,10 +1048,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5, y: 29}
+        - {x: -15, y: 16}
+        - {x: -15, y: -23}
+        - {x: -9, y: -26}
+        - {x: 14, y: -26}
+        - {x: 14, y: 18}
+        - {x: 11, y: 29}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_40
@@ -836,10 +1069,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -21}
+        - {x: -8, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_41
@@ -850,10 +1088,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -29}
+        - {x: -5, y: -32}
+        - {x: 31, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_42
@@ -864,10 +1108,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 28, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: 7, y: -28}
+        - {x: 25, y: -21}
+        - {x: 32, y: 5}
+        - {x: 32, y: 29}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_43
@@ -878,10 +1129,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 5, y: 25}
+        - {x: -4, y: 25}
+        - {x: -12, y: 15}
+        - {x: -16, y: 0}
+        - {x: -16, y: -11}
+        - {x: -8, y: -22}
+        - {x: 8, y: -22}
+        - {x: 15, y: -15}
+        - {x: 15, y: 16}
+        - {x: 14, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_44
@@ -892,10 +1153,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 28}
+        - {x: -12, y: 27}
+        - {x: -12, y: -11}
+        - {x: -3, y: -25}
+        - {x: 4, y: -25}
+        - {x: 11, y: -19}
+        - {x: 11, y: 28}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_45
@@ -906,10 +1174,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -8}
+        - {x: -12, y: -26}
+        - {x: 0, y: -32}
+        - {x: 24, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_46
@@ -920,10 +1195,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -30, y: -28}
+        - {x: 1, y: -32}
+        - {x: 23, y: -32}
+        - {x: 29, y: -30}
+        - {x: 32, y: -28}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_47
@@ -934,10 +1217,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 28, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: 14, y: -28}
+        - {x: 32, y: -1}
+        - {x: 32, y: 22}
+        - {x: 31, y: 30}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_48
@@ -948,10 +1238,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: -18}
+        - {x: 13, y: -18}
+        - {x: 22, y: -16}
+        - {x: 22, y: 1}
+        - {x: 14, y: 22}
+        - {x: -6, y: 22}
+        - {x: -20, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_49
@@ -962,10 +1259,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 26}
+        - {x: -11, y: 25}
+        - {x: -24, y: -5}
+        - {x: -24, y: -17}
+        - {x: -3, y: -22}
+        - {x: 18, y: -22}
+        - {x: 25, y: -15}
+        - {x: 25, y: -2}
+        - {x: 7, y: 26}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_50
@@ -976,10 +1282,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -14}
+        - {x: -5, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_51
@@ -990,10 +1302,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -29}
+        - {x: -20, y: -32}
+        - {x: 28, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_52
@@ -1004,10 +1322,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 29, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: 14, y: -28}
+        - {x: 32, y: -2}
+        - {x: 32, y: 27}
+        - {x: 31, y: 30}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_53
@@ -1018,10 +1343,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 14}
+        - {x: -17, y: 6}
+        - {x: -17, y: -7}
+        - {x: -10, y: -15}
+        - {x: 9, y: -15}
+        - {x: 16, y: -11}
+        - {x: 16, y: 7}
+        - {x: 6, y: 13}
+        - {x: 1, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_54
@@ -1032,10 +1366,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 28}
+        - {x: -17, y: -25}
+        - {x: -13, y: -26}
+        - {x: 12, y: -26}
+        - {x: 17, y: -12}
+        - {x: 17, y: 24}
+        - {x: 12, y: 28}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_55
@@ -1046,10 +1387,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -1}
+        - {x: -25, y: -29}
+        - {x: -7, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_56
@@ -1060,10 +1408,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -29}
+        - {x: -5, y: -32}
+        - {x: 31, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_57
@@ -1074,10 +1428,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 28, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: 9, y: -28}
+        - {x: 26, y: -21}
+        - {x: 32, y: 5}
+        - {x: 32, y: 29}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_58
@@ -1088,10 +1449,24 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: 27}
+        - {x: -11, y: 27}
+        - {x: -25, y: 8}
+        - {x: -25, y: -18}
+        - {x: -23, y: -23}
+        - {x: 11, y: -23}
+        - {x: 16, y: -22}
+        - {x: 25, y: -17}
+        - {x: 25, y: 3}
+        - {x: 20, y: 21}
+      - - {x: -4, y: 17}
+        - {x: 3, y: 17}
+        - {x: 6, y: 7}
+        - {x: -7, y: 6}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_59
@@ -1102,10 +1477,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: 23}
+        - {x: -16, y: 11}
+        - {x: -16, y: -11}
+        - {x: -5, y: -16}
+        - {x: 12, y: -16}
+        - {x: 13, y: -5}
+        - {x: 13, y: 9}
+        - {x: 3, y: 23}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_60
@@ -1116,10 +1499,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 28}
+        - {x: -32, y: 6}
+        - {x: -32, y: -29}
+        - {x: -31, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 28}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_61
@@ -1130,10 +1519,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -27, y: 32}
+        - {x: -32, y: 30}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 28}
+        - {x: 16, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_62
@@ -1144,10 +1539,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: -32}
+        - {x: 28, y: -32}
+        - {x: 28, y: -2}
+        - {x: 26, y: 17}
+        - {x: 0, y: 32}
+        - {x: -26, y: 32}
+        - {x: -32, y: 30}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_63
@@ -1158,10 +1560,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_64
@@ -1172,10 +1579,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -28, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_65
@@ -1186,10 +1598,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 8}
+        - {x: -32, y: -28}
+        - {x: -31, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 28}
+        - {x: 2, y: 28}
+        - {x: -16, y: 27}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_66
@@ -1200,10 +1619,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -27, y: 32}
+        - {x: -32, y: 31}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 28}
+        - {x: 14, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_67
@@ -1214,10 +1639,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -30, y: 32}
+        - {x: -32, y: 31}
+        - {x: -32, y: -32}
+        - {x: 28, y: -32}
+        - {x: 28, y: 14}
+        - {x: 5, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_68
@@ -1228,10 +1659,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_69
@@ -1242,10 +1678,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -28, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_70
@@ -1256,10 +1697,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 6}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 28}
+        - {x: 1, y: 28}
+        - {x: -20, y: 25}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_71
@@ -1270,10 +1717,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -27, y: 32}
+        - {x: -32, y: 31}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 28}
+        - {x: 14, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_72
@@ -1284,10 +1737,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -30, y: 32}
+        - {x: -32, y: 31}
+        - {x: -32, y: -32}
+        - {x: 28, y: -32}
+        - {x: 28, y: 13}
+        - {x: 5, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_73
@@ -1298,10 +1757,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_74
@@ -1312,10 +1776,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -28, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_75
@@ -1326,10 +1795,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -29, y: 32}
+        - {x: -32, y: 19}
+        - {x: -32, y: -28}
+        - {x: -31, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_76
@@ -1340,10 +1815,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_77
@@ -1354,10 +1833,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -17}
+        - {x: 32, y: 28}
+        - {x: 31, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_78
@@ -1368,10 +1853,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 29}
+        - {x: 29, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_79
@@ -1382,10 +1872,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -32, y: 28}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_80
@@ -1396,10 +1891,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -27, y: 28}
+        - {x: -32, y: -9}
+        - {x: -32, y: -23}
+        - {x: -30, y: -29}
+        - {x: -28, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_81
@@ -1410,10 +1913,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_82
@@ -1424,10 +1931,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -17}
+        - {x: 32, y: 28}
+        - {x: 31, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_83
@@ -1438,10 +1951,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 29}
+        - {x: 29, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_84
@@ -1452,10 +1970,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -32, y: 28}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_85
@@ -1466,10 +1989,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -29, y: 32}
+        - {x: -32, y: 18}
+        - {x: -32, y: -28}
+        - {x: -31, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_86
@@ -1480,10 +2009,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_87
@@ -1494,10 +2027,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -16}
+        - {x: 32, y: 27}
+        - {x: 31, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_88
@@ -1508,10 +2047,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 29}
+        - {x: 29, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_89
@@ -1522,10 +2066,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -32, y: 28}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_90
@@ -1536,10 +2085,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -9}
+        - {x: -12, y: -30}
+        - {x: 3, y: -32}
+        - {x: 28, y: -32}
+        - {x: 32, y: -30}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_91
@@ -1550,10 +2106,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -30, y: -28}
+        - {x: 1, y: -32}
+        - {x: 23, y: -32}
+        - {x: 29, y: -30}
+        - {x: 32, y: -28}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_92
@@ -1564,10 +2128,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 28, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: 7, y: -28}
+        - {x: 25, y: -21}
+        - {x: 32, y: 5}
+        - {x: 32, y: 28}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_93
@@ -1578,10 +2149,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 20}
+        - {x: -17, y: 7}
+        - {x: -17, y: -17}
+        - {x: -11, y: -19}
+        - {x: 13, y: -19}
+        - {x: 16, y: -14}
+        - {x: 16, y: 9}
+        - {x: 5, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_94
@@ -1592,10 +2171,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -23, y: 23}
+        - {x: -26, y: 20}
+        - {x: -29, y: 6}
+        - {x: -29, y: -15}
+        - {x: -18, y: -19}
+        - {x: 23, y: -19}
+        - {x: 29, y: -12}
+        - {x: 29, y: 18}
+        - {x: 21, y: 23}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_95
@@ -1606,10 +2194,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -21}
+        - {x: -8, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_96
@@ -1620,10 +2213,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -29}
+        - {x: -5, y: -32}
+        - {x: 31, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_97
@@ -1634,10 +2233,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 28, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: 7, y: -28}
+        - {x: 25, y: -21}
+        - {x: 32, y: 5}
+        - {x: 32, y: 29}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_98
@@ -1648,10 +2254,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 30}
+        - {x: -5, y: 27}
+        - {x: -13, y: 14}
+        - {x: -13, y: -1}
+        - {x: -11, y: -22}
+        - {x: -6, y: -26}
+        - {x: 4, y: -26}
+        - {x: 11, y: -23}
+        - {x: 12, y: -9}
+        - {x: 12, y: 12}
+        - {x: 2, y: 30}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_99
@@ -1662,10 +2279,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -24, y: 26}
+        - {x: -26, y: 17}
+        - {x: -26, y: 5}
+        - {x: -19, y: -20}
+        - {x: 24, y: -20}
+        - {x: 26, y: -11}
+        - {x: 26, y: 18}
+        - {x: 23, y: 26}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_100
@@ -1676,10 +2301,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -21}
+        - {x: -8, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_101
@@ -1690,10 +2320,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -29}
+        - {x: -20, y: -32}
+        - {x: 28, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_102
@@ -1704,10 +2340,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 30, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -10, y: -28}
+        - {x: 10, y: -27}
+        - {x: 27, y: -10}
+        - {x: 32, y: -3}
+        - {x: 32, y: 27}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_103
@@ -1718,10 +2362,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: 19}
+        - {x: -11, y: 19}
+        - {x: -18, y: 13}
+        - {x: -18, y: -3}
+        - {x: -11, y: -14}
+        - {x: 9, y: -14}
+        - {x: 17, y: 4}
+        - {x: 17, y: 14}
+        - {x: 14, y: 18}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_104
@@ -1732,10 +2385,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 23}
+        - {x: -17, y: 14}
+        - {x: -17, y: -6}
+        - {x: -10, y: -15}
+        - {x: 8, y: -15}
+        - {x: 18, y: -13}
+        - {x: 18, y: 23}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_105
@@ -1746,10 +2406,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -8}
+        - {x: -12, y: -26}
+        - {x: 0, y: -32}
+        - {x: 24, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_106
@@ -1760,10 +2427,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: -30, y: -28}
+        - {x: 1, y: -32}
+        - {x: 23, y: -32}
+        - {x: 29, y: -30}
+        - {x: 32, y: -28}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_107
@@ -1774,10 +2449,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 28, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: 14, y: -28}
+        - {x: 32, y: -1}
+        - {x: 32, y: 22}
+        - {x: 31, y: 30}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_108
@@ -1788,10 +2470,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 14}
+        - {x: -17, y: -18}
+        - {x: -11, y: -26}
+        - {x: 6, y: -26}
+        - {x: 17, y: -18}
+        - {x: 17, y: 13}
+        - {x: 8, y: 28}
+        - {x: -11, y: 28}
+        - {x: -16, y: 26}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_109
@@ -1802,10 +2493,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: 29}
+        - {x: -15, y: 8}
+        - {x: -15, y: -17}
+        - {x: -5, y: -26}
+        - {x: 14, y: -26}
+        - {x: 14, y: 21}
+        - {x: 2, y: 29}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_110
@@ -1816,10 +2514,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -1}
+        - {x: -25, y: -29}
+        - {x: -7, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_111
@@ -1830,10 +2535,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -29}
+        - {x: -5, y: -32}
+        - {x: 31, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_112
@@ -1844,10 +2555,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 28, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: 9, y: -28}
+        - {x: 26, y: -21}
+        - {x: 32, y: 5}
+        - {x: 32, y: 29}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_113
@@ -1858,10 +2576,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 16, y: -22}
+        - {x: 19, y: -21}
+        - {x: 19, y: 22}
+        - {x: -17, y: 22}
+        - {x: -17, y: -22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_114
@@ -1872,10 +2595,22 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 23, y: 16}
+        - {x: 13, y: 30}
+        - {x: -10, y: 30}
+        - {x: -19, y: 26}
+        - {x: -26, y: 13}
+        - {x: -26, y: -14}
+        - {x: -15, y: -25}
+        - {x: 16, y: -25}
+        - {x: 22, y: -23}
+        - {x: 28, y: -16}
+        - {x: 28, y: -4}
+        - {x: 27, y: 1}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_115
@@ -1886,10 +2621,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 32}
+        - {x: -28, y: -14}
+        - {x: -5, y: -32}
+        - {x: 29, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_116
@@ -1900,10 +2641,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -29}
+        - {x: -20, y: -32}
+        - {x: 28, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_117
@@ -1914,10 +2661,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 29, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -28}
+        - {x: 14, y: -28}
+        - {x: 32, y: -2}
+        - {x: 32, y: 27}
+        - {x: 31, y: 30}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_118
@@ -1928,10 +2682,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 22}
+        - {x: -20, y: 13}
+        - {x: -20, y: -1}
+        - {x: -13, y: -13}
+        - {x: -6, y: -18}
+        - {x: 14, y: -18}
+        - {x: 18, y: -3}
+        - {x: 18, y: 19}
+        - {x: 8, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_119
@@ -1942,10 +2705,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 29}
+        - {x: -16, y: -11}
+        - {x: -12, y: -25}
+        - {x: 5, y: -25}
+        - {x: 19, y: 3}
+        - {x: 19, y: 19}
+        - {x: 3, y: 29}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_120
@@ -1956,10 +2726,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: -3}
+        - {x: -11, y: -15}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 10}
+        - {x: 16, y: 10}
+        - {x: 3, y: 9}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_121
@@ -1970,10 +2748,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 11}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 11, y: -13}
+        - {x: -3, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_122
@@ -1984,10 +2769,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 9}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: -9, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_123
@@ -1998,10 +2789,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: -11}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 11, y: 9}
+        - {x: 9, y: 11}
+        - {x: -32, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_124
@@ -2012,10 +2809,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: -11}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: -32, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_125
@@ -2026,10 +2829,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 11, y: -32}
+        - {x: 11, y: 32}
+        - {x: -11, y: 32}
+        - {x: -11, y: -32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_126
@@ -2040,10 +2847,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: -11}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: -32, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_127
@@ -2054,10 +2865,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_128
@@ -2068,10 +2887,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: 11}
+        - {x: -5, y: 11}
+        - {x: -11, y: 7}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 11, y: 3}
+        - {x: 10, y: 6}
+        - {x: 5, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_129
@@ -2082,10 +2909,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: 4, y: -11}
+        - {x: 11, y: -6}
+        - {x: 11, y: 6}
+        - {x: 8, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_130
@@ -2096,10 +2929,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_131
@@ -2110,10 +2951,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_132
@@ -2124,10 +2973,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_133
@@ -2138,10 +2995,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_134
@@ -2152,10 +3017,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_135
@@ -2166,10 +3039,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -18, y: 28}
+        - {x: -20, y: 24}
+        - {x: -20, y: -23}
+        - {x: -16, y: -24}
+        - {x: 16, y: -24}
+        - {x: 21, y: -18}
+        - {x: 21, y: 25}
+        - {x: 13, y: 28}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_136
@@ -2180,10 +3061,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 12, y: 27}
+        - {x: -9, y: 27}
+        - {x: -20, y: 19}
+        - {x: -20, y: -19}
+        - {x: -18, y: -24}
+        - {x: 12, y: -24}
+        - {x: 19, y: -16}
+        - {x: 21, y: -4}
+        - {x: 21, y: 17}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_137
@@ -2194,10 +3084,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -11, y: 20}
+        - {x: -10, y: 8}
+        - {x: -1, y: -8}
+        - {x: 15, y: -11}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 12, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_138
@@ -2208,10 +3106,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: 2, y: -11}
+        - {x: 11, y: 1}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_139
@@ -2222,10 +3126,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -11, y: -9}
+        - {x: -9, y: -11}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_140
@@ -2236,10 +3146,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: 9, y: -11}
+        - {x: 11, y: -9}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_141
@@ -2250,10 +3166,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_142
@@ -2264,10 +3186,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_143
@@ -2278,10 +3206,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: -11}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 11, y: 32}
+        - {x: -11, y: 32}
+        - {x: -32, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_144
@@ -2292,10 +3226,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_145
@@ -2306,10 +3248,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: -5}
+        - {x: -8, y: -11}
+        - {x: 7, y: -11}
+        - {x: 11, y: -8}
+        - {x: 11, y: 32}
+        - {x: -11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_146
@@ -2320,10 +3268,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: 11}
+        - {x: -11, y: 6}
+        - {x: -11, y: -6}
+        - {x: -4, y: -11}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_147
@@ -2334,10 +3288,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_148
@@ -2348,10 +3310,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_149
@@ -2362,10 +3332,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_150
@@ -2376,10 +3354,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_151
@@ -2390,10 +3376,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_152
@@ -2404,10 +3398,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: 28}
+        - {x: -9, y: 28}
+        - {x: -14, y: 27}
+        - {x: -21, y: 23}
+        - {x: -21, y: -20}
+        - {x: -19, y: -24}
+        - {x: 12, y: -24}
+        - {x: 18, y: -15}
+        - {x: 19, y: -8}
+        - {x: 19, y: 18}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_153
@@ -2418,10 +3422,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 21, y: 12}
+        - {x: 12, y: 22}
+        - {x: -17, y: 22}
+        - {x: -20, y: 11}
+        - {x: -20, y: -20}
+        - {x: -10, y: -24}
+        - {x: 11, y: -24}
+        - {x: 19, y: -17}
+        - {x: 21, y: -7}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_154
@@ -2432,10 +3445,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 14}
+        - {x: -14, y: 2}
+        - {x: -14, y: -12}
+        - {x: -12, y: -32}
+        - {x: 11, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 10}
+        - {x: 9, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_155
@@ -2446,10 +3467,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -30, y: 14}
+        - {x: -32, y: 13}
+        - {x: -32, y: -11}
+        - {x: -11, y: -32}
+        - {x: 12, y: -32}
+        - {x: 14, y: -28}
+        - {x: 14, y: 7}
+        - {x: 9, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_156
@@ -2460,10 +3489,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 16}
+        - {x: -16, y: 8}
+        - {x: -16, y: -14}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 16, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_157
@@ -2474,10 +3511,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 16, y: -16}
+        - {x: 16, y: 7}
+        - {x: 5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_158
@@ -2488,10 +3533,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 7, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_159
@@ -2502,10 +3555,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -16, y: 2}
+        - {x: -16, y: -2}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 16, y: -2}
+        - {x: 16, y: 5}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_160
@@ -2516,10 +3577,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: -2, y: -16}
+        - {x: 2, y: -16}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 7, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_161
@@ -2530,10 +3599,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_162
@@ -2544,10 +3621,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 16}
+        - {x: -16, y: 6}
+        - {x: -16, y: -10}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 16, y: -18}
+        - {x: 16, y: 5}
+        - {x: 8, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_163
@@ -2558,10 +3643,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: -16}
+        - {x: 2, y: -16}
+        - {x: 16, y: -9}
+        - {x: 16, y: 5}
+        - {x: 8, y: 16}
+        - {x: -8, y: 16}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_164
@@ -2572,10 +3665,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_165
@@ -2586,10 +3687,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_166
@@ -2600,10 +3709,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_167
@@ -2614,10 +3731,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_168
@@ -2628,10 +3753,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_169
@@ -2642,10 +3775,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 26}
+        - {x: -20, y: 17}
+        - {x: -20, y: -16}
+        - {x: -14, y: -23}
+        - {x: 14, y: -23}
+        - {x: 20, y: -22}
+        - {x: 20, y: 26}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_170
@@ -2656,10 +3796,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_171
@@ -2670,10 +3814,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 32}
+        - {x: -14, y: 4}
+        - {x: -14, y: -1}
+        - {x: -3, y: -14}
+        - {x: 22, y: -14}
+        - {x: 32, y: -13}
+        - {x: 32, y: 11}
+        - {x: 12, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_172
@@ -2684,10 +3836,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: -24, y: -12}
+        - {x: -12, y: -14}
+        - {x: 3, y: -14}
+        - {x: 14, y: 0}
+        - {x: 14, y: 19}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_173
@@ -2698,10 +3859,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -16, y: 13}
+        - {x: -16, y: -2}
+        - {x: -11, y: -13}
+        - {x: -7, y: -16}
+        - {x: 9, y: -16}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_174
@@ -2712,10 +3882,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: -11}
+        - {x: -10, y: -16}
+        - {x: 6, y: -16}
+        - {x: 16, y: -7}
+        - {x: 16, y: 32}
+        - {x: -19, y: 32}
+        - {x: -32, y: 27}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_175
@@ -2726,10 +3903,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: -2, y: -16}
+        - {x: 2, y: -16}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_176
@@ -2740,10 +3925,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -16, y: 2}
+        - {x: -16, y: -2}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_177
@@ -2754,10 +3947,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 32}
+        - {x: -32, y: 11}
+        - {x: -32, y: -11}
+        - {x: -11, y: -32}
+        - {x: 11, y: -32}
+        - {x: 16, y: -2}
+        - {x: 16, y: 5}
+        - {x: 11, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_178
@@ -2768,10 +3969,19 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 16}
+        - {x: -3, y: 15}
+        - {x: -16, y: 2}
+        - {x: -16, y: -2}
+        - {x: -2, y: -16}
+        - {x: 2, y: -16}
+        - {x: 16, y: -7}
+        - {x: 16, y: 3}
+        - {x: 8, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_179
@@ -2782,10 +3992,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -2}
+        - {x: -9, y: -16}
+        - {x: 5, y: -16}
+        - {x: 16, y: -8}
+        - {x: 16, y: 12}
+        - {x: 11, y: 32}
+        - {x: -11, y: 32}
+        - {x: -16, y: 13}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_180
@@ -2796,10 +4014,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 16}
+        - {x: -16, y: 7}
+        - {x: -16, y: -2}
+        - {x: -7, y: -16}
+        - {x: 12, y: -16}
+        - {x: 32, y: -11}
+        - {x: 32, y: 11}
+        - {x: 7, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_181
@@ -2810,10 +4036,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_182
@@ -2824,10 +4058,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_183
@@ -2838,10 +4080,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_184
@@ -2852,10 +4102,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_185
@@ -2866,10 +4124,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 22}
+        - {x: -22, y: 20}
+        - {x: -22, y: -20}
+        - {x: -20, y: -22}
+        - {x: 20, y: -22}
+        - {x: 22, y: -20}
+        - {x: 22, y: 20}
+        - {x: 20, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_186
@@ -2880,10 +4146,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
       name: mapPack_tilesheet_187
@@ -2894,10 +4164,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
     outline: []
     physicsShape: []
