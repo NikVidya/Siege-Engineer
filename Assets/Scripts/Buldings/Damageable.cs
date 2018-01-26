@@ -31,10 +31,7 @@ public class Damageable : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-        if (periodicDamage)
-        {
-            InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
-        }
+        InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
     }
 
     void Update()
@@ -56,7 +53,7 @@ public class Damageable : MonoBehaviour
         {
             ChangeHealth(healthRepairAmount);
         }
-        else
+        else if (periodicDamage)
         {
             ChangeHealth(healthDecreaseAmount);
         }
