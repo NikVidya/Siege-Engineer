@@ -31,7 +31,7 @@ public class CharacterInventory : MonoBehaviour
     [Tooltip("The GameObject or prefab to use as indication that an object can be picked up")]
     public GameObject interactionPrompt;
 
-    public Gate gate;
+    public Damageable repairTarget;
     public int NumHeldItems
     {
         get
@@ -63,7 +63,8 @@ public class CharacterInventory : MonoBehaviour
         {   // Want to drop an item, and the button was released since the last time we dropped an item
             DropHoldable();
         }
-        if (Vector3.Distance(gate.gameObject.transform.position, transform.position) < 3) {
+        if (Vector3.Distance(repairTarget.gameObject.transform.position, transform.position) < 3)
+        {
             RepairGate();
         }
     }
@@ -128,9 +129,11 @@ public class CharacterInventory : MonoBehaviour
     {
         if (Input.GetButton(Constants.InputNames.REPAIR))
         {
-            gate.repairState = true;
-        } else {
-            gate.repairState = false;
+            repairTarget.repairState = true;
+        }
+        else
+        {
+            repairTarget.repairState = false;
         }
     }
 }

@@ -2674,13 +2674,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1555102875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbdd8a4c8c630bc4cb2b534c22e66ec4, type: 3}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthDecreaseRate: 3
-  healthRepairRate: 10
+  periodicDamage: 1
+  healthDecreaseRate: 1
+  gracePeriod: 5
+  healthDecreaseAmount: -3
+  healthRepairAmount: 10
   maxHealth: 100
-  health: 100
+  health: 0
   repairState: 0
 --- !u!4 &1555102877
 Transform:
@@ -2881,4 +2884,4 @@ MonoBehaviour:
   pickupDistance: 1
   worldContainer: {fileID: 717777204}
   interactionPrompt: {fileID: 1420467803}
-  gate: {fileID: 1555102876}
+  repairTarget: {fileID: 1555102876}
