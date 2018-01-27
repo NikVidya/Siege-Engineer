@@ -38,6 +38,13 @@ public class CharacterMovement : MonoBehaviour
     [Tooltip("The maximum multiplier for the encumbrance")]
     public float encumbranceMultiplier = 0.5f;
 
+	[Header("Visuals")]
+	[Tooltip("The animator component which controls the sprite animation")]
+	public Animator animator;
+
+	private const string ANIMATOR_SPEED_TAG = "speed";
+	private const string ANIMATOR_DIRECTION_TAG = "direction";
+
     CapsuleCollider2D _capsule;
     CharacterInventory _inventory;
 
@@ -64,11 +71,33 @@ public class CharacterMovement : MonoBehaviour
         Move(Input.GetAxisRaw(Constants.InputNames.HORIZONTAL), Input.GetAxisRaw(Constants.InputNames.VERTICAL), Input.GetButton(Constants.InputNames.DASH));
     }
 
+	void SetAnimatorDirection(Vector2 dir)
+	{
+		int dirVal = 0;
+		Vector2 abs = new Vector2(Mathf.Abs (dir.x), Mathf.Abs (dir.y));
+
+		if (dir.x > Mathf.Epsilon && abs.x >= abs.y) {
+			dirVal = 2;
+		} else if (dir.x < Mathf.Epsilon && abs.x >= abs.y) {
+			dirVal = 0;
+		}
+
+		if (dir.y > Mathf.Epsilon && abs.y > abs.x) {
+			dirVal = 1;
+		} else if (dir.y < Mathf.Epsilon && abs.y > abs.x) {
+			dirVal = 3;
+		}
+
+		animator.SetInteger (ANIMATOR_DIRECTION_TAG, dirVal);
+	}
+
     void Move(float horizontal, float vertical, bool shouldDash)
     {
 		// Get the desired direction of movement
         Vector2 direction = new Vector2(horizontal, vertical);
         direction.Normalize();
+
+		SetAnimatorDirection (direction);
 
 		if (direction.sqrMagnitude > Mathf.Epsilon && _moveState == MoveState.Ready) {
 			// The player started moving
@@ -77,6 +106,7 @@ public class CharacterMovement : MonoBehaviour
 		} else if (direction.sqrMagnitude <= Mathf.Epsilon) {
 			// Player is not moving
 			_moveState = MoveState.Ready;
+			animator.SetFloat (ANIMATOR_SPEED_TAG, 0.0f);
 			return;
 		}
 
@@ -118,6 +148,8 @@ public class CharacterMovement : MonoBehaviour
 		}
         float curEncumbranceMultiplier = 1 - encumbranceMultiplier * encumbranceCurve.Evaluate(_inventory.NumHeldItems / (float)encumbranceMaxCount);
         float total_vel = (vel_normal + vel_dash) * curEncumbranceMultiplier;
+
+		animator.SetFloat (ANIMATOR_SPEED_TAG, total_vel);
 
         // Cast the capsule to find where the player will end up
 		// Seperate casts so we can slide along walls with diagonal input
