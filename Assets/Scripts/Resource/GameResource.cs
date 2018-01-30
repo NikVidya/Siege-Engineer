@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class GameResource : MonoBehaviour, CharacterInventory.IHoldable {
+public class GameResource : MonoBehaviour, IHoldable {
     
     [HideInInspector]
     public enum ResourceState
@@ -15,15 +15,27 @@ public class GameResource : MonoBehaviour, CharacterInventory.IHoldable {
     }
     public ResourceState State { get; set; }
 
-    CharacterInventory.HoldState CharacterInventory.IHoldable.State
+	InteractionState IInteractable.interactState {
+		get {
+			return _interactState;
+		}
+		set {
+			_interactState = value;
+		}
+	}
+
+    HoldState IHoldable.heldState
     {
         get
         {
             return _holdState;
         }
+		set {
+			_holdState = value;
+		}
     }
 
-    GameObject CharacterInventory.IHoldable.gameObject
+    GameObject IInteractable.gameObject
     {
         get
         {
@@ -31,7 +43,8 @@ public class GameResource : MonoBehaviour, CharacterInventory.IHoldable {
         }
     }
 
-    private CharacterInventory.HoldState _holdState = CharacterInventory.HoldState.Ready;
+	private InteractionState _interactState = InteractionState.Ready;
+    private HoldState _holdState = HoldState.Dropped;
     private Transform oldParent;
 
     private void Start()
@@ -40,27 +53,39 @@ public class GameResource : MonoBehaviour, CharacterInventory.IHoldable {
         GameManager.Instance.holdables.Add(this);
     }
 
+	private void OnDestroy()
+	{
+		if (!GameManager.IsApplicationQuitting) {
+			GameManager.Instance.holdables.Remove (this);
+		}
+	}
+
+	public void OnInteract (CharacterInteraction.KeyState state)
+	{
+		switch (state) {
+		case CharacterInteraction.KeyState.Pressed:
+			break;
+
+		case CharacterInteraction.KeyState.Released:
+
+			break;
+		}
+	}
+
+	public void SetBlocked (bool blocked)
+	{
+		throw new System.NotImplementedException ();
+	}
+
     public void Pickup()
     {
         oldParent = transform.parent;
-        _holdState = CharacterInventory.HoldState.Held;
+        _holdState = HoldState.Held;
     }
 
     public void Drop()
     {
-        _holdState = CharacterInventory.HoldState.Dropped;
+        _holdState = HoldState.Dropped;
         transform.parent = oldParent;
-    }
-
-    public void SetBlocked(bool blocked)
-    {
-        if(blocked)
-        {
-            _holdState = CharacterInventory.HoldState.Blocked;
-        }
-        else
-        {
-            _holdState = CharacterInventory.HoldState.Ready;
-        }
     }
 }

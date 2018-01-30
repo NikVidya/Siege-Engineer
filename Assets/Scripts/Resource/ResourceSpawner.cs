@@ -25,7 +25,8 @@ public class ResourceSpawner : MonoBehaviour {
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawIcon(transform.TransformPoint(spawnPosition), "spawn_icon.png", true);
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere(transform.TransformPoint(spawnPosition), 0.1f);
     }
 
     // Use this for initialization
@@ -33,7 +34,6 @@ public class ResourceSpawner : MonoBehaviour {
 		if(resourcePrefab && !resourceInstance)
         {   // Resource instance needs to be created
             resourceInstance = GameObject.Instantiate(resourcePrefab, transform.TransformPoint(spawnPosition), new Quaternion(), null);
-            GameManager.Instance.activeResources.Add(resourceInstance);
         }
         if (!resourceIsSpawned && spawnOnMatchStart)
         {
@@ -54,16 +54,16 @@ public class ResourceSpawner : MonoBehaviour {
         else if(!resourceIsSpawned)
         {
             timeSinceLastDespawn += Time.deltaTime;
-        }
-    }
-
-    private void OnDestroy()
-    {
-        GameManager.Instance.activeResources.Remove(resourceInstance);
+		}
+		if (!resourceInstance.activeInHierarchy && resourceIsSpawned) {
+			resourceIsSpawned = false;
+			timeSinceLastDespawn = 0.0f;
+		}
     }
 
     void SpawnResource()
     {
+		resourceIsSpawned = true;
         resourceInstance.SetActive(true);
         resourceInstance.transform.position = transform.TransformPoint(spawnPosition);
     }

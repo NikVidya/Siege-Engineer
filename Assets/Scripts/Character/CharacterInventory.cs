@@ -4,24 +4,6 @@ using UnityEngine;
 
 public class CharacterInventory : MonoBehaviour
 {
-
-    // Interface for objects which can be held by the player
-    public enum HoldState
-    {
-        Ready,
-        Held,
-        Dropped,
-        Blocked
-    }
-    public interface IHoldable
-    {
-        void Pickup();
-        void Drop();
-        void SetBlocked(bool blocked);
-        HoldState State { get; }
-        GameObject gameObject { get; }
-    }
-
     [Header("Pickup Parameters")]
     [Tooltip("Maximum distance that a resource can be picked up")]
     public float pickupDistance = 1.0f;
@@ -41,6 +23,12 @@ public class CharacterInventory : MonoBehaviour
     }
 
     private List<IHoldable> heldInventory = new List<IHoldable>();
+
+	void OnDrawGizmos()
+	{
+		Gizmos.color = Color.green;
+		Gizmos.DrawWireSphere(transform.position, pickupDistance);
+	}
 
     private void Start()
     {
@@ -71,7 +59,6 @@ public class CharacterInventory : MonoBehaviour
 
     void TakeHoldable(IHoldable holdable)
     {
-        holdable.Pickup();
         worldContainer.PlaceInContainer(holdable.gameObject);
         heldInventory.Add(holdable);
     }
@@ -104,7 +91,7 @@ public class CharacterInventory : MonoBehaviour
         {
             // Get distance to this holdable
             float dist = Vector3.Distance(holdable.gameObject.transform.position, transform.position);
-            if (dist < closestDistance && dist <= pickupDistance && (holdable.State == HoldState.Ready || holdable.State == HoldState.Dropped))
+            if (dist < closestDistance && dist <= pickupDistance && holdable.heldState == HoldState.Dropped)
             { // Close enough to pick up, and is the closest so far
                 closest = holdable;
                 closestDistance = dist;
