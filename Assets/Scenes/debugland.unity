@@ -405,40 +405,56 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4387407693831270, guid: 5aa6955b256cb6d42ac0da25800645ec, type: 2}
+    - target: {fileID: 4214433505555998, guid: aa3687d120367594d9bed1c5dcbc8a35, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.228
+      value: -3.7124636
       objectReference: {fileID: 0}
-    - target: {fileID: 4387407693831270, guid: 5aa6955b256cb6d42ac0da25800645ec, type: 2}
+    - target: {fileID: 4214433505555998, guid: aa3687d120367594d9bed1c5dcbc8a35, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.566
+      value: -1.3943068
       objectReference: {fileID: 0}
-    - target: {fileID: 4387407693831270, guid: 5aa6955b256cb6d42ac0da25800645ec, type: 2}
+    - target: {fileID: 4214433505555998, guid: aa3687d120367594d9bed1c5dcbc8a35, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.06201172
       objectReference: {fileID: 0}
-    - target: {fileID: 4387407693831270, guid: 5aa6955b256cb6d42ac0da25800645ec, type: 2}
+    - target: {fileID: 4214433505555998, guid: aa3687d120367594d9bed1c5dcbc8a35, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4387407693831270, guid: 5aa6955b256cb6d42ac0da25800645ec, type: 2}
+    - target: {fileID: 4214433505555998, guid: aa3687d120367594d9bed1c5dcbc8a35, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4387407693831270, guid: 5aa6955b256cb6d42ac0da25800645ec, type: 2}
+    - target: {fileID: 4214433505555998, guid: aa3687d120367594d9bed1c5dcbc8a35, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4387407693831270, guid: 5aa6955b256cb6d42ac0da25800645ec, type: 2}
+    - target: {fileID: 4214433505555998, guid: aa3687d120367594d9bed1c5dcbc8a35, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4387407693831270, guid: 5aa6955b256cb6d42ac0da25800645ec, type: 2}
+    - target: {fileID: 4214433505555998, guid: aa3687d120367594d9bed1c5dcbc8a35, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114181969543881894, guid: aa3687d120367594d9bed1c5dcbc8a35,
+        type: 2}
+      propertyPath: resourcePrefab
+      value: 
+      objectReference: {fileID: 1773575736184434, guid: f34b8054c1b9efa499ff1d6a7c83b7da,
+        type: 2}
+    - target: {fileID: 114181969543881894, guid: aa3687d120367594d9bed1c5dcbc8a35,
+        type: 2}
+      propertyPath: spawnPosition.x
+      value: 0.076284885
+      objectReference: {fileID: 0}
+    - target: {fileID: 114181969543881894, guid: aa3687d120367594d9bed1c5dcbc8a35,
+        type: 2}
+      propertyPath: spawnPosition.y
+      value: 0.76603264
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5aa6955b256cb6d42ac0da25800645ec, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: aa3687d120367594d9bed1c5dcbc8a35, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &717777202
 GameObject:
@@ -4818,7 +4834,7 @@ Transform:
   m_Children:
   - {fileID: 1379299769}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1619524322
 GameObject:
@@ -4992,7 +5008,7 @@ Transform:
   - {fileID: 1420467805}
   - {fileID: 960676745}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1827822423
 MonoBehaviour:
@@ -5006,6 +5022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdTime: 0.5
+  interactDistance: 0.85
+  interactionPrompt: {fileID: 1420467803}
 --- !u!114 &1827822424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5019,5 +5037,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupDistance: 1
   worldContainer: {fileID: 717777204}
-  interactionPrompt: {fileID: 1420467803}
-  repairTarget: {fileID: 1555102876}
