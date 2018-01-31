@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class GameResource : MonoBehaviour, IHoldable {
-    
+public class GameResource : MonoBehaviour, IHoldable
+{
+
+    [Header("Resource Type")]
+    public Constants.Resource.ResourceType type = Constants.Resource.ResourceType.WOOD;
+
     [HideInInspector]
     public enum ResourceState
     {
@@ -15,24 +19,28 @@ public class GameResource : MonoBehaviour, IHoldable {
     }
     public ResourceState State { get; set; }
 
-	InteractionState IInteractable.interactState {
-		get {
-			return _interactState;
-		}
-		set {
-			_interactState = value;
-		}
-	}
+    InteractionState IInteractable.InteractState
+    {
+        get
+        {
+            return _interactState;
+        }
+        set
+        {
+            _interactState = value;
+        }
+    }
 
-    HoldState IHoldable.heldState
+    HoldState IHoldable.HeldState
     {
         get
         {
             return _holdState;
         }
-		set {
-			_holdState = value;
-		}
+        set
+        {
+            _holdState = value;
+        }
     }
 
     GameObject IInteractable.gameObject
@@ -43,49 +51,44 @@ public class GameResource : MonoBehaviour, IHoldable {
         }
     }
 
-	private InteractionState _interactState = InteractionState.Ready;
+    private InteractionState _interactState = InteractionState.Ready;
     private HoldState _holdState = HoldState.Dropped;
     private Transform oldParent;
 
     private void Start()
     {
         // Register this resource with the game manager
-        GameManager.Instance.holdables.Add(this);
+        GameManager.Instance.RegisterInteractable(this, InteractionPriority.RESOURCE);
     }
 
-	private void OnDestroy()
-	{
-		if (!GameManager.IsApplicationQuitting) {
-			GameManager.Instance.holdables.Remove (this);
-		}
-	}
+    private void OnDestroy()
+    {
+        if (!GameManager.IsApplicationQuitting)
+        {
+            GameManager.Instance.DeRegisterInteractable(this, InteractionPriority.RESOURCE);
+        }
+    }
 
-	public void OnInteract (CharacterInteraction.KeyState state)
-	{
-		switch (state) {
-		case CharacterInteraction.KeyState.Pressed:
-			break;
-
-		case CharacterInteraction.KeyState.Released:
-
-			break;
-		}
-	}
-
-	public void SetBlocked (bool blocked)
-	{
-		throw new System.NotImplementedException ();
-	}
+    public void OnInteract(CharacterInteraction instigator, CharacterInteraction.KeyState state)
+    {
+        if (state == CharacterInteraction.KeyState.Pressed && _holdState == HoldState.Dropped)
+        {
+            Pickup();
+            instigator.InventoryComponent.AddHoldable(this);
+        }
+    }
 
     public void Pickup()
     {
         oldParent = transform.parent;
         _holdState = HoldState.Held;
+        _interactState = InteractionState.Activated;
     }
 
     public void Drop()
     {
         _holdState = HoldState.Dropped;
+        _interactState = InteractionState.Ready;
         transform.parent = oldParent;
     }
 }

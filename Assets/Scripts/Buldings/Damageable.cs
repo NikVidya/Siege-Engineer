@@ -75,8 +75,8 @@ public class Damageable : MonoBehaviour
         {
             health += changeAmount;
         }
-        Debug.Log("Health changed " + (health - healthPrevious));
-        Debug.Log("Current Damageable health is " + health);
+        //Debug.Log("Health changed " + (health - healthPrevious));
+        //Debug.Log("Current Damageable health is " + health);
     }
     void Die()
     {

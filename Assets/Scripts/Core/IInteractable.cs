@@ -1,6 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
+public enum InteractionPriority
+{
+    RESOURCE = 0,
+    STRUCTURE = 1
+}
 public enum InteractionState {
 	Ready,
 	Activated,
@@ -8,9 +13,8 @@ public enum InteractionState {
 }
 public interface IInteractable
 {
-	void OnInteract(CharacterInteraction.KeyState state);
-	void SetBlocked(bool blocked);
-	InteractionState interactState { get; set; }
+	void OnInteract(CharacterInteraction instigator, CharacterInteraction.KeyState state);
+	InteractionState InteractState { get; set; }
 	GameObject gameObject { get; }
 }
 
@@ -22,6 +26,6 @@ public enum HoldState
 public interface IHoldable : IInteractable
 {
 	void Drop();
-	HoldState heldState { get; set; }
+	HoldState HeldState { get; set; }
 }
 
