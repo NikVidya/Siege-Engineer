@@ -39,6 +39,7 @@ public class Damageable : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
+            periodicDamage = repairState = false;
             Die();
         }
         if (health > maxHealth)
@@ -79,6 +80,6 @@ public class Damageable : MonoBehaviour
     }
     void Die()
     {
-        Debug.Log("object died");
+        GameStateSwitcher.Instance.GameOver();
     }
 }
