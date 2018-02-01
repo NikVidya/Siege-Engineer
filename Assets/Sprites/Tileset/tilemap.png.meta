@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f7a1901c0e2cbb843b674ea01d646cbb
-timeCreated: 1517075511
+timeCreated: 1517499447
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -272,3904 +272,756 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 23}
-        - {x: -24, y: 11}
-        - {x: -24, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 23}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -18, y: 24}
-        - {x: -32, y: 23}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 23}
-        - {x: 19, y: 24}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_2
       rect:
         serializedVersion: 2
         x: 128
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 23}
-        - {x: -32, y: -32}
-        - {x: 24, y: -32}
-        - {x: 24, y: 11}
-        - {x: 16, y: 23}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_3
       rect:
         serializedVersion: 2
         x: 192
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_4
       rect:
         serializedVersion: 2
         x: 256
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -29}
-        - {x: -29, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_5
       rect:
         serializedVersion: 2
         x: 320
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 6}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 28}
-        - {x: 1, y: 28}
-        - {x: -20, y: 25}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_6
       rect:
         serializedVersion: 2
         x: 384
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -27, y: 32}
-        - {x: -32, y: 31}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 28}
-        - {x: 14, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_7
       rect:
         serializedVersion: 2
         x: 448
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -30, y: 32}
-        - {x: -32, y: 31}
-        - {x: -32, y: -32}
-        - {x: 28, y: -32}
-        - {x: 28, y: 13}
-        - {x: 5, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_8
       rect:
         serializedVersion: 2
         x: 512
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_9
       rect:
         serializedVersion: 2
         x: 576
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: -28, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_10
       rect:
         serializedVersion: 2
         x: 640
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 8}
-        - {x: -32, y: -28}
-        - {x: -31, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 28}
-        - {x: 2, y: 28}
-        - {x: -16, y: 27}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_11
       rect:
         serializedVersion: 2
         x: 704
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -27, y: 32}
-        - {x: -32, y: 31}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 28}
-        - {x: 14, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_12
       rect:
         serializedVersion: 2
         x: 768
-        y: 704
+        y: 258
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -30, y: 32}
-        - {x: -32, y: 31}
-        - {x: -32, y: -32}
-        - {x: 28, y: -32}
-        - {x: 28, y: 14}
-        - {x: 5, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_13
       rect:
         serializedVersion: 2
-        x: 832
-        y: 704
+        x: 0
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_14
       rect:
         serializedVersion: 2
-        x: 896
-        y: 704
+        x: 64
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: -28, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 640
+        x: 128
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -24, y: 32}
-        - {x: -25, y: 30}
-        - {x: -25, y: -14}
-        - {x: -24, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_16
       rect:
         serializedVersion: 2
-        x: 64
-        y: 640
+        x: 192
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_17
       rect:
         serializedVersion: 2
-        x: 128
-        y: 640
+        x: 256
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 24, y: -32}
-        - {x: 25, y: -4}
-        - {x: 25, y: 27}
-        - {x: 24, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_18
       rect:
         serializedVersion: 2
-        x: 192
-        y: 640
+        x: 320
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 29}
-        - {x: 29, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_19
       rect:
         serializedVersion: 2
-        x: 256
-        y: 640
+        x: 384
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -29, y: 32}
-        - {x: -32, y: 29}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_20
       rect:
         serializedVersion: 2
-        x: 320
-        y: 640
+        x: 448
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -29, y: 32}
-        - {x: -32, y: 18}
-        - {x: -32, y: -28}
-        - {x: -31, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_21
       rect:
         serializedVersion: 2
-        x: 384
-        y: 640
+        x: 512
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_22
       rect:
         serializedVersion: 2
-        x: 448
-        y: 640
+        x: 576
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -16}
-        - {x: 32, y: 27}
-        - {x: 31, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_23
       rect:
         serializedVersion: 2
-        x: 512
-        y: 640
+        x: 640
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 29}
-        - {x: 29, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_24
       rect:
         serializedVersion: 2
-        x: 576
-        y: 640
+        x: 704
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -32, y: 28}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_25
       rect:
         serializedVersion: 2
-        x: 640
-        y: 640
+        x: 768
+        y: 194
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -27, y: 28}
-        - {x: -32, y: -9}
-        - {x: -32, y: -23}
-        - {x: -30, y: -29}
-        - {x: -28, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_26
       rect:
         serializedVersion: 2
-        x: 704
-        y: 640
+        x: 0
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_27
       rect:
         serializedVersion: 2
-        x: 768
-        y: 640
+        x: 64
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -17}
-        - {x: 32, y: 28}
-        - {x: 31, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_28
       rect:
         serializedVersion: 2
-        x: 832
-        y: 640
+        x: 128
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 29}
-        - {x: 29, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_29
       rect:
         serializedVersion: 2
-        x: 896
-        y: 640
+        x: 192
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -32, y: 28}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_30
       rect:
         serializedVersion: 2
-        x: 0
-        y: 576
+        x: 256
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -24, y: 32}
-        - {x: -24, y: -12}
-        - {x: -13, y: -26}
-        - {x: 22, y: -27}
-        - {x: 32, y: -27}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_31
       rect:
         serializedVersion: 2
-        x: 64
-        y: 576
+        x: 320
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -27}
-        - {x: 18, y: -28}
-        - {x: 32, y: -28}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_32
       rect:
         serializedVersion: 2
-        x: 128
-        y: 576
+        x: 384
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 24, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: 6, y: -28}
-        - {x: 14, y: -26}
-        - {x: 24, y: -12}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_33
       rect:
         serializedVersion: 2
-        x: 192
-        y: 576
+        x: 448
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -15, y: 14}
-        - {x: -16, y: 3}
-        - {x: -16, y: -10}
-        - {x: -3, y: -15}
-        - {x: 9, y: -15}
-        - {x: 17, y: -8}
-        - {x: 17, y: 3}
-        - {x: 13, y: 14}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_34
       rect:
         serializedVersion: 2
-        x: 256
-        y: 576
+        x: 512
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 17, y: 21}
-        - {x: 4, y: 32}
-        - {x: -5, y: 32}
-        - {x: -8, y: 31}
-        - {x: -18, y: 18}
-        - {x: -18, y: -8}
-        - {x: -10, y: -23}
-        - {x: 6, y: -23}
-        - {x: 9, y: -18}
-        - {x: 17, y: 4}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_35
       rect:
         serializedVersion: 2
-        x: 320
-        y: 576
+        x: 576
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -28, y: -21}
-        - {x: -8, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_36
       rect:
         serializedVersion: 2
-        x: 384
-        y: 576
+        x: 640
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -29}
-        - {x: -20, y: -32}
-        - {x: 28, y: -32}
-        - {x: 32, y: -31}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_37
       rect:
         serializedVersion: 2
-        x: 448
-        y: 576
+        x: 704
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 30, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: -10, y: -28}
-        - {x: 10, y: -27}
-        - {x: 27, y: -10}
-        - {x: 32, y: -3}
-        - {x: 32, y: 27}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_38
       rect:
         serializedVersion: 2
-        x: 512
-        y: 576
+        x: 768
+        y: 130
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -13, y: 17}
-        - {x: -21, y: 10}
-        - {x: -21, y: -11}
-        - {x: -13, y: -12}
-        - {x: 19, y: -12}
-        - {x: 22, y: -7}
-        - {x: 22, y: 12}
-        - {x: 6, y: 17}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_39
       rect:
         serializedVersion: 2
-        x: 576
-        y: 576
+        x: 0
+        y: 66
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -5, y: 29}
-        - {x: -15, y: 16}
-        - {x: -15, y: -23}
-        - {x: -9, y: -26}
-        - {x: 14, y: -26}
-        - {x: 14, y: 18}
-        - {x: 11, y: 29}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_40
       rect:
         serializedVersion: 2
-        x: 640
-        y: 576
+        x: 64
+        y: 66
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -28, y: -21}
-        - {x: -8, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_41
       rect:
         serializedVersion: 2
-        x: 704
-        y: 576
+        x: 128
+        y: 66
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -29}
-        - {x: -5, y: -32}
-        - {x: 31, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_42
       rect:
         serializedVersion: 2
-        x: 768
-        y: 576
+        x: 192
+        y: 66
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 28, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: 7, y: -28}
-        - {x: 25, y: -21}
-        - {x: 32, y: 5}
-        - {x: 32, y: 29}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_43
       rect:
         serializedVersion: 2
-        x: 832
-        y: 576
+        x: 256
+        y: 66
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 5, y: 25}
-        - {x: -4, y: 25}
-        - {x: -12, y: 15}
-        - {x: -16, y: 0}
-        - {x: -16, y: -11}
-        - {x: -8, y: -22}
-        - {x: 8, y: -22}
-        - {x: 15, y: -15}
-        - {x: 15, y: 16}
-        - {x: 14, y: 20}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_44
       rect:
         serializedVersion: 2
-        x: 896
-        y: 576
+        x: 320
+        y: 66
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -10, y: 28}
-        - {x: -12, y: 27}
-        - {x: -12, y: -11}
-        - {x: -3, y: -25}
-        - {x: 4, y: -25}
-        - {x: 11, y: -19}
-        - {x: 11, y: 28}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_45
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
+        x: 384
+        y: 66
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -27, y: 32}
-        - {x: -27, y: -15}
-        - {x: -5, y: -32}
-        - {x: 30, y: -32}
-        - {x: 32, y: -31}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_46
       rect:
         serializedVersion: 2
-        x: 64
-        y: 512
+        x: 448
+        y: 66
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: -30, y: -28}
-        - {x: 1, y: -32}
-        - {x: 23, y: -32}
-        - {x: 29, y: -30}
-        - {x: 32, y: -28}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_47
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 28, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: 14, y: -28}
-        - {x: 32, y: -1}
-        - {x: 32, y: 22}
-        - {x: 31, y: 30}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_48
       rect:
         serializedVersion: 2
-        x: 192
-        y: 512
+        x: 640
+        y: 66
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -20, y: -18}
-        - {x: 13, y: -18}
-        - {x: 22, y: -16}
-        - {x: 22, y: 1}
-        - {x: 14, y: 22}
-        - {x: -6, y: 22}
-        - {x: -20, y: 16}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_49
       rect:
         serializedVersion: 2
-        x: 256
-        y: 512
+        x: 128
+        y: 2
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -9, y: 26}
-        - {x: -11, y: 25}
-        - {x: -24, y: -5}
-        - {x: -24, y: -17}
-        - {x: -3, y: -22}
-        - {x: 18, y: -22}
-        - {x: 25, y: -15}
-        - {x: 25, y: -2}
-        - {x: 7, y: 26}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_50
       rect:
         serializedVersion: 2
-        x: 320
-        y: 512
+        x: 192
+        y: 2
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -28, y: -14}
-        - {x: -5, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -31}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_51
       rect:
         serializedVersion: 2
-        x: 384
-        y: 512
+        x: 256
+        y: 2
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -29}
-        - {x: -20, y: -32}
-        - {x: 28, y: -32}
-        - {x: 32, y: -31}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_52
       rect:
         serializedVersion: 2
-        x: 448
-        y: 512
+        x: 320
+        y: 2
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 29, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: 14, y: -28}
-        - {x: 32, y: -2}
-        - {x: 32, y: 27}
-        - {x: 31, y: 30}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_53
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
+        x: 384
+        y: 2
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -10, y: 14}
-        - {x: -17, y: 6}
-        - {x: -17, y: -7}
-        - {x: -10, y: -15}
-        - {x: 9, y: -15}
-        - {x: 16, y: -11}
-        - {x: 16, y: 7}
-        - {x: 6, y: 13}
-        - {x: 1, y: 14}
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tilemap_54
       rect:
         serializedVersion: 2
-        x: 576
-        y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -17, y: 28}
-        - {x: -17, y: -25}
-        - {x: -13, y: -26}
-        - {x: 12, y: -26}
-        - {x: 17, y: -12}
-        - {x: 17, y: 24}
-        - {x: 12, y: 28}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_55
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -28, y: -1}
-        - {x: -25, y: -29}
-        - {x: -7, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_56
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -29}
-        - {x: -5, y: -32}
-        - {x: 31, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_57
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 28, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: 9, y: -28}
-        - {x: 26, y: -21}
-        - {x: 32, y: 5}
-        - {x: 32, y: 29}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_58
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 10, y: 27}
-        - {x: -11, y: 27}
-        - {x: -25, y: 8}
-        - {x: -25, y: -18}
-        - {x: -23, y: -23}
-        - {x: 11, y: -23}
-        - {x: 16, y: -22}
-        - {x: 25, y: -17}
-        - {x: 25, y: 3}
-        - {x: 20, y: 21}
-      - - {x: -4, y: 17}
-        - {x: 3, y: 17}
-        - {x: 6, y: 7}
-        - {x: -7, y: 6}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_59
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 512
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -4, y: 23}
-        - {x: -16, y: 11}
-        - {x: -16, y: -11}
-        - {x: -5, y: -16}
-        - {x: 12, y: -16}
-        - {x: 13, y: -5}
-        - {x: 13, y: 9}
-        - {x: 3, y: 23}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_60
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -14, y: 28}
-        - {x: -32, y: 6}
-        - {x: -32, y: -29}
-        - {x: -31, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 28}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_61
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -27, y: 32}
-        - {x: -32, y: 30}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 28}
-        - {x: 16, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_62
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: -32}
-        - {x: 28, y: -32}
-        - {x: 28, y: -2}
-        - {x: 26, y: 17}
-        - {x: 0, y: 32}
-        - {x: -26, y: 32}
-        - {x: -32, y: 30}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_63
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_64
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: -28, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_65
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 8}
-        - {x: -32, y: -28}
-        - {x: -31, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 28}
-        - {x: 2, y: 28}
-        - {x: -16, y: 27}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_66
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -27, y: 32}
-        - {x: -32, y: 31}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 28}
-        - {x: 14, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_67
-      rect:
-        serializedVersion: 2
         x: 448
-        y: 448
+        y: 2
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -30, y: 32}
-        - {x: -32, y: 31}
-        - {x: -32, y: -32}
-        - {x: 28, y: -32}
-        - {x: 28, y: 14}
-        - {x: 5, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_68
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_69
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: -28, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_70
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 6}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 28}
-        - {x: 1, y: 28}
-        - {x: -20, y: 25}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_71
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -27, y: 32}
-        - {x: -32, y: 31}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 28}
-        - {x: 14, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_72
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -30, y: 32}
-        - {x: -32, y: 31}
-        - {x: -32, y: -32}
-        - {x: 28, y: -32}
-        - {x: 28, y: 13}
-        - {x: 5, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_73
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_74
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: -28, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_75
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -29, y: 32}
-        - {x: -32, y: 19}
-        - {x: -32, y: -28}
-        - {x: -31, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_76
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_77
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -17}
-        - {x: 32, y: 28}
-        - {x: 31, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_78
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 29}
-        - {x: 29, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_79
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -32, y: 28}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_80
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -27, y: 28}
-        - {x: -32, y: -9}
-        - {x: -32, y: -23}
-        - {x: -30, y: -29}
-        - {x: -28, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_81
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_82
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -17}
-        - {x: 32, y: 28}
-        - {x: 31, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_83
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 29}
-        - {x: 29, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_84
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -32, y: 28}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_85
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -29, y: 32}
-        - {x: -32, y: 18}
-        - {x: -32, y: -28}
-        - {x: -31, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_86
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_87
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -16}
-        - {x: 32, y: 27}
-        - {x: 31, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_88
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 29}
-        - {x: 29, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_89
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 384
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -32, y: 28}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_90
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -28, y: -9}
-        - {x: -12, y: -30}
-        - {x: 3, y: -32}
-        - {x: 28, y: -32}
-        - {x: 32, y: -30}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_91
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: -30, y: -28}
-        - {x: 1, y: -32}
-        - {x: 23, y: -32}
-        - {x: 29, y: -30}
-        - {x: 32, y: -28}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_92
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 28, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: 7, y: -28}
-        - {x: 25, y: -21}
-        - {x: 32, y: 5}
-        - {x: 32, y: 28}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_93
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -9, y: 20}
-        - {x: -17, y: 7}
-        - {x: -17, y: -17}
-        - {x: -11, y: -19}
-        - {x: 13, y: -19}
-        - {x: 16, y: -14}
-        - {x: 16, y: 9}
-        - {x: 5, y: 20}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_94
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -23, y: 23}
-        - {x: -26, y: 20}
-        - {x: -29, y: 6}
-        - {x: -29, y: -15}
-        - {x: -18, y: -19}
-        - {x: 23, y: -19}
-        - {x: 29, y: -12}
-        - {x: 29, y: 18}
-        - {x: 21, y: 23}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_95
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -28, y: -21}
-        - {x: -8, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_96
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -29}
-        - {x: -5, y: -32}
-        - {x: 31, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_97
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 28, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: 7, y: -28}
-        - {x: 25, y: -21}
-        - {x: 32, y: 5}
-        - {x: 32, y: 29}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_98
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -2, y: 30}
-        - {x: -5, y: 27}
-        - {x: -13, y: 14}
-        - {x: -13, y: -1}
-        - {x: -11, y: -22}
-        - {x: -6, y: -26}
-        - {x: 4, y: -26}
-        - {x: 11, y: -23}
-        - {x: 12, y: -9}
-        - {x: 12, y: 12}
-        - {x: 2, y: 30}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_99
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -24, y: 26}
-        - {x: -26, y: 17}
-        - {x: -26, y: 5}
-        - {x: -19, y: -20}
-        - {x: 24, y: -20}
-        - {x: 26, y: -11}
-        - {x: 26, y: 18}
-        - {x: 23, y: 26}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_100
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -28, y: -21}
-        - {x: -8, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_101
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -29}
-        - {x: -20, y: -32}
-        - {x: 28, y: -32}
-        - {x: 32, y: -31}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_102
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 30, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: -10, y: -28}
-        - {x: 10, y: -27}
-        - {x: 27, y: -10}
-        - {x: 32, y: -3}
-        - {x: 32, y: 27}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_103
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 10, y: 19}
-        - {x: -11, y: 19}
-        - {x: -18, y: 13}
-        - {x: -18, y: -3}
-        - {x: -11, y: -14}
-        - {x: 9, y: -14}
-        - {x: 17, y: 4}
-        - {x: 17, y: 14}
-        - {x: 14, y: 18}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_104
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 320
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -14, y: 23}
-        - {x: -17, y: 14}
-        - {x: -17, y: -6}
-        - {x: -10, y: -15}
-        - {x: 8, y: -15}
-        - {x: 18, y: -13}
-        - {x: 18, y: 23}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_105
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -28, y: -8}
-        - {x: -12, y: -26}
-        - {x: 0, y: -32}
-        - {x: 24, y: -32}
-        - {x: 32, y: -31}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_106
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: -30, y: -28}
-        - {x: 1, y: -32}
-        - {x: 23, y: -32}
-        - {x: 29, y: -30}
-        - {x: 32, y: -28}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_107
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 28, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: 14, y: -28}
-        - {x: 32, y: -1}
-        - {x: 32, y: 22}
-        - {x: 31, y: 30}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_108
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -17, y: 14}
-        - {x: -17, y: -18}
-        - {x: -11, y: -26}
-        - {x: 6, y: -26}
-        - {x: 17, y: -18}
-        - {x: 17, y: 13}
-        - {x: 8, y: 28}
-        - {x: -11, y: 28}
-        - {x: -16, y: 26}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_109
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -4, y: 29}
-        - {x: -15, y: 8}
-        - {x: -15, y: -17}
-        - {x: -5, y: -26}
-        - {x: 14, y: -26}
-        - {x: 14, y: 21}
-        - {x: 2, y: 29}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_110
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -28, y: -1}
-        - {x: -25, y: -29}
-        - {x: -7, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_111
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -29}
-        - {x: -5, y: -32}
-        - {x: 31, y: -32}
-        - {x: 32, y: -29}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_112
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 28, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: 9, y: -28}
-        - {x: 26, y: -21}
-        - {x: 32, y: 5}
-        - {x: 32, y: 29}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_113
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -22}
-        - {x: 19, y: -21}
-        - {x: 19, y: 22}
-        - {x: -17, y: 22}
-        - {x: -17, y: -22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_114
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 23, y: 16}
-        - {x: 13, y: 30}
-        - {x: -10, y: 30}
-        - {x: -19, y: 26}
-        - {x: -26, y: 13}
-        - {x: -26, y: -14}
-        - {x: -15, y: -25}
-        - {x: 16, y: -25}
-        - {x: 22, y: -23}
-        - {x: 28, y: -16}
-        - {x: 28, y: -4}
-        - {x: 27, y: 1}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_115
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -28, y: 32}
-        - {x: -28, y: -14}
-        - {x: -5, y: -32}
-        - {x: 29, y: -32}
-        - {x: 32, y: -31}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_116
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -29}
-        - {x: -20, y: -32}
-        - {x: 28, y: -32}
-        - {x: 32, y: -31}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_117
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 29, y: 32}
-        - {x: -32, y: 32}
-        - {x: -32, y: -28}
-        - {x: 14, y: -28}
-        - {x: 32, y: -2}
-        - {x: 32, y: 27}
-        - {x: 31, y: 30}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_118
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -14, y: 22}
-        - {x: -20, y: 13}
-        - {x: -20, y: -1}
-        - {x: -13, y: -13}
-        - {x: -6, y: -18}
-        - {x: 14, y: -18}
-        - {x: 18, y: -3}
-        - {x: 18, y: 19}
-        - {x: 8, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_119
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -16, y: 29}
-        - {x: -16, y: -11}
-        - {x: -12, y: -25}
-        - {x: 5, y: -25}
-        - {x: 19, y: 3}
-        - {x: 19, y: 19}
-        - {x: 3, y: 29}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_120
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -10, y: -3}
-        - {x: -11, y: -15}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 32, y: -11}
-        - {x: 32, y: 10}
-        - {x: 16, y: 10}
-        - {x: 3, y: 9}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_121
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -17, y: 11}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 11, y: -13}
-        - {x: -3, y: 8}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_122
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 9}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: -9, y: 11}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_123
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: -11}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 11, y: 9}
-        - {x: 9, y: 11}
-        - {x: -32, y: 11}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_124
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: -11}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: -32, y: 11}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_125
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 11, y: -32}
-        - {x: 11, y: 32}
-        - {x: -11, y: 32}
-        - {x: -11, y: -32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_126
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: -11}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: -32, y: 11}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_127
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_128
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 4, y: 11}
-        - {x: -5, y: 11}
-        - {x: -11, y: 7}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 11, y: 3}
-        - {x: 10, y: 6}
-        - {x: 5, y: 10}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_129
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: 4, y: -11}
-        - {x: 11, y: -6}
-        - {x: 11, y: 6}
-        - {x: 8, y: 11}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_130
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_131
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_132
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_133
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_134
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_135
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -18, y: 28}
-        - {x: -20, y: 24}
-        - {x: -20, y: -23}
-        - {x: -16, y: -24}
-        - {x: 16, y: -24}
-        - {x: 21, y: -18}
-        - {x: 21, y: 25}
-        - {x: 13, y: 28}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_136
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 12, y: 27}
-        - {x: -9, y: 27}
-        - {x: -20, y: 19}
-        - {x: -20, y: -19}
-        - {x: -18, y: -24}
-        - {x: 12, y: -24}
-        - {x: 19, y: -16}
-        - {x: 21, y: -4}
-        - {x: 21, y: 17}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_137
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -11, y: 20}
-        - {x: -10, y: 8}
-        - {x: -1, y: -8}
-        - {x: 15, y: -11}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 12, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_138
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: 2, y: -11}
-        - {x: 11, y: 1}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_139
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -11, y: -9}
-        - {x: -9, y: -11}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_140
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: 9, y: -11}
-        - {x: 11, y: -9}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_141
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_142
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_143
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: -11}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 11, y: 32}
-        - {x: -11, y: 32}
-        - {x: -32, y: 11}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_144
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_145
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: -5}
-        - {x: -8, y: -11}
-        - {x: 7, y: -11}
-        - {x: 11, y: -8}
-        - {x: 11, y: 32}
-        - {x: -11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_146
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -4, y: 11}
-        - {x: -11, y: 6}
-        - {x: -11, y: -6}
-        - {x: -4, y: -11}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_147
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_148
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_149
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_150
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_151
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_152
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 10, y: 28}
-        - {x: -9, y: 28}
-        - {x: -14, y: 27}
-        - {x: -21, y: 23}
-        - {x: -21, y: -20}
-        - {x: -19, y: -24}
-        - {x: 12, y: -24}
-        - {x: 18, y: -15}
-        - {x: 19, y: -8}
-        - {x: 19, y: 18}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_153
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 21, y: 12}
-        - {x: 12, y: 22}
-        - {x: -17, y: 22}
-        - {x: -20, y: 11}
-        - {x: -20, y: -20}
-        - {x: -10, y: -24}
-        - {x: 11, y: -24}
-        - {x: 19, y: -17}
-        - {x: 21, y: -7}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_154
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -1, y: 14}
-        - {x: -14, y: 2}
-        - {x: -14, y: -12}
-        - {x: -12, y: -32}
-        - {x: 11, y: -32}
-        - {x: 32, y: -11}
-        - {x: 32, y: 10}
-        - {x: 9, y: 14}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_155
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -30, y: 14}
-        - {x: -32, y: 13}
-        - {x: -32, y: -11}
-        - {x: -11, y: -32}
-        - {x: 12, y: -32}
-        - {x: 14, y: -28}
-        - {x: 14, y: 7}
-        - {x: 9, y: 14}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_156
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -6, y: 16}
-        - {x: -16, y: 8}
-        - {x: -16, y: -14}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 16, y: 16}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_157
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 16, y: -16}
-        - {x: 16, y: 7}
-        - {x: 5, y: 16}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_158
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: 16}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 7, y: 16}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_159
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -16, y: 2}
-        - {x: -16, y: -2}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 16, y: -2}
-        - {x: 16, y: 5}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_160
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: 16}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: -2, y: -16}
-        - {x: 2, y: -16}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 7, y: 16}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_161
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_162
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -2, y: 16}
-        - {x: -16, y: 6}
-        - {x: -16, y: -10}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 16, y: -18}
-        - {x: 16, y: 5}
-        - {x: 8, y: 16}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_163
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -13, y: -16}
-        - {x: 2, y: -16}
-        - {x: 16, y: -9}
-        - {x: 16, y: 5}
-        - {x: 8, y: 16}
-        - {x: -8, y: 16}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_164
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_165
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_166
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_167
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_168
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_169
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -10, y: 26}
-        - {x: -20, y: 17}
-        - {x: -20, y: -16}
-        - {x: -14, y: -23}
-        - {x: 14, y: -23}
-        - {x: 20, y: -22}
-        - {x: 20, y: 26}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_170
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_171
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -12, y: 32}
-        - {x: -14, y: 4}
-        - {x: -14, y: -1}
-        - {x: -3, y: -14}
-        - {x: 22, y: -14}
-        - {x: 32, y: -13}
-        - {x: 32, y: 11}
-        - {x: 12, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_172
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: -24, y: -12}
-        - {x: -12, y: -14}
-        - {x: 3, y: -14}
-        - {x: 14, y: 0}
-        - {x: 14, y: 19}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_173
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -16, y: 13}
-        - {x: -16, y: -2}
-        - {x: -11, y: -13}
-        - {x: -7, y: -16}
-        - {x: 9, y: -16}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_174
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: -11}
-        - {x: -10, y: -16}
-        - {x: 6, y: -16}
-        - {x: 16, y: -7}
-        - {x: 16, y: 32}
-        - {x: -19, y: 32}
-        - {x: -32, y: 27}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_175
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: -2, y: -16}
-        - {x: 2, y: -16}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_176
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -16, y: 2}
-        - {x: -16, y: -2}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_177
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -11, y: 32}
-        - {x: -32, y: 11}
-        - {x: -32, y: -11}
-        - {x: -11, y: -32}
-        - {x: 11, y: -32}
-        - {x: 16, y: -2}
-        - {x: 16, y: 5}
-        - {x: 11, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_178
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -1, y: 16}
-        - {x: -3, y: 15}
-        - {x: -16, y: 2}
-        - {x: -16, y: -2}
-        - {x: -2, y: -16}
-        - {x: 2, y: -16}
-        - {x: 16, y: -7}
-        - {x: 16, y: 3}
-        - {x: 8, y: 16}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_179
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -16, y: -2}
-        - {x: -9, y: -16}
-        - {x: 5, y: -16}
-        - {x: 16, y: -8}
-        - {x: 16, y: 12}
-        - {x: 11, y: 32}
-        - {x: -11, y: 32}
-        - {x: -16, y: 13}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_180
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -3, y: 16}
-        - {x: -16, y: 7}
-        - {x: -16, y: -2}
-        - {x: -7, y: -16}
-        - {x: 12, y: -16}
-        - {x: 32, y: -11}
-        - {x: 32, y: 11}
-        - {x: 7, y: 16}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_181
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_182
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_183
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_184
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_185
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -20, y: 22}
-        - {x: -22, y: 20}
-        - {x: -22, y: -20}
-        - {x: -20, y: -22}
-        - {x: 20, y: -22}
-        - {x: 22, y: -20}
-        - {x: 22, y: 20}
-        - {x: 20, y: 22}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_186
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap_187
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -32}
-        - {x: 32, y: -32}
-        - {x: 32, y: 32}
+      physicsShape: []
       tessellationDetail: 0
     outline: []
     physicsShape: []
