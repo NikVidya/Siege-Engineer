@@ -45,6 +45,7 @@ public class CharacterInventory : MonoBehaviour
         {
             Debug.LogFormat("Detaching object {0} to inventory", heldInventory[0].gameObject.name);
             worldContainer.RemoveFromContainer(heldInventory[0].gameObject, transform.position);
+			heldInventory [0].Drop ();
             heldInventory.RemoveAt(0);
         }
     }

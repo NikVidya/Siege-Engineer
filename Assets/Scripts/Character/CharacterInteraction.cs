@@ -21,6 +21,7 @@ public class CharacterInteraction : MonoBehaviour
     KeyState curKeyState = KeyState.Released;
     KeyState oldKeyState = KeyState.Released;
     float keyPressedStartTime = 0.0f;
+	bool canDrop = true;
 
     public CharacterInventory InventoryComponent { get { return _inv; } }
     CharacterInventory _inv;
@@ -76,6 +77,7 @@ public class CharacterInteraction : MonoBehaviour
         {
             curKeyState = KeyState.Pressed;
             keyPressedStartTime = 0.0f;
+			canDrop = true;
         }
         else if (Input.GetButton(Constants.InputNames.INTERACT) && curKeyState == KeyState.Pressed && keyPressedStartTime < holdTime)
         {
@@ -99,14 +101,12 @@ public class CharacterInteraction : MonoBehaviour
 
     void OnKeyStateChange(KeyState keyState, IInteractable interactable)
     {
-        if (interactable != null)
-        {
-            interactable.OnInteract(this, keyState);
-        }
-        else if (Input.GetButtonUp(Constants.InputNames.INTERACT))
-        {   // Default to dropping things from inventory when button is released
-            InventoryComponent.DropFirstHeld();
-        }
+		if (interactable != null) {
+			interactable.OnInteract (this, keyState);
+			canDrop = false;
+		} else if (canDrop && keyState == KeyState.Released){
+			InventoryComponent.DropFirstHeld ();
+		}
     }
 }
 

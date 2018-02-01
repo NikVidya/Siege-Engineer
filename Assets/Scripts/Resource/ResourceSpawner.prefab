@@ -50,7 +50,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1977991031908160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.129, y: -1.671, z: 0.06201172}
+  m_LocalPosition: {x: -3.7124636, y: -1.3943068, z: 0.06201172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4410237231439208}
@@ -82,9 +82,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 1
-  resourcePrefab: {fileID: 0}
+  resourcePrefab: {fileID: 1773575736184434, guid: f34b8054c1b9efa499ff1d6a7c83b7da,
+    type: 2}
   spawnOnMatchStart: 0
-  spawnPosition: {x: 0.541502, y: 0.8056255, z: 0}
+  spawnPosition: {x: 0.076284885, y: 0.76603264, z: 0}
 --- !u!212 &212781898254913450
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -119,7 +120,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300226, guid: c322ac6b1226ab540baf145b77f6eacb, type: 3}
+  m_Sprite: {fileID: 21300080, guid: f7a1901c0e2cbb843b674ea01d646cbb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
