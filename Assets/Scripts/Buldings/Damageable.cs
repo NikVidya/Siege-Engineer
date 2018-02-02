@@ -27,9 +27,12 @@ public class Damageable : MonoBehaviour
     public int health;
     [HideInInspector]
     public bool repairState = false;
+	[HideInInspector]
+	public float damageDeBuff = 1.0f;
     //private
     void Start()
     {
+		GameManager.Instance.RegisterDamageable (this);
         health = maxHealth;
         InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
     }
@@ -52,11 +55,12 @@ public class Damageable : MonoBehaviour
     {
         if (repairState)
         {
-            ChangeHealth(healthRepairAmount);
+			ChangeHealth(healthRepairAmount);
         }
         else if (periodicDamage)
-        {
-            ChangeHealth(healthDecreaseAmount);
+		{
+			int calcChangeAmount = Mathf.Round(healthDecreaseAmount * (1 - damageDeBuff));
+			ChangeHealth(calcChangeAmount);
         }
 
     }
@@ -67,7 +71,7 @@ public class Damageable : MonoBehaviour
     public void ChangeHealth(int changeAmount)
     {
         int healthPrevious = health;
-        if (changeAmount > 0 && health > maxHealth - changeAmount)
+		if (changeAmount > 0 && health > maxHealth - changeAmount)
         {
             health += maxHealth - health;
         }
