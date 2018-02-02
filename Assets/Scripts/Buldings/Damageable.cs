@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /* TODO
 	1. Have the Damageable's health correspond to the healthbar graphic
 		- Alternatively, ditch the healthbar and use Damageable damage sprites
 	2. Placeholder sprites
  */
-[RequireComponent(typeof(Transform))]
 public class Damageable : MonoBehaviour
 {
     //public
@@ -24,9 +24,14 @@ public class Damageable : MonoBehaviour
     [Tooltip("The maximum health of the building")]
     public int maxHealth = 100;
     [HideInInspector]
+    public bool repairState = false;
+    [HideInInspector]
     public int health;
     [HideInInspector]
-    public bool repairState = false;
+    public float healthPercent;
+    [HideInInspector]
+    public float healthPercentChange;
+    public UnityEvent healthChange;
     //private
     void Start()
     {
@@ -46,6 +51,7 @@ public class Damageable : MonoBehaviour
         {
             health = maxHealth;
         }
+        healthPercent = (maxHealth / health) * 100;
     }
 
     void PeriodicHealthChange()
@@ -66,7 +72,7 @@ public class Damageable : MonoBehaviour
 	*/
     public void ChangeHealth(int changeAmount)
     {
-        int healthPrevious = health;
+        float healthPrevious = health;
         if (changeAmount > 0 && health > maxHealth - changeAmount)
         {
             health += maxHealth - health;
@@ -75,11 +81,15 @@ public class Damageable : MonoBehaviour
         {
             health += changeAmount;
         }
-        Debug.Log("Health changed " + (health - healthPrevious));
-        Debug.Log("Current Damageable health is " + health);
+        if (healthChange == null) { healthChange = new UnityEvent(); }
+        healthPercent = (float)health / (float)maxHealth;
+        Debug.Log("current health is " + health);
+        Debug.Log(healthPercent);
+        healthChange.Invoke();
     }
     void Die()
     {
         GameStateSwitcher.Instance.GameOver();
     }
+
 }
