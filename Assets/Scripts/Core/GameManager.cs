@@ -17,6 +17,11 @@ public class GameManager : Singleton<GameManager> {
         }
     }
 
+    public void ConsumeResource(GameResource resource)
+    {
+        resource.gameObject.SetActive(false);
+    }
+
     public void RegisterInteractable(IInteractable interactable, InteractionPriority priority)
     {
         interactables[(int)priority].Add(interactable);
@@ -65,5 +70,20 @@ public class GameManager : Singleton<GameManager> {
             }
         }
         return null;
+    }
+
+    public List<GameResource> GetResourcesInRange(Transform t, float range)
+    {
+        List<GameResource> ret = new List<GameResource>();
+        foreach(IInteractable interact in interactables)
+        {
+            GameResource gr = interact as GameResource; // Try and cast down the tree to a GameResource
+            if (gr != null && Vector3.Distance(gr.transform.position, t.position) <= range)
+            {   // This interactable was a resource, and is close enough to be included
+                ret.Add(gr);
+            }
+        }
+
+        return ret;
     }
 }

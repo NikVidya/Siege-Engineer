@@ -18,7 +18,7 @@ public class CharacterInventory : MonoBehaviour
         }
     }
 
-    private List<IHoldable> heldInventory = new List<IHoldable>();
+    public List<IHoldable> heldInventory = new List<IHoldable>();
 
     private void Start()
     {

@@ -7,10 +7,13 @@ using UnityEngine;
 		- Alternatively, ditch the healthbar and use Damageable damage sprites
 	2. Placeholder sprites
  */
-[RequireComponent(typeof(Transform))]
-public class Damageable : MonoBehaviour
+public class Damageable : MonoBehaviour, IInteractable
 {
-    //public
+    [Header("Health Parameters")]
+    [Tooltip("The maximum health of the building")]
+    public int maxHealth = 100;
+
+    [Header("Damage Parameters")]
     [Tooltip("Whether this object takes periodic damage")]
     public bool periodicDamage = true;
     [Tooltip("The rate at which the Damageable heals or damages periodically")]
@@ -19,17 +22,35 @@ public class Damageable : MonoBehaviour
     public int gracePeriod = 5;
     [Tooltip("The amount of damage the Damageable receives periodically")]
     public int healthDecreaseAmount = -3;
+
+    [Header("Repair Parameters")]
     [Tooltip("The amount that the Damageable heals periodically")]
     public int healthRepairAmount = 10;
-    [Tooltip("The maximum health of the building")]
-    public int maxHealth = 100;
+    [Tooltip("What resources are required for repair")]
+    public Constants.Resource.ResourceType[] repairCost;
+
     [HideInInspector]
     public int health;
     [HideInInspector]
     public bool repairState = false;
+
+    InteractionState _interactState = InteractionState.Ready;
+    public InteractionState InteractState {
+        get {
+            return _interactState;
+        }
+        set {
+            _interactState = value;
+        }
+    }
+
     //private
     void Start()
     {
+        // Register this game object so it can be interacted with.
+        GameManager.Instance.RegisterInteractable(this, InteractionPriority.STRUCTURE);
+
+
         health = maxHealth;
         InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
     }
@@ -81,5 +102,50 @@ public class Damageable : MonoBehaviour
     void Die()
     {
         GameStateSwitcher.Instance.GameOver();
+    }
+
+    public void OnInteract(CharacterInteraction instigator, CharacterInteraction.KeyState state)
+    {
+        if (state != CharacterInteraction.KeyState.Held)
+        {
+            return; // Early return because I dislike nesting. (Piet)
+        }
+
+        Dictionary<Constants.Resource.ResourceType, GameResource> availableResources = new Dictionary<Constants.Resource.ResourceType, GameResource>();
+
+        // Note: If it where possible for multiple instances of resources to be on the map at once, the order 
+        //  that the next two sections are in will determine if resources are used out of the player's inventory
+        //  first, or off the ground first.
+
+        // Find nearby resources
+        List<GameResource> nearbyResources = GameManager.Instance.GetResourcesInRange(instigator.transform, instigator.interactDistance);
+        foreach(GameResource gr in nearbyResources)
+        {
+            availableResources[gr.type] = gr; // This is set to be used
+        }
+
+        // Find resources in player inventory
+        foreach(GameResource gr in instigator.InventoryComponent.heldInventory)
+        {
+            availableResources[gr.type] = gr; // This is set to be used
+        }
+
+        bool canRepair = true;
+        foreach (Constants.Resource.ResourceType cost in repairCost)
+        {
+            canRepair = availableResources.ContainsKey(cost);
+            if (!canRepair)
+            {   // No sense continuing, we can't repair
+                return;
+            }
+        }
+
+        if (canRepair)
+        {
+            foreach (Constants.Resource.ResourceType cost in repairCost)
+            {
+                GameManager.Instance.ConsumeResource(availableResources[cost]);
+            }
+        }
     }
 }
