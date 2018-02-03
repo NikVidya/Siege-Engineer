@@ -93,7 +93,7 @@ public class GameManager : Singleton<GameManager> {
 		foreach(IInteractable interact in Interactables[(int)InteractionPriority.RESOURCE])
         {
             GameResource gr = interact as GameResource; // Try and cast down the tree to a GameResource
-            if (gr != null && Vector3.Distance(gr.transform.position, t.position) <= range)
+			if (gr != null && ((IHoldable)gr).HeldState != HoldState.Held && Vector3.Distance(gr.transform.position, t.position) <= range)
             {   // This interactable was a resource, and is close enough to be included
                 ret.Add(gr);
             }
