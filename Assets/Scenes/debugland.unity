@@ -3082,6 +3082,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114463982980813256, guid: c58c14c920c1daf4ca82bb826a251934,
+        type: 2}
+      propertyPath: accelerationCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4402588756747948, guid: c58c14c920c1daf4ca82bb826a251934, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.9300885
@@ -3124,6 +3129,46 @@ Prefab:
       propertyPath: interactionPrompt
       value: 
       objectReference: {fileID: 1502141997}
+    - target: {fileID: 114463982980813256, guid: c58c14c920c1daf4ca82bb826a251934,
+        type: 2}
+      propertyPath: accelerationCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463982980813256, guid: c58c14c920c1daf4ca82bb826a251934,
+        type: 2}
+      propertyPath: accelerationCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463982980813256, guid: c58c14c920c1daf4ca82bb826a251934,
+        type: 2}
+      propertyPath: accelerationCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463982980813256, guid: c58c14c920c1daf4ca82bb826a251934,
+        type: 2}
+      propertyPath: accelerationCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463982980813256, guid: c58c14c920c1daf4ca82bb826a251934,
+        type: 2}
+      propertyPath: accelerationCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463982980813256, guid: c58c14c920c1daf4ca82bb826a251934,
+        type: 2}
+      propertyPath: accelerationCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463982980813256, guid: c58c14c920c1daf4ca82bb826a251934,
+        type: 2}
+      propertyPath: accelerationCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463982980813256, guid: c58c14c920c1daf4ca82bb826a251934,
+        type: 2}
+      propertyPath: accelerationCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c58c14c920c1daf4ca82bb826a251934, type: 2}
   m_IsPrefabParent: 0
@@ -4555,7 +4600,7 @@ MonoBehaviour:
   periodicDamage: 1
   healthDecreaseRate: 1
   gracePeriod: 0
-  healthDecreaseAmount: -5
+  healthDecreaseAmount: -2
   healthRepairAmount: 10
   healthRepairTime: 1
   repairCost: 0000000001000000
@@ -4579,7 +4624,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  damageDeBuff: 1
 --- !u!4 &1555102877
 Transform:
   m_ObjectHideFlags: 0
