@@ -26,6 +26,8 @@ public class Damageable : MonoBehaviour, IInteractable
     [Header("Repair Parameters")]
     [Tooltip("The amount that the Damageable heals periodically")]
     public int healthRepairAmount = 10;
+	[Tooltip("The amount of time invoking repair will repair for")]
+	public float healthRepairTime = 1.0f;
     [Tooltip("What resources are required for repair")]
     public Constants.Resource.ResourceType[] repairCost;
 
@@ -42,7 +44,9 @@ public class Damageable : MonoBehaviour, IInteractable
         set {
             _interactState = value;
         }
-    }
+	}
+
+	float timeSpentRepairing = 0;
 
     //private
     void Start()
@@ -66,20 +70,24 @@ public class Damageable : MonoBehaviour, IInteractable
         if (health > maxHealth)
         {
             health = maxHealth;
-        }
+		}
+
+		if (timeSpentRepairing > healthRepairTime) {
+			repairState = false;
+		} else if (repairState) {
+			timeSpentRepairing += Time.deltaTime;
+		}
     }
 
     void PeriodicHealthChange()
-    {
-        if (repairState)
-        {
-            ChangeHealth(healthRepairAmount);
-        }
+	{
+		if (repairState) {
+			ChangeHealth (healthRepairAmount);
+		}
         else if (periodicDamage)
         {
             ChangeHealth(healthDecreaseAmount);
         }
-
     }
 
     /* 
@@ -101,14 +109,14 @@ public class Damageable : MonoBehaviour, IInteractable
     }
     void Die()
     {
-        GameStateSwitcher.Instance.GameOver();
+		GameStateSwitcher.Instance.GameOver ();
     }
 
     public void OnInteract(CharacterInteraction instigator, CharacterInteraction.KeyState state)
     {
         if (state != CharacterInteraction.KeyState.Held)
         {
-            return; // Early return because I dislike nesting. (Piet)
+            return; // Early return because I dislike nesting
         }
 
         Dictionary<Constants.Resource.ResourceType, GameResource> availableResources = new Dictionary<Constants.Resource.ResourceType, GameResource>();
@@ -145,7 +153,8 @@ public class Damageable : MonoBehaviour, IInteractable
             foreach (Constants.Resource.ResourceType cost in repairCost)
             {
                 GameManager.Instance.ConsumeResource(availableResources[cost]);
-            }
+			}
+			repairState = true;
+			timeSpentRepairing = 0;
         }
-    }
-}
+    }}

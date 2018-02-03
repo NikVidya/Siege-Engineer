@@ -34,7 +34,8 @@ public class CharacterInteraction : MonoBehaviour
     }
 
     private void Start()
-    {
+	{
+		GameManager.Instance.interactionComponent = this;
         _inv = gameObject.GetComponent<CharacterInventory>();
         if (!interactionPrompt)
         {

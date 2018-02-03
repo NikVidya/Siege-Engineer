@@ -5,8 +5,6 @@ using UnityEngine;
 public class CharacterInventory : MonoBehaviour
 {
     [Header("Pickup Parameters")]
-    [Tooltip("Maximum distance that a resource can be picked up")]
-    public float pickupDistance = 1.0f;
     [Tooltip("The in world container for the inventory. Leave as none to have no visible inventory")]
     public ResourceWorldContainer worldContainer;
 
@@ -34,7 +32,6 @@ public class CharacterInventory : MonoBehaviour
 
     public void AddHoldable(IHoldable holdable)
     {
-        Debug.LogFormat("Attaching object {0} to inventory", holdable.gameObject.name);
         worldContainer.PlaceInContainer(holdable.gameObject);
         heldInventory.Add(holdable);
     }
@@ -43,12 +40,18 @@ public class CharacterInventory : MonoBehaviour
     {
         if (heldInventory.Count > 0)
         {
-            Debug.LogFormat("Detaching object {0} to inventory", heldInventory[0].gameObject.name);
             worldContainer.RemoveFromContainer(heldInventory[0].gameObject, transform.position);
 			heldInventory [0].Drop ();
             heldInventory.RemoveAt(0);
         }
     }
+
+	public void DropHeld(IHoldable held)
+	{
+		worldContainer.RemoveFromContainer (held.gameObject, transform.position);
+		held.Drop ();
+		heldInventory.Remove (held);
+	}
 
     /*
     // Repair system

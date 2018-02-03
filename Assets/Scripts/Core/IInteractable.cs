@@ -3,8 +3,8 @@ using UnityEngine;
 
 public enum InteractionPriority
 {
-    RESOURCE = 0,
-    STRUCTURE = 1
+	STRUCTURE = 0,
+    RESOURCE = 1
 }
 public enum InteractionState {
 	Ready,
