@@ -4800,12 +4800,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   periodicDamage: 1
   healthDecreaseRate: 1
-  gracePeriod: 5
-  healthDecreaseAmount: -3
+  gracePeriod: 0
+  healthDecreaseAmount: -5
   healthRepairAmount: 10
   maxHealth: 100
-  health: 0
   repairState: 0
+  health: 0
+  healthPercent: 0
+  healthPercentChange: 0
+  healthChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 203513084}
+        m_MethodName: changeWidth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &1555102877
 Transform:
   m_ObjectHideFlags: 0
