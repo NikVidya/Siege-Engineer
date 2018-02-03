@@ -8,9 +8,13 @@ using UnityEngine.Events;
 		- Alternatively, ditch the healthbar and use Damageable damage sprites
 	2. Placeholder sprites
  */
-public class Damageable : MonoBehaviour
+public class Damageable : MonoBehaviour, IInteractable
 {
-    //public
+    [Header("Health Parameters")]
+    [Tooltip("The maximum health of the building")]
+    public int maxHealth = 100;
+
+    [Header("Damage Parameters")]
     [Tooltip("Whether this object takes periodic damage")]
     public bool periodicDamage = true;
     [Tooltip("The rate at which the Damageable heals or damages periodically")]
@@ -19,10 +23,15 @@ public class Damageable : MonoBehaviour
     public int gracePeriod = 5;
     [Tooltip("The amount of damage the Damageable receives periodically")]
     public int healthDecreaseAmount = -3;
+
+    [Header("Repair Parameters")]
     [Tooltip("The amount that the Damageable heals periodically")]
     public int healthRepairAmount = 10;
-    [Tooltip("The maximum health of the building")]
-    public int maxHealth = 100;
+	[Tooltip("The amount of time invoking repair will repair for")]
+	public float healthRepairTime = 1.0f;
+    [Tooltip("What resources are required for repair")]
+    public Constants.Resource.ResourceType[] repairCost;
+
     [HideInInspector]
     public bool repairState = false;
     [HideInInspector]
@@ -34,10 +43,25 @@ public class Damageable : MonoBehaviour
     public UnityEvent healthChange;
 	[HideInInspector]
 	public float damageDeBuff = 1.0f;
+
+    InteractionState _interactState = InteractionState.Ready;
+    public InteractionState InteractState {
+        get {
+            return _interactState;
+        }
+        set {
+            _interactState = value;
+        }
+	}
+
+	float timeSpentRepairing = 0;
+
     //private
     void Start()
     {
-		GameManager.Instance.RegisterDamageable (this);
+        // Register this game object so it can be interacted with.
+        GameManager.Instance.RegisterInteractable(this, InteractionPriority.STRUCTURE);
+
         health = maxHealth;
         InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
     }
@@ -50,25 +74,32 @@ public class Damageable : MonoBehaviour
             periodicDamage = repairState = false;
             Die();
         }
+
         if (health > maxHealth)
         {
             health = maxHealth;
         }
-        healthPercent = (maxHealth / health) * 100;
+
+		healthPercent = (maxHealth / health) * 100;
+
+		if (timeSpentRepairing > healthRepairTime) {
+			repairState = false;
+		} else if (repairState) {
+			timeSpentRepairing += Time.deltaTime;
+		}
     }
 
+
     void PeriodicHealthChange()
-    {
-        if (repairState)
-        {
-			ChangeHealth(healthRepairAmount);
-        }
+	{
+		if (repairState) {
+			ChangeHealth (healthRepairAmount);
+		}
         else if (periodicDamage)
 		{
 			int calcChangeAmount = Mathf.RoundToInt(healthDecreaseAmount * (1 - damageDeBuff));
 			ChangeHealth(calcChangeAmount);
         }
-
     }
 
     /* 
@@ -85,15 +116,63 @@ public class Damageable : MonoBehaviour
         {
             health += changeAmount;
         }
-        if (healthChange == null) { healthChange = new UnityEvent(); }
+        if (healthChange == null) { 
+			healthChange = new UnityEvent(); 
+		}
         healthPercent = (float)health / (float)maxHealth;
         Debug.Log("current health is " + health);
         Debug.Log(healthPercent);
         healthChange.Invoke();
     }
+
     void Die()
     {
         GameStateSwitcher.Instance.GameOver();
     }
 
-}
+    public void OnInteract(CharacterInteraction instigator, CharacterInteraction.KeyState state)
+    {
+        if (state != CharacterInteraction.KeyState.Held)
+        {
+            return; // Early return because I dislike nesting
+        }
+
+        Dictionary<Constants.Resource.ResourceType, GameResource> availableResources = new Dictionary<Constants.Resource.ResourceType, GameResource>();
+
+        // Note: If it where possible for multiple instances of resources to be on the map at once, the order 
+        //  that the next two sections are in will determine if resources are used out of the player's inventory
+        //  first, or off the ground first.
+
+        // Find nearby resources
+        List<GameResource> nearbyResources = GameManager.Instance.GetResourcesInRange(instigator.transform, instigator.interactDistance);
+        foreach(GameResource gr in nearbyResources)
+        {
+            availableResources[gr.type] = gr; // This is set to be used
+        }
+
+        // Find resources in player inventory
+        foreach(GameResource gr in instigator.InventoryComponent.heldInventory)
+        {
+            availableResources[gr.type] = gr; // This is set to be used
+        }
+
+        bool canRepair = true;
+        foreach (Constants.Resource.ResourceType cost in repairCost)
+        {
+            canRepair = availableResources.ContainsKey(cost);
+            if (!canRepair)
+            {   // No sense continuing, we can't repair
+                return;
+            }
+        }
+
+        if (canRepair)
+        {
+            foreach (Constants.Resource.ResourceType cost in repairCost)
+            {
+                GameManager.Instance.ConsumeResource(availableResources[cost]);
+			}
+			repairState = true;
+			timeSpentRepairing = 0;
+        }
+    }}
