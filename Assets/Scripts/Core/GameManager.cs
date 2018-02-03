@@ -11,25 +11,25 @@ public class GameManager : Singleton<GameManager> {
 
 	public void RegisterDamageable(Damageable damageable)
 	{
-		defensiveStructures.Add (damageable);
+		damagebales.Add (damageable);
 	}
 
 	public void DeRegisterDamageable(Damageable damageable)
 	{
-		defensiveStructures.Remove (damageable);
+		damagebales.Remove (damageable);
 	}
 
 	public void RemoveDamageDeBuff(Catapult defensiveStructure)
 	{
 		foreach (Damageable damageable in damagebales) {
-			damageable.damageDeBuff -= defensiveStructure.damageDebuff;
+			damageable.damageDeBuff -= defensiveStructure.damageDebuf;
 		}
 	}
 
 	public void AddDamageDeBuff(Catapult defensiveStructure)
 	{
-		foreach (Damageable damageable in damageables) {
-			damageable.damageDeBuff += defensiveStructure.damageDebuff;
+		foreach (Damageable damageable in damagebales) {
+			damageable.damageDeBuff += defensiveStructure.damageDebuf;
 		}
 	}
 }

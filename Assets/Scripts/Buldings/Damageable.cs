@@ -65,7 +65,7 @@ public class Damageable : MonoBehaviour
         }
         else if (periodicDamage)
 		{
-			int calcChangeAmount = Mathf.Round(healthDecreaseAmount * (1 - damageDeBuff));
+			int calcChangeAmount = Mathf.RoundToInt(healthDecreaseAmount * (1 - damageDeBuff));
 			ChangeHealth(calcChangeAmount);
         }
 
