@@ -42,7 +42,8 @@ public class Damageable : MonoBehaviour, IInteractable
     public float healthPercentChange;
     public UnityEvent healthChange;
 	[HideInInspector]
-	public float damageDeBuff = 1.0f;
+    [System.NonSerialized]
+	public float damageDeBuff = 0f;
 
     InteractionState _interactState = InteractionState.Ready;
     public InteractionState InteractState {
@@ -121,7 +122,7 @@ public class Damageable : MonoBehaviour, IInteractable
 		}
         healthPercent = (float)health / (float)maxHealth;
         Debug.Log("current health is " + health);
-        Debug.Log(healthPercent);
+        Debug.Log("Damage debuff is: " + damageDeBuff);
         healthChange.Invoke();
     }
 
@@ -175,4 +176,5 @@ public class Damageable : MonoBehaviour, IInteractable
 			repairState = true;
 			timeSpentRepairing = 0;
         }
-    }}
+    }
+}

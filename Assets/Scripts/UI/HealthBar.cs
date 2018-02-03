@@ -22,7 +22,6 @@ public class HealthBar : MonoBehaviour
     public void changeWidth()
     {
         // transform.localScale.Set(maxWidth * damageable.healthPercent, transform.localScale.y, transform.localScale.z);
-        Debug.Log("made it");
         transform.localScale = new Vector3(maxWidth * damageable.healthPercent, transform.localScale.y, transform.localScale.z);
         spriteRenderer.color = gradient.Evaluate(damageable.healthPercent);
     }
