@@ -28,31 +28,8 @@ public class Catapult : MonoBehaviour
 		}
 	}
 
-	void PeriodicHealthChange()
-	{
-		 if (periodicDamage)
-		{
-			ChangeHealth(healthDecreaseAmount);
-		}
 
-	}
 
-	/* 
-	Change the health of the Damageable
-	*/
-	public void ChangeHealth(int changeAmount)
-	{
-		int healthPrevious = health;
-		if (changeAmount > 0 && health > maxHealth - changeAmount)
-		{
-			health += maxHealth - health;
-		}
-		else
-		{
-			health += changeAmount;
-		}
-		Debug.Log("Health changed " + (health - healthPrevious));
-		Debug.Log("Current Damageable health is " + health);
-	}
+
 }
 
