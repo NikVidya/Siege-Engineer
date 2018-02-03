@@ -32,9 +32,12 @@ public class Damageable : MonoBehaviour
     [HideInInspector]
     public float healthPercentChange;
     public UnityEvent healthChange;
+	[HideInInspector]
+	public float damageDeBuff = 1.0f;
     //private
     void Start()
     {
+		GameManager.Instance.RegisterDamageable (this);
         health = maxHealth;
         InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
     }
@@ -58,11 +61,12 @@ public class Damageable : MonoBehaviour
     {
         if (repairState)
         {
-            ChangeHealth(healthRepairAmount);
+			ChangeHealth(healthRepairAmount);
         }
         else if (periodicDamage)
-        {
-            ChangeHealth(healthDecreaseAmount);
+		{
+			int calcChangeAmount = Mathf.Round(healthDecreaseAmount * (1 - damageDeBuff));
+			ChangeHealth(calcChangeAmount);
         }
 
     }
