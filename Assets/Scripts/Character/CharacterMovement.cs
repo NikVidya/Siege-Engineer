@@ -38,6 +38,10 @@ public class CharacterMovement : MonoBehaviour
     [Tooltip("The maximum multiplier for the encumbrance")]
     public float encumbranceMultiplier = 0.5f;
 
+	[Header("Stun")]
+	[Tooltip("The amount of time the player should be stunned for")]
+	public float stunDuration = 1.0f;
+
 	[Header("Visuals")]
 	[Tooltip("The animator component which controls the sprite animation")]
 	public Animator animator;
@@ -57,18 +61,30 @@ public class CharacterMovement : MonoBehaviour
 	MoveState _moveState = MoveState.Ready;
 	MoveState _dashState = MoveState.Ready;
 
+	float _timeStunned;
+
     // Use this for initialization
     void Start()
     {
         _capsule = GetComponent<CapsuleCollider2D>();
-        _inventory = GetComponent<CharacterInventory>();
+		_inventory = GetComponent<CharacterInventory>();
+		_timeStunned = stunDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move(Input.GetAxisRaw(Constants.InputNames.HORIZONTAL), Input.GetAxisRaw(Constants.InputNames.VERTICAL), Input.GetButton(Constants.InputNames.DASH));
+		if (_timeStunned <= stunDuration) {
+			_timeStunned += Time.deltaTime;
+		} else {
+			Move (Input.GetAxisRaw (Constants.InputNames.HORIZONTAL), Input.GetAxisRaw (Constants.InputNames.VERTICAL), Input.GetButton (Constants.InputNames.DASH));
+		}
     }
+
+	public void Stun()
+	{
+		_timeStunned = 0;
+	}
 
 	void SetAnimatorDirection(Vector2 dir)
 	{

@@ -30,8 +30,7 @@ public class BattleManager : Singleton<BattleManager>
 
 	void Update()
 	{
-		if (Time.time - lastBombardmentStartTime >= bombardmentTime) {
-			Debug.Log ("Bombard!");
+		if (Time.time - lastBombardmentStartTime >= (bombardmentTime + Random.Range(-(bombardmentDeviation*0.5f),bombardmentDeviation*0.5f))) {
 			SpawnBombardment ();
 			lastBombardmentStartTime = Time.time;
 		}
