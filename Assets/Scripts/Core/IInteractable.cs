@@ -28,4 +28,3 @@ public interface IHoldable : IInteractable
 	void Drop();
 	HoldState HeldState { get; set; }
 }
-

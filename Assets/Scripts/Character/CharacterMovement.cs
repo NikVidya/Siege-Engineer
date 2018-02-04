@@ -62,7 +62,6 @@ public class CharacterMovement : MonoBehaviour
     {
         _capsule = GetComponent<CapsuleCollider2D>();
         _inventory = GetComponent<CharacterInventory>();
-        GameManager.Instance.avatar = this.gameObject;
     }
 
     // Update is called once per frame

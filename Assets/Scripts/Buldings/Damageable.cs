@@ -8,7 +8,7 @@ using UnityEngine.Events;
 		- Alternatively, ditch the healthbar and use Damageable damage sprites
 	2. Placeholder sprites
  */
-public class Damageable : MonoBehaviour, IInteractable
+public class Damageable : MonoBehaviour, IInteractable, IBombable
 {
     [Header("Health Parameters")]
     [Tooltip("The maximum health of the building")]
@@ -130,6 +130,16 @@ public class Damageable : MonoBehaviour, IInteractable
     {
         GameStateSwitcher.Instance.GameOver();
     }
+
+	public void OnBombed(Bombardment instigator){
+		Debug.LogFormat ("Bombed {0} for {1} damage", gameObject.name, instigator.damage);
+		this.health -= instigator.damage;
+	}
+
+	public float GetDistanceToTransform(Transform t)
+	{
+		return Vector3.Distance (t.position, transform.position);
+	}
 
     public void OnInteract(CharacterInteraction instigator, CharacterInteraction.KeyState state)
     {
