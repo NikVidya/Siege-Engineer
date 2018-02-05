@@ -21,54 +21,68 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher>
     [Header("Text UIs")]
     public Text timeUI;
     public Text pauseUI;
+    [Header("Time")]
+    public int timeMinutes = 1;
+    public float timeSeconds = 30; // Time in seconds after minute. for example, if minute = 1 and seconds = 30, timer is 1:30
     bool paused = false;
-    int timeMinutes = 1;
-    float timeSeconds = 30; // Time in seconds after minute. for example, if minute = 1 and seconds = 30, timer is 1:30
     float gameTimer;
     string pauseString = "PAUSED";
     void Start()
     {
         timeString = timeMinutes + ":" + Mathf.Floor(timeSeconds);
         gameTimer = (60 * timeMinutes) + timeSeconds;
-        pauseUI.text = "";
-    }
-    void Update()
-    {
-        if (gameTimer <= 0.01)
+        if (timeUI == null)
         {
-            Win();
+            Debug.LogWarning("Warning: Timer Text UI not passed to Game State Switcher, player won't know how much time remains");
+        }
+        if (pauseUI == null)
+        {
+            Debug.LogWarning("No Pause Text UI was passed to Game State Switcher");
         }
         else
         {
-            if (Input.GetButtonDown(Constants.InputNames.PAUSE))
-            {
-                if (!paused)
-                {
-                    Pause();
-                    Debug.Log("PAUSED");
-                }
-                else
-                {
-                    UnPause();
-                }
-            }
-            TimerLogic();
+            pauseUI.text = "";
         }
+    }
+    void Update()
+    {
+        if (Input.GetButtonDown(Constants.InputNames.PAUSE))
+        {
+            if (!paused)
+            {
+                Pause();
+                Debug.Log("PAUSED");
+            }
+            else
+            {
+                UnPause();
+            }
+        }
+        TimerLogic();
     }
 
     void TimerLogic()
     {
         timeSeconds -= Time.deltaTime;
         gameTimer -= Time.deltaTime;
+
         if (timeSeconds <= 0)
         {
             timeSeconds = 60f;
             timeMinutes--;
         }
+
         string zero = "";
         if (timeSeconds < 10) { zero = "0"; } else { zero = ""; }
         timeString = timeMinutes + ":" + zero + Mathf.Floor(timeSeconds);
-        timeUI.text = timeString;
+        if (timeUI != null)
+        {
+            timeUI.text = timeString;
+        }
+        if (gameTimer <= 0.01)
+        {
+            Win();
+        }
     }
     public void GameStart()
     {
@@ -100,7 +114,7 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher>
         }
         else
         {
-            Debug.LogWarning("No player object for game state switcher to pause");
+            Debug.LogWarning("Player Movement was not passed to GameStateSwitcher, player can still move when paused");
         }
         if (pauseUI != null)
         {
@@ -114,10 +128,6 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher>
         if (player != null)
         {
             player.paused = false;
-        }
-        else
-        {
-            Debug.LogWarning("No player object for game state switcher to unpause");
         }
         if (pauseUI != null)
         {
