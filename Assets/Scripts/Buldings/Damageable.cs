@@ -108,7 +108,6 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
 	*/
     public void ChangeHealth(int changeAmount)
     {
-        float healthPrevious = health;
         if (changeAmount > 0 && health > maxHealth - changeAmount)
         {
             health += maxHealth - health;

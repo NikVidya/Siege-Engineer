@@ -38,157 +38,179 @@ public class CharacterMovement : MonoBehaviour
     [Tooltip("The maximum multiplier for the encumbrance")]
     public float encumbranceMultiplier = 0.5f;
 
-	[Header("Stun")]
-	[Tooltip("The amount of time the player should be stunned for")]
-	public float stunDuration = 1.0f;
+    [Header("Stun")]
+    [Tooltip("The amount of time the player should be stunned for")]
+    public float stunDuration = 1.0f;
 
-	[Header("Visuals")]
-	[Tooltip("The animator component which controls the sprite animation")]
-	public Animator animator;
+    [Header("Visuals")]
+    [Tooltip("The animator component which controls the sprite animation")]
+    public Animator animator;
 
-	[HideInInspector]
-	public bool paused = false;
-	private const string ANIMATOR_SPEED_TAG = "speed";
-	private const string ANIMATOR_DIRECTION_TAG = "direction";
+    [HideInInspector]
+    public bool paused = false;
+    private const string ANIMATOR_SPEED_TAG = "speed";
+    private const string ANIMATOR_DIRECTION_TAG = "direction";
 
     CapsuleCollider2D _capsule;
     CharacterInventory _inventory;
 
     float _timeMoving;
     float _timeDashing;
-	private enum MoveState
-	{
-		Ready, Moving, Cooldown
-	}
-	MoveState _moveState = MoveState.Ready;
-	MoveState _dashState = MoveState.Ready;
+    private enum MoveState
+    {
+        Ready, Moving, Cooldown
+    }
+    MoveState _moveState = MoveState.Ready;
+    MoveState _dashState = MoveState.Ready;
 
-	float _timeStunned;
+    float _timeStunned;
 
     // Use this for initialization
     void Start()
     {
         _capsule = GetComponent<CapsuleCollider2D>();
-		_inventory = GetComponent<CharacterInventory>();
-		_timeStunned = stunDuration;
+        _inventory = GetComponent<CharacterInventory>();
+        _timeStunned = stunDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
-		if (_timeStunned <= stunDuration) {
-			_timeStunned += Time.deltaTime;
-		} else if (!paused) {
-			Move (Input.GetAxisRaw (Constants.InputNames.HORIZONTAL), Input.GetAxisRaw (Constants.InputNames.VERTICAL), Input.GetButton (Constants.InputNames.DASH));
-		}
+        if (_timeStunned <= stunDuration)
+        {
+            _timeStunned += Time.deltaTime;
+        }
+        else if (!paused)
+        {
+            Move(Input.GetAxisRaw(Constants.InputNames.HORIZONTAL), Input.GetAxisRaw(Constants.InputNames.VERTICAL), Input.GetButton(Constants.InputNames.DASH));
+        }
     }
 
-	public void Stun()
-	{
-		_timeStunned = 0;
-	}
+    public void Stun()
+    {
+        _timeStunned = 0;
+    }
 
-	void SetAnimatorDirection(Vector2 dir)
-	{
-		int dirVal = 0;
-		Vector2 abs = new Vector2(Mathf.Abs (dir.x), Mathf.Abs (dir.y));
+    void SetAnimatorDirection(Vector2 dir)
+    {
+        int dirVal = 0;
+        Vector2 abs = new Vector2(Mathf.Abs(dir.x), Mathf.Abs(dir.y));
 
-		if (dir.x > Mathf.Epsilon && abs.x >= abs.y) {
-			dirVal = 2;
-		} else if (dir.x < Mathf.Epsilon && abs.x >= abs.y) {
-			dirVal = 0;
-		}
+        if (dir.x > Mathf.Epsilon && abs.x >= abs.y)
+        {
+            dirVal = 2;
+        }
+        else if (dir.x < Mathf.Epsilon && abs.x >= abs.y)
+        {
+            dirVal = 0;
+        }
 
-		if (dir.y > Mathf.Epsilon && abs.y > abs.x) {
-			dirVal = 1;
-		} else if (dir.y < Mathf.Epsilon && abs.y > abs.x) {
-			dirVal = 3;
-		}
+        if (dir.y > Mathf.Epsilon && abs.y > abs.x)
+        {
+            dirVal = 1;
+        }
+        else if (dir.y < Mathf.Epsilon && abs.y > abs.x)
+        {
+            dirVal = 3;
+        }
 
-		animator.SetInteger (ANIMATOR_DIRECTION_TAG, dirVal);
-	}
+        animator.SetInteger(ANIMATOR_DIRECTION_TAG, dirVal);
+    }
 
     void Move(float horizontal, float vertical, bool shouldDash)
     {
-		// Get the desired direction of movement
+        // Get the desired direction of movement
         Vector2 direction = new Vector2(horizontal, vertical);
         direction.Normalize();
 
-		SetAnimatorDirection (direction);
+        SetAnimatorDirection(direction);
 
-		if (direction.sqrMagnitude > Mathf.Epsilon && _moveState == MoveState.Ready) {
-			// The player started moving
-			_moveState = MoveState.Moving;
-			_timeMoving = 0.0f;
-		} else if (direction.sqrMagnitude <= Mathf.Epsilon) {
-			// Player is not moving
-			_moveState = MoveState.Ready;
-			animator.SetFloat (ANIMATOR_SPEED_TAG, 0.0f);
-			return;
-		}
+        if (direction.sqrMagnitude > Mathf.Epsilon && _moveState == MoveState.Ready)
+        {
+            // The player started moving
+            _moveState = MoveState.Moving;
+            _timeMoving = 0.0f;
+        }
+        else if (direction.sqrMagnitude <= Mathf.Epsilon)
+        {
+            // Player is not moving
+            _moveState = MoveState.Ready;
+            animator.SetFloat(ANIMATOR_SPEED_TAG, 0.0f);
+            return;
+        }
 
-		if (shouldDash && _dashState == MoveState.Ready) {
-			_dashState = MoveState.Moving;
-			_timeDashing = 0.0f;
-		}
+        if (shouldDash && _dashState == MoveState.Ready)
+        {
+            _dashState = MoveState.Moving;
+            _timeDashing = 0.0f;
+        }
 
-		// Increment the timers
-		_timeMoving += Time.deltaTime;
-		_timeDashing += Time.deltaTime;
+        // Increment the timers
+        _timeMoving += Time.deltaTime;
+        _timeDashing += Time.deltaTime;
 
-		// Determine the normal movement velocity
-		float vel_normal = Mathf.Clamp(accelerationCurve.Evaluate(_timeMoving / accelerationTime) * maxSpeed, minSpeed, maxSpeed);
+        // Determine the normal movement velocity
+        float vel_normal = Mathf.Clamp(accelerationCurve.Evaluate(_timeMoving / accelerationTime) * maxSpeed, minSpeed, maxSpeed);
 
-		// Determine the Dash velocity
-		float vel_dash = 0.0f;
-		switch (_dashState) {
-		case MoveState.Moving:
-			
-			// Compute dash speed
-			vel_dash = dashCurve.Evaluate(_timeDashing / dashTime) * dashAdd;
+        // Determine the Dash velocity
+        float vel_dash = 0.0f;
+        switch (_dashState)
+        {
+            case MoveState.Moving:
 
-			if (_timeDashing >= dashTime) {
-				// Dashed long enough
-				_timeMoving = 1.0f; // Force full speed after a dash
-				_dashState = MoveState.Cooldown;
-			}
-			break;
-		case MoveState.Cooldown:
-			// TODO Indicate cool down progress
+                // Compute dash speed
+                vel_dash = dashCurve.Evaluate(_timeDashing / dashTime) * dashAdd;
 
-			// Only let the cooldown end if the timer is up AND the player let go of the key
-			if (_timeDashing >= dashTime + dashCooldownTime && !shouldDash) {
-				// Dash is ready again
-				_dashState = MoveState.Ready;
-			}
-			break;
-		}
+                if (_timeDashing >= dashTime)
+                {
+                    // Dashed long enough
+                    _timeMoving = 1.0f; // Force full speed after a dash
+                    _dashState = MoveState.Cooldown;
+                }
+                break;
+            case MoveState.Cooldown:
+                // TODO Indicate cool down progress
+
+                // Only let the cooldown end if the timer is up AND the player let go of the key
+                if (_timeDashing >= dashTime + dashCooldownTime && !shouldDash)
+                {
+                    // Dash is ready again
+                    _dashState = MoveState.Ready;
+                }
+                break;
+        }
         float curEncumbranceMultiplier = 1 - encumbranceMultiplier * encumbranceCurve.Evaluate(_inventory.NumHeldItems / (float)encumbranceMaxCount);
-		float total_vel = (vel_normal + vel_dash) * curEncumbranceMultiplier;
+        float total_vel = (vel_normal + vel_dash) * curEncumbranceMultiplier;
 
-		animator.SetFloat (ANIMATOR_SPEED_TAG, total_vel);
+        animator.SetFloat(ANIMATOR_SPEED_TAG, total_vel);
 
         // Cast the capsule to find where the player will end up
-		// Seperate casts so we can slide along walls with diagonal input
-		Vector2 dirH = new Vector2(direction.x, 0);
-		Vector2 dirV = new Vector2 (0, direction.y);
-		RaycastHit2D hitH = Physics2D.CapsuleCast(_capsule.transform.position, _capsule.size, _capsule.direction, 0.0f, dirH, total_vel, LayerMask.GetMask(Constants.MOVEMENT_BLOCKING_LAYERS));
-		RaycastHit2D hitV = Physics2D.CapsuleCast(_capsule.transform.position, _capsule.size, _capsule.direction, 0.0f, dirV, total_vel, LayerMask.GetMask(Constants.MOVEMENT_BLOCKING_LAYERS));
+        // Seperate casts so we can slide along walls with diagonal input
+        Vector2 dirH = new Vector2(direction.x, 0);
+        Vector2 dirV = new Vector2(0, direction.y);
+        RaycastHit2D hitH = Physics2D.CapsuleCast(_capsule.transform.position, _capsule.size, _capsule.direction, 0.0f, dirH, total_vel, LayerMask.GetMask(Constants.MOVEMENT_BLOCKING_LAYERS));
+        RaycastHit2D hitV = Physics2D.CapsuleCast(_capsule.transform.position, _capsule.size, _capsule.direction, 0.0f, dirV, total_vel, LayerMask.GetMask(Constants.MOVEMENT_BLOCKING_LAYERS));
 
-		//Vector3 oldPos = transform.position;
+        //Vector3 oldPos = transform.position;
 
-		if (hitH.collider) {
-			transform.position = new Vector3(hitH.centroid.x - (direction.x * 0.01f), transform.position.y, transform.position.z); // Place at the hit location, backed off by an amount to account for precision errors
-		} else {
-			transform.position += new Vector3(direction.x * total_vel, 0, 0);
-		}
+        if (hitH.collider)
+        {
+            transform.position = new Vector3(hitH.centroid.x - (direction.x * 0.01f), transform.position.y, transform.position.z); // Place at the hit location, backed off by an amount to account for precision errors
+        }
+        else
+        {
+            transform.position += new Vector3(direction.x * total_vel, 0, 0);
+        }
 
-		if (hitV.collider) {
-			transform.position = new Vector3(transform.position.x, hitV.centroid.y - (direction.y * 0.01f), transform.position.z); // Place at the hit location, backed off by an amount to account for precision errors
-		} else {
-			transform.position += new Vector3(0, direction.y * total_vel, 0);
-		}
+        if (hitV.collider)
+        {
+            transform.position = new Vector3(transform.position.x, hitV.centroid.y - (direction.y * 0.01f), transform.position.z); // Place at the hit location, backed off by an amount to account for precision errors
+        }
+        else
+        {
+            transform.position += new Vector3(0, direction.y * total_vel, 0);
+        }
 
-		//Debug.DrawLine (oldPos, transform.position, Color.red);
+        //Debug.DrawLine (oldPos, transform.position, Color.red);
     }
 }
