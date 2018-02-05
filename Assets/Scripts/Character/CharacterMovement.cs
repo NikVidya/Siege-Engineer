@@ -46,6 +46,8 @@ public class CharacterMovement : MonoBehaviour
 	[Tooltip("The animator component which controls the sprite animation")]
 	public Animator animator;
 
+	[HideInInspector]
+	public bool paused = false;
 	private const string ANIMATOR_SPEED_TAG = "speed";
 	private const string ANIMATOR_DIRECTION_TAG = "direction";
 
@@ -76,7 +78,7 @@ public class CharacterMovement : MonoBehaviour
     {
 		if (_timeStunned <= stunDuration) {
 			_timeStunned += Time.deltaTime;
-		} else {
+		} else if (!paused) {
 			Move (Input.GetAxisRaw (Constants.InputNames.HORIZONTAL), Input.GetAxisRaw (Constants.InputNames.VERTICAL), Input.GetButton (Constants.InputNames.DASH));
 		}
     }

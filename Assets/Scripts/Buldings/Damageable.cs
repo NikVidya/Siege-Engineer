@@ -121,8 +121,8 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
 			healthChange = new UnityEvent(); 
 		}
         healthPercent = (float)health / (float)maxHealth;
-        Debug.Log("current health is " + health);
-        Debug.Log("Damage debuff is: " + damageDeBuff);
+        // Debug.Log("current health is " + health);
+        // Debug.Log("Damage debuff is: " + damageDeBuff);
         healthChange.Invoke();
     }
 
