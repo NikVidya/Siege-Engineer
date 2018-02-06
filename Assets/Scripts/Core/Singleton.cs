@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
+	public static bool IsApplicationQuitting {
+		get {
+			return applicationIsQuitting;
+		}
+	}
     private static T _instance;
     private static object _lock = new object();
 
