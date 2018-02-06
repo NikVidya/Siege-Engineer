@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 2dc0170f534b98b40b0b1aa1832bbf53
-timeCreated: 1517875733
+guid: 2cc8c0bcad162ea4aaa0c7b0ef4e8240
+timeCreated: 1517876357
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: trebuchet_0
-    21300002: trebuchet_1
-    21300004: trebuchet_2
-    21300006: trebuchet_3
+    21300000: tilemap_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -61,7 +58,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -71,7 +68,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -81,7 +78,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: iPhone
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -91,7 +88,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Android
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -104,43 +101,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trebuchet_0
+      name: tilemap_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1104
-        height: 1460
+        y: 63
+        width: 190
+        height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: trebuchet_1
-      rect:
-        serializedVersion: 2
-        x: 1104
-        y: 0
-        width: 1104
-        height: 1460
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: trebuchet_2
-      rect:
-        serializedVersion: 2
-        x: 2208
-        y: 0
-        width: 1104
-        height: 1460
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
