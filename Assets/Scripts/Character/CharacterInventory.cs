@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterInventory : MonoBehaviour
+public class CharacterInventory : MonoBehaviour, IBombable
 {
     [Header("Pickup Parameters")]
     [Tooltip("The in world container for the inventory. Leave as none to have no visible inventory")]
@@ -20,6 +20,7 @@ public class CharacterInventory : MonoBehaviour
 
     private void Start()
     {
+		GameManager.Instance.RegisterBombable (this);
     }
 
     void Update()
@@ -53,18 +54,18 @@ public class CharacterInventory : MonoBehaviour
 		heldInventory.Remove (held);
 	}
 
-    /*
-    // Repair system
-    void RepairGate()
-    {
-        if (Input.GetButton(Constants.InputNames.REPAIR))
-        {
-            repairTarget.repairState = true;
-        }
-        else
-        {
-            repairTarget.repairState = false;
-        }
-    }
-    */
+	public void OnBombed(Bombardment instigator)
+	{
+		if (NumHeldItems <= 0) {
+			CharacterMovement movementComponent = GetComponent<CharacterMovement> ();
+			if (movementComponent != null) {
+				movementComponent.Stun ();
+			}
+		}
+	}
+
+	public float GetDistanceToTransform(Transform t)
+	{
+		return Vector3.Distance (transform.position, t.position);
+	}
 }

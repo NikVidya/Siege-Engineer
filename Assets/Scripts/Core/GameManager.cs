@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager> {
 
-    public GameObject avatar;
+	public CharacterInteraction interactionComponent;
 
+	public List<IInteractable>[] Interactables {
+		get {
+			if (_interactables == null) {
+				InitializeInteractables ();
+			}
+			return _interactables;
+		}
+	}
+	public List<IInteractable>[] _interactables;
 	public List<Damageable> damagebales = new List<Damageable>();
+
+	public List<IBombable> bombables = new List<IBombable>();
 
 	public void RegisterDamageable(Damageable damageable)
 	{
@@ -31,17 +42,6 @@ public class GameManager : Singleton<GameManager> {
 			damageable.damageDeBuff += defensiveStructure.damageDebuf;
 		}
 	}
-	public CharacterInteraction interactionComponent;
-
-	public List<IInteractable>[] Interactables {
-		get {
-			if (_interactables == null) {
-				InitializeInteractables ();
-			}
-			return _interactables;
-		}
-	}
-	public List<IInteractable>[] _interactables;
 
 	void InitializeInteractables()
 	{
@@ -127,4 +127,25 @@ public class GameManager : Singleton<GameManager> {
 
         return ret;
     }
+
+	public void RegisterBombable(IBombable bombable)
+	{
+		bombables.Add (bombable);
+	}
+
+	public void DeRegisterBombable(IBombable bombable)
+	{
+		bombables.Remove(bombable);
+	}
+
+	public List<IBombable> GetBombablesInRange(Transform t, float range)
+	{
+		List<IBombable> ret = new List<IBombable> ();
+		foreach (IBombable bombable in bombables) {
+			if (bombable.GetDistanceToTransform (t) < range) {
+				ret.Add (bombable);
+			}
+		}
+		return ret;
+	}
 }
