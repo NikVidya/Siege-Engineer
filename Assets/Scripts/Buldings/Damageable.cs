@@ -32,12 +32,14 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
     [Tooltip("What resources are required for repair")]
     public Constants.Resource.ResourceType[] repairCost;
 
+    public bool ShouldEndGame = false;
+
     [HideInInspector]
     public bool repairState = false;
     [HideInInspector]
     public int health;
     [HideInInspector]
-    public float healthPercent;
+    public float healthPercent = 100.0f;
     [HideInInspector]
     public float healthPercentChange;
     public UnityEvent healthChange;
@@ -65,23 +67,26 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
 
         health = maxHealth;
         InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
+
+        healthChange.Invoke();
     }
 
     void Update()
     {
-        if (health <= 0)
-        {
-            health = 0;
-            periodicDamage = repairState = false;
-            Die();
-        }
 
         if (health > maxHealth)
         {
             health = maxHealth;
         }
 
-		healthPercent = (maxHealth / health) * 100;
+        if (health > 0)
+        {
+            healthPercent = (maxHealth / health) * 100;
+        }
+        else
+        {
+            healthPercent = 0;
+        }
 
 		if (timeSpentRepairing > healthRepairTime) {
 			repairState = false;
@@ -93,13 +98,14 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
 
     void PeriodicHealthChange()
 	{
-		if (repairState) {
-			ChangeHealth (healthRepairAmount);
-		}
-        else if (periodicDamage)
-		{
-			int calcChangeAmount = Mathf.RoundToInt(healthDecreaseAmount * (1 - damageDeBuff));
-			ChangeHealth(calcChangeAmount);
+        if(repairState)
+        {
+            ChangeHealth(healthRepairAmount);
+        }
+        else if (periodicDamage && !repairState)
+        {
+            int calcChangeAmount = Mathf.RoundToInt(healthDecreaseAmount * (1 - damageDeBuff));
+            ChangeHealth(calcChangeAmount);
         }
     }
 
@@ -108,14 +114,14 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
 	*/
     public void ChangeHealth(int changeAmount)
     {
-        if (changeAmount > 0 && health > maxHealth - changeAmount)
+        health += changeAmount;
+        health = Mathf.Clamp(health, 0, maxHealth);
+
+        if (health <= 0)
         {
-            health += maxHealth - health;
+            Die();
         }
-        else
-        {
-            health += changeAmount;
-        }
+
         if (healthChange == null) { 
 			healthChange = new UnityEvent(); 
 		}
@@ -127,7 +133,10 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
 
     void Die()
     {
-        GameStateSwitcher.Instance.GameOver();
+        if (ShouldEndGame)
+        {
+            GameStateSwitcher.Instance.GameOver();
+        }
     }
 
 	public void OnBombed(Bombardment instigator){
@@ -183,6 +192,7 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
                 GameManager.Instance.ConsumeResource(availableResources[cost]);
 			}
 			repairState = true;
+            Debug.Log("Start Repair");
 			timeSpentRepairing = 0;
         }
     }

@@ -81,11 +81,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6c450737f8d1b43a55fc8e28ce89eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTime: 5
-  hitDelay: 1
-  moveRate: 2
+  moveTime: 3
+  hitDelay: 0.5
+  moveRate: 3
   bombardmentArea: 1.5
-  damage: 10
+  damage: 20
 --- !u!212 &212030072141698950
 SpriteRenderer:
   m_ObjectHideFlags: 1
