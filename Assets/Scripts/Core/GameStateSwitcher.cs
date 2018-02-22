@@ -21,14 +21,22 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher> {
     public Text timeUI;
     public Text pauseUI;
     [Header ("Time")]
-    public int timeMinutes = 1;
-    public float timeSeconds = 30; // Time in seconds after minute. for example, if minute = 1 and seconds = 30, timer is 1:30
+    public bool countDown = true;
     bool paused = false;
-    float gameTimer;
+    [SerializeField]
+    float gameTimer = 150;
+    // timeMinutes and timeSeconds used for the display time
+    int timeMinutes = 1;
+    float timeSeconds = 30; // Time in seconds after minute. for example, if minute = 1 and seconds = 30, timer is 1:30
     string pauseString = "PAUSED";
     void Start () {
-        timeString = timeMinutes + ":" + Mathf.Floor (timeSeconds);
         gameTimer = (60 * timeMinutes) + timeSeconds;
+
+        timeMinutes = (int) Mathf.Floor (gameTimer / 60);
+        timeSeconds = gameTimer - (timeMinutes * 60);
+
+        timeString = timeMinutes + ":" + Mathf.Floor (timeSeconds);
+
         if (timeUI == null) {
             Debug.LogWarning ("Warning: Timer Text UI not passed to Game State Switcher, player won't know how much time remains");
         }
@@ -51,21 +59,30 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher> {
     }
 
     void TimerLogic () {
-        timeSeconds -= Time.deltaTime;
-        gameTimer -= Time.deltaTime;
-
-        if (timeSeconds <= 0) {
-            timeSeconds = 60f;
-            timeMinutes--;
+        if (countDown) {
+            timeSeconds -= Time.deltaTime;
+            gameTimer -= Time.deltaTime;
+            if (timeSeconds <= 0) {
+                timeSeconds = 60f;
+                timeMinutes--;
+            }
+        } else {
+            timeSeconds += Time.deltaTime;
+            gameTimer += Time.deltaTime;
+            if (timeSeconds > 59) {
+                timeSeconds = 0f;
+                timeMinutes++;
+            }
         }
 
         string zero = "";
         if (timeSeconds < 10) { zero = "0"; } else { zero = ""; }
         timeString = timeMinutes + ":" + zero + Mathf.Floor (timeSeconds);
+
         if (timeUI != null) {
             timeUI.text = timeString;
         }
-        if (gameTimer <= 0.01) {
+        if (countDown && gameTimer <= 0.01) {
             Win ();
         }
     }
