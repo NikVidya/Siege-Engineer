@@ -11,16 +11,8 @@ public class CharacterMovement : MonoBehaviour
     public float maxSpeed = 0.05f;
     [Tooltip("Added to the maximum speed when the player is dashing")]
     public float dashAdd = 0.09f;
-    [Tooltip("When any input is supplied, player will move at least this fast")]
-    public float minSpeed = 0.01f;
 
     [Header("Movement Feel")]
-    [Space(-8)]
-    [Header(" - Acceleration")]
-    [Tooltip("Defines the shape of the player's acceleration")]
-    public AnimationCurve accelerationCurve;
-    [Tooltip("Amount of time in seconds that the above curve takes")]
-    public float accelerationTime = 0.4f;
     [Space(-8)]
     [Header(" - Dash")]
     [Tooltip("Defines the shape of the dash movement")]
@@ -75,12 +67,15 @@ public class CharacterMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (_timeStunned <= stunDuration)
-        {
-            _timeStunned += Time.deltaTime;
-        }
-        else if (!paused)
+	{
+		if (_timeStunned <= stunDuration) {
+			_timeStunned += Time.deltaTime;
+		}
+	}
+
+	void LateUpdate()
+	{
+		if (!paused && _timeStunned > stunDuration)
         {
             Move(Input.GetAxisRaw(Constants.InputNames.HORIZONTAL), Input.GetAxisRaw(Constants.InputNames.VERTICAL), Input.GetButton(Constants.InputNames.DASH));
         }
@@ -150,7 +145,7 @@ public class CharacterMovement : MonoBehaviour
         _timeDashing += Time.deltaTime;
 
         // Determine the normal movement velocity
-        float vel_normal = Mathf.Clamp(accelerationCurve.Evaluate(_timeMoving / accelerationTime) * maxSpeed, minSpeed, maxSpeed);
+        float vel_normal = maxSpeed;
 
         // Determine the Dash velocity
         float vel_dash = 0.0f;
@@ -195,7 +190,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (hitH.collider)
         {
-            transform.position = new Vector3(hitH.centroid.x - (direction.x * 0.01f), transform.position.y, transform.position.z); // Place at the hit location, backed off by an amount to account for precision errors
+			transform.position = new Vector3(hitH.centroid.x - (direction.x * 0.01f), transform.position.y, transform.position.z); // Place at the hit location, backed off by an amount to account for precision errors
         }
         else
         {
@@ -204,7 +199,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (hitV.collider)
         {
-            transform.position = new Vector3(transform.position.x, hitV.centroid.y - (direction.y * 0.01f), transform.position.z); // Place at the hit location, backed off by an amount to account for precision errors
+			transform.position = new Vector3(transform.position.x, hitV.centroid.y - (direction.y * 0.01f), transform.position.z); // Place at the hit location, backed off by an amount to account for precision errors
         }
         else
         {
