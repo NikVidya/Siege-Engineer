@@ -73,7 +73,7 @@ public class CharacterMovement : MonoBehaviour
 		}
 	}
 
-	void FixedUpdate()
+	void LateUpdate()
 	{
 		if (!paused && _timeStunned > stunDuration)
         {
