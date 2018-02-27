@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Currency : MonoBehaviour {
 
-	private bool active = false;
 	void Start () {
-		
+		Debug.Log("I am active");
 	}
 	
 	void Update () {
 	}
+
 }
