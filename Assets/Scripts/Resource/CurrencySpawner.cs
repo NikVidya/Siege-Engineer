@@ -54,11 +54,9 @@ public class CurrencySpawner : MonoBehaviour {
 	void SpawnCurrency () {
 		if (!instanceList[instanceIteration].activeInHierarchy) {
 			instanceList[instanceIteration].SetActive (true);
-			Debug.Log ("activated currency item");
-			SetRandomLocation (instanceList[instanceIteration]);
-		} else {
-			instanceList[instanceIteration].SetActive (false);
 		}
+
+		SetRandomLocation (instanceList[instanceIteration]);
 
 		instanceIteration++;
 		if (instanceIteration == currencyMaxSpawnAmount) {
