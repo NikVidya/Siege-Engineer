@@ -13871,8 +13871,8 @@ MonoBehaviour:
   timeString: 
   timeUI: {fileID: 1024361507}
   pauseUI: {fileID: 1993855376}
-  timeMinutes: 2
-  timeSeconds: 30
+  countDown: 1
+  gameTimer: 150
 --- !u!4 &1883485625
 Transform:
   m_ObjectHideFlags: 0

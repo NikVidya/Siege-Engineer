@@ -23,8 +23,7 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher> {
     [Header ("Time")]
     public bool countDown = true;
     bool paused = false;
-    [SerializeField]
-    float gameTimer = 150;
+    public float gameTimer = 150;
     // timeMinutes and timeSeconds used for the display time
     int timeMinutes = 1;
     float timeSeconds = 30; // Time in seconds after minute. for example, if minute = 1 and seconds = 30, timer is 1:30
