@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CurrencySpawner : MonoBehaviour {
-
 	// public
 	[Tooltip ("Amount of time between spawns")]
 	public float spawnTime = 10;
@@ -11,7 +10,7 @@ public class CurrencySpawner : MonoBehaviour {
 	public int currencyMaxSpawnAmount = 5;
 	[Tooltip ("Possible spawn positions for the currency pickups.")]
 	public Vector3[] spawnPositions = new Vector3[5];
-	[Tooltip ("The prefab to spawn in a random location")]
+	[Tooltip ("The prefab to spawn in one of the positions.")]
 	public GameObject currencyPrefab = null;
 	// private
 	private float spawnTimer;
@@ -27,7 +26,7 @@ public class CurrencySpawner : MonoBehaviour {
 
 	void Start () {
 		spawnTimer = spawnTime;
-		if (currencyMaxSpawnAmount < spawnPositions.Length) {
+		if (currencyMaxSpawnAmount > spawnPositions.Length) {
 			Debug.LogWarning ("Amount of currency instances greater than possible spawn positions. Clamped to amount of spawn positions");
 			Mathf.Clamp (currencyMaxSpawnAmount, 0, spawnPositions.Length);
 		}
@@ -35,7 +34,7 @@ public class CurrencySpawner : MonoBehaviour {
 		instanceList = new GameObject[currencyMaxSpawnAmount];
 
 		for (int i = 0; i < instanceList.Length; i++) {
-			if (currencyPrefab) { // Resource instance needs to be created
+			if (currencyPrefab) { 
 				instanceList[i] = GameObject.Instantiate (currencyPrefab, transform.TransformPoint (spawnPositions[i]), new Quaternion (), null);
 			}
 			instanceList[i].SetActive (false);
@@ -54,8 +53,7 @@ public class CurrencySpawner : MonoBehaviour {
 	void SpawnCurrency () {
 		if (!instanceList[instanceIteration].activeInHierarchy) {
 			instanceList[instanceIteration].SetActive (true);
-		}
-
+		} 
 		SetRandomLocation (instanceList[instanceIteration]);
 
 		instanceIteration++;
