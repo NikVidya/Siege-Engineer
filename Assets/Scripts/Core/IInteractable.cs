@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-public enum InteractionPriority
+public enum InteractableType
 {
-	STRUCTURE = 0,
-    RESOURCE = 1
+	REPAIR = 0,
+    PICKUP = 1
 }
 public enum InteractionState {
 	Ready,
@@ -13,8 +13,9 @@ public enum InteractionState {
 }
 public interface IInteractable
 {
-	void OnInteract(CharacterInteraction instigator, CharacterInteraction.KeyState state);
+	void OnInteract(CharacterInteraction instigator);
 	InteractionState InteractState { get; set; }
+    InteractableType InteractableType { get; set; }
 	GameObject gameObject { get; }
 }
 
