@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(CharacterInventory))]
 public class CharacterInteraction : MonoBehaviour
@@ -11,17 +12,9 @@ public class CharacterInteraction : MonoBehaviour
     public float interactDistance = 1.0f;
     [Tooltip("The GameObject or prefab to use as indication that an object can be picked up")]
     public GameObject interactionPrompt;
-
-    public enum KeyState
-    {
-        Pressed,
-        Held,
-        Released
-    }
-    KeyState curKeyState = KeyState.Released;
-    KeyState oldKeyState = KeyState.Released;
-    float keyPressedStartTime = 0.0f;
+    
 	bool canDrop = true;
+    Dictionary<GameObject, GameObject> prompts;
 
     public CharacterInventory InventoryComponent { get { return _inv; } }
     CharacterInventory _inv;
@@ -42,72 +35,77 @@ public class CharacterInteraction : MonoBehaviour
             Debug.LogError("Character Interaction does not have an interaction prompt!");
         }
         interactionPrompt.SetActive(false);
+        prompts = new Dictionary<GameObject, GameObject>();
     }
 
-    void ShowPrompt(GameObject target)
+    void AddPrompt(GameObject target, InteractableType type)
     {
-        interactionPrompt.SetActive(true);
-        interactionPrompt.transform.position = target.transform.position + new Vector3(0.0f, 0.0f, 0.0f);
-        interactionPrompt.transform.parent = target.transform;
-    }
-    void HidePrompt()
-    {
-        interactionPrompt.SetActive(false);
-    }
-
-    IInteractable FocusCloseHoldable()
-    {
-        IInteractable closest = GameManager.Instance.GetHighestPriorityNearestInteractableInRange(transform, interactDistance);
-        // Found closest if it exists
-        if (closest != null)
-        {   // Show the prompt
-            ShowPrompt(closest.gameObject);
+        if (!prompts.ContainsKey(target))
+        {
+            // TODO: When art supports it, set the text on the prompt based on the type
+            GameObject prompt = GameObject.Instantiate(interactionPrompt);
+            prompt.SetActive(true);
+            prompt.transform.position = target.transform.position + new Vector3(0.0f, 0.0f, 0.0f);
+            prompt.transform.parent = target.transform;
+            prompts.Add(target, prompt);
         }
-        else
-        {   // Hide the prompt
-            HidePrompt();
+    }
+    void RemovePrompt(GameObject target)
+    {
+        GameObject.Destroy(prompts[target]);
+    }
+
+    IInteractable[] HighlightNearestInteractables()
+    {
+        IInteractable[] interactables = GameManager.Instance.GetNearestInteractablesFromEachTypeInRange(gameObject.transform, interactDistance);
+
+        foreach(IInteractable interactable in interactables)
+        {
+            if (interactable != null)
+            {
+                AddPrompt(interactable.gameObject, interactable.InteractableType);
+            }
         }
 
-        return closest;
+        return interactables;
     }
 
     void Update()
     {
-        IInteractable closest = FocusCloseHoldable();
-        if (Input.GetButtonDown(Constants.InputNames.INTERACT) && curKeyState == KeyState.Released)
-        {
-            curKeyState = KeyState.Pressed;
-            keyPressedStartTime = 0.0f;
-			canDrop = true;
-        }
-        else if (Input.GetButton(Constants.InputNames.INTERACT) && curKeyState == KeyState.Pressed && keyPressedStartTime < holdTime)
-        {
-            keyPressedStartTime += Time.deltaTime;
-        }
-        else if (Input.GetButton(Constants.InputNames.INTERACT) && curKeyState == KeyState.Pressed && keyPressedStartTime >= holdTime)
-        {
-            curKeyState = KeyState.Held;
-        }
-        else if (Input.GetButtonUp(Constants.InputNames.INTERACT) && (curKeyState == KeyState.Pressed || curKeyState == KeyState.Held))
-        {
-            curKeyState = KeyState.Released;
-        }
-
-        if (oldKeyState != curKeyState)
-        {
-            OnKeyStateChange(curKeyState, closest);
-            oldKeyState = curKeyState;
-        }
+        IInteractable[] interactables = HighlightNearestInteractables();
+        CheckIfInteracting(interactables);
     }
 
-    void OnKeyStateChange(KeyState keyState, IInteractable interactable)
+    void CheckIfInteracting(IInteractable[] interactablePool)
     {
-		if (interactable != null) {
-			interactable.OnInteract (this, keyState);
-			canDrop = false;
-		} else if (canDrop && keyState == KeyState.Released){
-			InventoryComponent.DropFirstHeld ();
-		}
+        // Check the pickup key response
+        if (Input.GetButtonDown(Constants.InputNames.PICKUP))
+        {
+            if (interactablePool[(int)InteractableType.PICKUP] == null)
+            { // No pickup to interact with
+                canDrop = true;
+            }
+            else
+            {
+                canDrop = false;
+                interactablePool[(int)InteractableType.PICKUP].OnInteract(this);
+            }
+        }
+        else if (Input.GetButtonUp(Constants.InputNames.PICKUP) && canDrop)
+        {   // Nothing was close enough to pickup when pressing the key, releasing should drop one
+            canDrop = false;
+            InventoryComponent.DropFirstHeld();
+        }
+
+        // Check the repair key response
+        if (Input.GetButtonUp(Constants.InputNames.REPAIR))
+        {
+            // Trigger a repair on the nearest repairable
+            if(interactablePool[(int)InteractableType.REPAIR] != null)
+            {
+                interactablePool[(int)InteractableType.REPAIR].OnInteract(this);
+            }
+        }
     }
 }
 
