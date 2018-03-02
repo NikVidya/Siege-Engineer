@@ -148,4 +148,24 @@ public class GameManager : Singleton<GameManager> {
 		}
 		return ret;
 	}
+
+    public void DisableAvatar()
+    {
+        interactionComponent.DisableInteraction();
+        CharacterMovement movementComponent = interactionComponent.gameObject.GetComponent<CharacterMovement>();
+        if (movementComponent != null)
+        {
+            movementComponent.DisableMovement();
+        }
+    }
+
+    public void EnableAvatar()
+    {
+        interactionComponent.EnableInteraction();
+        CharacterMovement movementComponent = interactionComponent.gameObject.GetComponent<CharacterMovement>();
+        if (movementComponent != null)
+        {
+            movementComponent.EnableMovement();
+        }
+    }
 }

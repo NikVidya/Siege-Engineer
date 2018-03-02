@@ -25,6 +25,19 @@ public class CharacterInteraction : MonoBehaviour
 
     public CharacterInventory InventoryComponent { get { return _inv; } }
     CharacterInventory _inv;
+    IInteractable lastFocused;
+
+    bool interactionEnabled = true;
+
+    public void EnableInteraction()
+    {
+        interactionEnabled = true;
+    }
+
+    public void DisableInteraction()
+    {
+        interactionEnabled = false;
+    }
 
     // EDITOR: Gizmos
     void OnDrawGizmos()
@@ -61,11 +74,19 @@ public class CharacterInteraction : MonoBehaviour
         // Found closest if it exists
         if (closest != null)
         {   // Show the prompt
+            if(lastFocused != null && closest != lastFocused)
+            {
+                lastFocused.OnDefocus(this);
+            }
             ShowPrompt(closest.gameObject);
+            closest.OnFocus(this);
+            lastFocused = closest;
         }
-        else
+        else if (lastFocused != null)
         {   // Hide the prompt
             HidePrompt();
+            lastFocused.OnDefocus(this);
+            lastFocused = null;
         }
 
         return closest;
@@ -73,6 +94,10 @@ public class CharacterInteraction : MonoBehaviour
 
     void Update()
     {
+        if (!interactionEnabled)
+        { // Interaction is disabled, early return
+            return;
+        }
         IInteractable closest = FocusCloseHoldable();
         if (Input.GetButtonDown(Constants.InputNames.INTERACT) && curKeyState == KeyState.Released)
         {

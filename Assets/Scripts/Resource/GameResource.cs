@@ -110,4 +110,12 @@ public class GameResource : MonoBehaviour, IHoldable, IBombable
         _interactState = InteractionState.Ready;
         transform.parent = oldParent;
     }
+
+    public void OnFocus(CharacterInteraction focuser)
+    {
+    }
+
+    public void OnDefocus(CharacterInteraction focuser)
+    {
+    }
 }
