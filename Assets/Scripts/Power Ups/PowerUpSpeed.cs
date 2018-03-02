@@ -21,7 +21,7 @@ public class PowerUpSpeed : PowerUp
 			return;
 		}
 		base.PowerUpHasExpired();
-		player.SetSpeedBoostOff();
+		Player.SetSpeedBoostOff();
 	}
 
 	private void Update ()                            // Checklist item 3

@@ -11,7 +11,7 @@ public class PowerUpHealth : PowerUp
 		base.PowerUpPayload();
 
 		// Payload is to give some health bonus
-		player.SetHealthAdjustment(healthBonus);      
+		Player.SetHealthAdjustment(healthBonus);      
 	}
 }
 }

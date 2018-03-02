@@ -55,12 +55,12 @@ public class PowerUp : MonoBehaviour
         powerUpState = PowerUpState.IsCollected;
 
         // We must have been collected by a player, store handle to player for later use      
-        playerBrain = gameObjectCollectingPowerUp.GetComponent<Player> ();
+        Player = gameObjectCollectingPowerUp.GetComponent<Player> ();
 
         // We move the power up game object to be under the player that collect it, this isn't essential for functionality 
         // presented so far, but it is neater in the gameObject hierarchy
-        gameObject.transform.parent = player.gameObject.transform;
-        gameObject.transform.position = player.gameObject.transform.position;
+        gameObject.transform.parent = Player.gameObject.transform;
+        gameObject.transform.position = Player.gameObject.transform.position;
 
         // Collection effects
         PowerUpEffects ();           
@@ -71,7 +71,7 @@ public class PowerUp : MonoBehaviour
         // Send message to any listeners
         foreach (GameObject go in EventSystemListeners.main.listeners)
         {
-            ExecuteEvents.Execute<IPowerUpEvents> (go, null, (x, y) => x.OnPowerUpCollected (this, playerBrain));
+            ExecuteEvents.Execute<IPowerUpEvents> (go, null, (x, y) => x.OnPowerUpCollected (this, Player));
         }
 
         // Now the power up visuals can go away
@@ -101,7 +101,7 @@ public class PowerUp : MonoBehaviour
         // Send message to any listeners
         foreach (GameObject go in EventSystemListeners.main.listeners)
         {
-            ExecuteEvents.Execute<IPowerUpEvents> (go, null, (x, y) => x.OnPowerUpExpired (this, playerBrain));
+            ExecuteEvents.Execute<IPowerUpEvents> (go, null, (x, y) => x.OnPowerUpExpired (this, Player));
         }
         Debug.Log ("Power Up has expired, removing after a delay for: " + gameObject.name);
         DestroySelfAfterDelay ();
