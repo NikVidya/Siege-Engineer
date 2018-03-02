@@ -102,7 +102,7 @@ InputManager:
     axis: 27
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Interact
+    m_Name: Pickup
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -118,7 +118,7 @@ InputManager:
     axis: 26
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Interact
+    m_Name: Pickup
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -138,7 +138,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick button 0
+    positiveButton: joystick button 1
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -187,6 +187,22 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: \
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 26
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Repair
+    descriptiveName: Keyboard Repair Input
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: r
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
