@@ -3750,6 +3750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyUI: {fileID: 625494949}
+  upgrades:
+  - {fileID: 114241844101537386, guid: 1bae68addd8649e42bc9ab91abddb340, type: 2}
   currencyAmount: 0
 --- !u!224 &285712662
 RectTransform:
@@ -13979,7 +13981,7 @@ MonoBehaviour:
   timeUI: {fileID: 930893547}
   pauseUI: {fileID: 429113348}
   countDown: 1
-  gameTimer: 151
+  gameTimer: 0
 --- !u!4 &1883485625
 Transform:
   m_ObjectHideFlags: 0
