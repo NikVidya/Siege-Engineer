@@ -8,9 +8,10 @@ public static class Constants {
         public const string HORIZONTAL = "Horizontal";
         public const string VERTICAL = "Vertical";
         public const string DASH = "Dash";
-        public const string INTERACT = "Interact";
+        public const string PICKUP = "Pickup";
         public const string REPAIR = "Repair";
         public const string PAUSE = "Pause";
+        public const string UICANCEL = "UICancel";
     }
 
     public static class Resource
