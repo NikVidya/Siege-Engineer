@@ -4,7 +4,8 @@ using UnityEngine;
 public enum InteractableType
 {
 	REPAIR = 0,
-    PICKUP = 1
+    PICKUP = 1,
+    UPGRADE_AREA = 2
 }
 public enum InteractionState {
 	Ready,
@@ -14,6 +15,8 @@ public enum InteractionState {
 public interface IInteractable
 {
 	void OnInteract(CharacterInteraction instigator);
+    void OnFocus(CharacterInteraction focuser);
+    void OnDefocus(CharacterInteraction focuser);
 	InteractionState InteractState { get; set; }
     InteractableType InteractableType { get; set; }
 	GameObject gameObject { get; }
