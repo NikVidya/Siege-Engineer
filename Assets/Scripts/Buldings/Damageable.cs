@@ -200,4 +200,12 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
 			timeSpentRepairing = 0;
         }
     }
+
+    public void OnFocus(CharacterInteraction focuser)
+    {
+    }
+
+    public void OnDefocus(CharacterInteraction focuser)
+    {
+    }
 }
