@@ -14,7 +14,6 @@ public class CharacterInteraction : MonoBehaviour
     public GameObject interactionPrompt;
     
 	bool canDrop = true;
-	Dictionary<IInteractable, GameObject> prompts = new Dictionary<IInteractable, GameObject>();
 
     public CharacterInventory InventoryComponent { get { return _inv; } }
     CharacterInventory _inv;
@@ -48,10 +47,72 @@ public class CharacterInteraction : MonoBehaviour
             Debug.LogError("Character Interaction does not have an interaction prompt!");
         }
         interactionPrompt.SetActive(false);
+        prompts = new Dictionary<GameObject, GameObject>();
     }
 
-    void AddPrompt(IInteractable target, InteractableType type)
+    void ShowPrompt(GameObject target)
     {
+        interactionPrompt.SetActive(true);
+        interactionPrompt.transform.position = target.transform.position + new Vector3(0.0f, 0.0f, 0.0f);
+        interactionPrompt.transform.parent = target.transform;
+    }
+    void HidePrompt()
+    {
+        GameObject.Destroy(prompts[target]);
+    }
+
+    IInteractable FocusCloseHoldable()
+    {
+        IInteractable closest = GameManager.Instance.GetHighestPriorityNearestInteractableInRange(transform, interactDistance);
+        // Found closest if it exists
+        if (closest != null)
+        {   // Show the prompt
+            ShowPrompt(closest.gameObject);
+        }
+        else
+        {   // Hide the prompt
+            HidePrompt();
+        }
+
+        return closest;
+    }
+
+    void Update()
+    {
+        IInteractable closest = FocusCloseHoldable();
+        if (Input.GetButtonDown(Constants.InputNames.INTERACT) && curKeyState == KeyState.Released)
+        {
+            if (interactablePool[(int)InteractableType.PICKUP] == null)
+            { // No pickup to interact with
+                canDrop = true;
+            }
+            else
+            {
+                canDrop = false;
+                interactablePool[(int)InteractableType.PICKUP].OnInteract(this);
+            }
+        }
+        else if (Input.GetButtonUp(Constants.InputNames.PICKUP) && canDrop)
+        {   // Nothing was close enough to pickup when pressing the key, releasing should drop one
+            canDrop = false;
+            InventoryComponent.DropFirstHeld();
+        }
+
+        // Check the repair key response
+        if (Input.GetButtonUp(Constants.InputNames.REPAIR))
+        {
+            // Trigger a repair on the nearest repairable
+            if(interactablePool[(int)InteractableType.REPAIR] != null)
+            {
+                interactablePool[(int)InteractableType.REPAIR].OnInteract(this);
+            }
+        }
+    }
+}
+
+
+	Dictionary<IInteractable, GameObject> prompts = new Dictionary<IInteractable, GameObject>();
+    void AddPrompt(IInteractable target, InteractableType type)
         if (!prompts.ContainsKey(target))
         {
             // TODO: When art supports it, set the text on the prompt based on the type
@@ -61,16 +122,10 @@ public class CharacterInteraction : MonoBehaviour
 			prompt.transform.parent = target.gameObject.transform;
             prompts.Add(target, prompt);
         }
-    }
 	void RemovePrompt(IInteractable target)
-    {
-        GameObject.Destroy(prompts[target]);
-    }
-
     IInteractable[] HighlightNearestInteractables()
     {
         IInteractable[] interactables = GameManager.Instance.GetNearestInteractablesFromEachTypeInRange(gameObject.transform, interactDistance);
-
         foreach(IInteractable interactable in interactables)
         {
             if (interactable != null)
@@ -107,9 +162,6 @@ public class CharacterInteraction : MonoBehaviour
 		}
 
         return interactables;
-    }
-
-    void Update()
     {
 		IInteractable[] interactables = HighlightNearestInteractables();
 		if (interactionEnabled)
@@ -122,32 +174,3 @@ public class CharacterInteraction : MonoBehaviour
 	{
         // Check the pickup key response
         if (Input.GetButtonDown(Constants.InputNames.PICKUP))
-        {
-            if (interactablePool[(int)InteractableType.PICKUP] == null)
-            { // No pickup to interact with
-                canDrop = true;
-            }
-            else
-            {
-                canDrop = false;
-                interactablePool[(int)InteractableType.PICKUP].OnInteract(this);
-            }
-        }
-        else if (Input.GetButtonUp(Constants.InputNames.PICKUP) && canDrop)
-        {   // Nothing was close enough to pickup when pressing the key, releasing should drop one
-            canDrop = false;
-            InventoryComponent.DropFirstHeld();
-        }
-
-        // Check the repair key response
-        if (Input.GetButtonUp(Constants.InputNames.REPAIR))
-        {
-            // Trigger a repair on the nearest repairable
-            if(interactablePool[(int)InteractableType.REPAIR] != null)
-            {
-                interactablePool[(int)InteractableType.REPAIR].OnInteract(this);
-            }
-        }
-    }
-}
-
