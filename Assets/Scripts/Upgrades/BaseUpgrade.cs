@@ -10,7 +10,24 @@ public abstract class BaseUpgrade : MonoBehaviour
 	[Tooltip("The currency cost of purchasing this upgrade")]
 	public float UpgradeCost;
 
-	abstract public void ApplyUpgrade(GameObject playerObject);
-	abstract public void RemoveUpgrade(GameObject playerObject);
+	public bool IsApplied {
+		get; private set;
+	}
+
+	public virtual void ApplyUpgrade(GameObject playerObject){
+		if (!IsApplied) {
+			IsApplied = true;
+			OnApplyUpgrade (playerObject);
+		}
+	}
+	public virtual void RemoveUpgrade(GameObject playerObject){
+		if (IsApplied) {
+			IsApplied = false;
+			OnRemoveUpgrade (playerObject);
+		}
+	}
+
+	abstract protected void OnApplyUpgrade(GameObject playerObject);
+	abstract protected void OnRemoveUpgrade(GameObject playerObject);
 }
 

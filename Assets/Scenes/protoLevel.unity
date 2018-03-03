@@ -3752,6 +3752,8 @@ MonoBehaviour:
   currencyUI: {fileID: 625494949}
   upgrades:
   - {fileID: 114241844101537386, guid: 1bae68addd8649e42bc9ab91abddb340, type: 2}
+  - {fileID: 114760309585547010, guid: 806d73e550e004642af7edd6c42eba26, type: 2}
+  - {fileID: 114123792748393670, guid: a3ba3fa47b8e8d740a40f417299f9050, type: 2}
   currencyAmount: 0
 --- !u!224 &285712662
 RectTransform:

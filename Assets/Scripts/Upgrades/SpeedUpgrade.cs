@@ -2,32 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedUpgrade : BaseUpgrade {
-
-	[Space(10)]
+public class SpeedUpgrade : TimedUpgrade {
+	
 	[Header("Upgrade Parameters")]
 	[Tooltip("The amount to change the max speed of the character by")]
 	public float maxSpeedMod = 0.05f;
-	public float speedTimer = 60;
-	public float speedExpire = 0;
 
-
-
-	public override void ApplyUpgrade (GameObject playerObject)
+	protected override void OnApplyUpgrade (GameObject playerObject)
 	{
-		Debug.Log ("Applied an Upgrade!");
 		CharacterMovement movementCompontent = playerObject.GetComponent<CharacterMovement> ();
-		if (movementComponent != null) {
-			movementComponent.maxSpeed += maxSpeedMod;
-			speedExpire=Time.time+speedTimer;
-
+		if (movementCompontent != null) {
+			movementCompontent.maxSpeed += maxSpeedMod;
 		}
 	}
 
-	public override void RemoveUpgrade (GameObject playerObject)
+	protected override void OnRemoveUpgrade (GameObject playerObject)
 	{
 		CharacterMovement movementCompontent = playerObject.GetComponent<CharacterMovement> ();
-		if (movementCompontent != null && Time.time == speedExpire) {
+		if (movementCompontent != null) {
 			movementCompontent.maxSpeed -= maxSpeedMod;
 		}
 	}
