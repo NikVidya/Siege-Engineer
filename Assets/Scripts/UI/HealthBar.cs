@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// TODO make coloour of health bar change based on health (gradient)
+// TODO add outline/background to health bar to indicate not only max health but also damage rate
 public class HealthBar : MonoBehaviour
 {
     // public
@@ -17,7 +17,6 @@ public class HealthBar : MonoBehaviour
     {
         maxWidth = transform.localScale.x;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        defaultPos = new Vector2(transform.position.x, transform.position.y);
 
     }
     void Update()
