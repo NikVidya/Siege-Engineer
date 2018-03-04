@@ -57,13 +57,22 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
         }
 	}
 
+    public InteractableType InteractableType
+    {
+        get
+        {
+            return InteractableType.REPAIR;
+        }
+        set { }
+    }
+
 	float timeSpentRepairing = 0;
 
     //private
     void Start()
     {
         // Register this game object so it can be interacted with.
-        GameManager.Instance.RegisterInteractable(this, InteractionPriority.STRUCTURE);
+        GameManager.Instance.RegisterInteractable(this);
 
         health = maxHealth;
         InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
@@ -149,13 +158,8 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
 		return Vector3.Distance (t.position, transform.position);
 	}
 
-    public void OnInteract(CharacterInteraction instigator, CharacterInteraction.KeyState state)
+    public void OnInteract(CharacterInteraction instigator)
     {
-        if (state != CharacterInteraction.KeyState.Held)
-        {
-            return; // Early return because I dislike nesting
-        }
-
         Dictionary<Constants.Resource.ResourceType, GameResource> availableResources = new Dictionary<Constants.Resource.ResourceType, GameResource>();
 
         // Note: If it where possible for multiple instances of resources to be on the map at once, the order 
@@ -195,5 +199,13 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
             Debug.Log("Start Repair");
 			timeSpentRepairing = 0;
         }
+    }
+
+    public void OnFocus(CharacterInteraction focuser)
+    {
+    }
+
+    public void OnDefocus(CharacterInteraction focuser)
+    {
     }
 }

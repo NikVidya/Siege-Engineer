@@ -51,6 +51,18 @@ public class GameResource : MonoBehaviour, IHoldable, IBombable
         }
     }
 
+    InteractableType IInteractable.InteractableType
+    {
+        get
+        {
+            return InteractableType.PICKUP;
+        }
+
+        set
+        {
+        }
+    }
+
     private InteractionState _interactState = InteractionState.Ready;
     private HoldState _holdState = HoldState.Dropped;
     private Transform oldParent;
@@ -58,7 +70,7 @@ public class GameResource : MonoBehaviour, IHoldable, IBombable
     private void Start()
     {
         // Register this resource with the game manager
-        GameManager.Instance.RegisterInteractable(this, InteractionPriority.RESOURCE);
+        GameManager.Instance.RegisterInteractable(this);
 		GameManager.Instance.RegisterBombable (this);
     }
 
@@ -66,13 +78,13 @@ public class GameResource : MonoBehaviour, IHoldable, IBombable
     {
         if (!GameManager.IsApplicationQuitting)
         {
-            GameManager.Instance.DeRegisterInteractable(this, InteractionPriority.RESOURCE);
+            GameManager.Instance.DeRegisterInteractable(this);
         }
     }
 
-    public void OnInteract(CharacterInteraction instigator, CharacterInteraction.KeyState state)
+    public void OnInteract(CharacterInteraction instigator)
     {
-        if (state == CharacterInteraction.KeyState.Pressed && _holdState == HoldState.Dropped)
+        if (_holdState == HoldState.Dropped)
         {
             Pickup();
             instigator.InventoryComponent.AddHoldable(this);
@@ -109,5 +121,13 @@ public class GameResource : MonoBehaviour, IHoldable, IBombable
         _holdState = HoldState.Dropped;
         _interactState = InteractionState.Ready;
         transform.parent = oldParent;
+    }
+
+    public void OnFocus(CharacterInteraction focuser)
+    {
+    }
+
+    public void OnDefocus(CharacterInteraction focuser)
+    {
     }
 }

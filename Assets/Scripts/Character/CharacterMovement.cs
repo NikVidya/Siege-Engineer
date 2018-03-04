@@ -57,6 +57,17 @@ public class CharacterMovement : MonoBehaviour
 
     float _timeStunned;
 
+    bool movementEnabled = true;
+
+    public void DisableMovement()
+    {
+        movementEnabled = false;
+    }
+    public void EnableMovement()
+    {
+        movementEnabled = true;
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -120,13 +131,13 @@ public class CharacterMovement : MonoBehaviour
 
         SetAnimatorDirection(direction);
 
-        if (direction.sqrMagnitude > Mathf.Epsilon && _moveState == MoveState.Ready)
+        if (direction.sqrMagnitude > Mathf.Epsilon && _moveState == MoveState.Ready && movementEnabled)
         {
             // The player started moving
             _moveState = MoveState.Moving;
             _timeMoving = 0.0f;
         }
-        else if (direction.sqrMagnitude <= Mathf.Epsilon)
+        else if (direction.sqrMagnitude <= Mathf.Epsilon || !movementEnabled)
         {
             // Player is not moving
             _moveState = MoveState.Ready;
