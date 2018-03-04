@@ -10,6 +10,18 @@ public abstract class TimedUpgrade : BaseUpgrade {
 
 	protected bool isActive = false;
 
+	public override GameObject GetListEntryObject()
+	{
+		GameObject entry = base.GetListEntryObject ();
+		if (entry != null) {
+			TimedUpgradeListEntry timedEntry = entry.GetComponent<TimedUpgradeListEntry> ();
+			if (timedEntry) {
+				timedEntry.DurationText.text = string.Format ("{0:F2}s", UpgradeDuration);
+			}
+		}
+		return entry;
+	}
+
 	// Upgrades are instanciated GameObjects, so regular MonoBehaviour functions are valid, like Coroutines
 	IEnumerator Timer(GameObject playerObject, float delay)
 	{

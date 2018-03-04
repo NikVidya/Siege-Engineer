@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InvincibilityUpgrade : TimedUpgrade {
-	
-	[Header("Upgrade Parameters")]
-	[Tooltip("The length of time to remain invincible in seconds")]
-	public float invincibilityLength = 60;
-
+public class InvincibilityUpgrade : TimedUpgrade 
+{
 	Dictionary<GameObject, int> storedHealth = new Dictionary<GameObject, int>();
 
 	// Thanks to this being a GameObject, we can use the Update tick within the upgrades!
@@ -28,7 +24,7 @@ public class InvincibilityUpgrade : TimedUpgrade {
 			}
 		}
 	}
-		
+
 	protected override void OnApplyUpgrade (GameObject playerObject)
 	{
 		// Get all the structures in the scene (using the list the GameManager keeps)

@@ -53,4 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeName: Reinforced Construction
   UpgradeCost: 100
+  EntryListTemplate: {fileID: 1080763141026864, guid: a7bce9c2bdc0c6946bddeb5144529c84,
+    type: 2}
   HealthBonus: 10
