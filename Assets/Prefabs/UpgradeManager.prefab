@@ -588,8 +588,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyUI: {fileID: 0}
-  UpgradeWindow: {fileID: 1375293896491536}
-  FirstListEntry: {fileID: 1900496709097280}
+  upgrades:
+  - {fileID: 114123792748393670, guid: a3ba3fa47b8e8d740a40f417299f9050, type: 2}
+  - {fileID: 114760309585547010, guid: 806d73e550e004642af7edd6c42eba26, type: 2}
+  - {fileID: 114241844101537386, guid: 1bae68addd8649e42bc9ab91abddb340, type: 2}
+  UpgradeWindow: {fileID: 0}
+  FirstListEntry: {fileID: 0}
   currencyAmount: 0
 --- !u!114 &114162019563384836
 MonoBehaviour:
@@ -1687,7 +1691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000023841858, y: 0.0000014305115}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224994139148196574

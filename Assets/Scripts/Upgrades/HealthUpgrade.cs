@@ -10,7 +10,7 @@ public class HealthUpgrade : BaseUpgrade {
 
 	protected override void OnApplyUpgrade (GameObject playerObject)
 	{
-		List<IInteractable> structures = GameManager.Instance.Interactables [(int)InteractionPriority.STRUCTURE];
+		List<IInteractable> structures = GameManager.Instance.Interactables [(int)InteractableType.REPAIR];
 		foreach (IInteractable structure in structures) {
 			Damageable damageableCompontent = structure.gameObject.GetComponent<Damageable> ();
 			if (damageableCompontent != null) {
@@ -22,7 +22,7 @@ public class HealthUpgrade : BaseUpgrade {
 
 	protected override void OnRemoveUpgrade (GameObject playerObject)
 	{
-		List<IInteractable> structures = GameManager.Instance.Interactables [(int)InteractionPriority.STRUCTURE];
+		List<IInteractable> structures = GameManager.Instance.Interactables [(int)InteractableType.REPAIR];
 		foreach (IInteractable structure in structures) {
 			Damageable damageableCompontent = structure.gameObject.GetComponent<Damageable> ();
 			if (damageableCompontent != null) {

@@ -16,7 +16,7 @@ public class InvincibilityUpgrade : TimedUpgrade {
 		// As long as this upgrade is active, set all the structures to max health
 		if (isActive) {
 			// Get all the structures in the scene (using the list the GameManager keeps)
-			List<IInteractable> structures = GameManager.Instance.Interactables [(int)InteractionPriority.STRUCTURE];
+			List<IInteractable> structures = GameManager.Instance.Interactables [(int)InteractableType.REPAIR];
 			foreach (IInteractable structure in structures) {
 				// For each structure, get it's damageable component
 				Damageable damageableComponent = structure.gameObject.GetComponent<Damageable> ();
@@ -32,7 +32,7 @@ public class InvincibilityUpgrade : TimedUpgrade {
 	protected override void OnApplyUpgrade (GameObject playerObject)
 	{
 		// Get all the structures in the scene (using the list the GameManager keeps)
-		List<IInteractable> structures = GameManager.Instance.Interactables [(int)InteractionPriority.STRUCTURE];
+		List<IInteractable> structures = GameManager.Instance.Interactables [(int)InteractableType.REPAIR];
 		foreach (IInteractable structure in structures) {
 			// For each structure, get it's damageable component
 			Damageable damageableComponent = structure.gameObject.GetComponent<Damageable> ();
@@ -49,7 +49,7 @@ public class InvincibilityUpgrade : TimedUpgrade {
 	protected override void OnRemoveUpgrade (GameObject playerObject)
 	{
 		// Return all the damageables in the scene to their original health
-		List<IInteractable> structures = GameManager.Instance.Interactables [(int)InteractionPriority.STRUCTURE];
+		List<IInteractable> structures = GameManager.Instance.Interactables [(int)InteractableType.REPAIR];
 		foreach (IInteractable structure in structures) {
 			Damageable damageableCompontent = structure.gameObject.GetComponent<Damageable> ();
 			if (damageableCompontent != null) {
