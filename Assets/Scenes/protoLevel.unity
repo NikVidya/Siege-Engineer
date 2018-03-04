@@ -3525,6 +3525,7 @@ Transform:
   m_Children:
   - {fileID: 1299723888}
   - {fileID: 914239955}
+  - {fileID: 1499377020}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12160,12 +12161,12 @@ Prefab:
     - target: {fileID: 224991332804131422, guid: 38d6770b1fba80a409dc9313944b1341,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224991332804131422, guid: 38d6770b1fba80a409dc9313944b1341,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000014305115
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224991332804131422, guid: 38d6770b1fba80a409dc9313944b1341,
         type: 2}
@@ -12333,7 +12334,7 @@ Transform:
   m_LocalScale: {x: 3, y: 0.19999999, z: 0.19999999}
   m_Children: []
   m_Father: {fileID: 152509282}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1547494805
 GameObject:
@@ -14091,9 +14092,9 @@ MonoBehaviour:
   player: {fileID: 898386600}
   timeString: 
   timeUI: {fileID: 930893547}
-  pauseUI: {fileID: 1906446701}
+  pauseUI: {fileID: 0}
   countDown: 1
-  gameTimer: 151
+  gameTimer: 0
 --- !u!4 &1883485625
 Transform:
   m_ObjectHideFlags: 0
@@ -14315,11 +14316,6 @@ Tilemap:
     e32: 0
     e33: 1
   m_TileRefreshArray: []
---- !u!1 &1906446701 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1306412265163690, guid: 172516922089fc94c8f0efe11788b127,
-    type: 2}
-  m_PrefabInternal: {fileID: 660847569}
 --- !u!224 &1906446702 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224166280844030958, guid: 172516922089fc94c8f0efe11788b127,

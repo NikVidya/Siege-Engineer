@@ -19,6 +19,11 @@ public class GameManager : Singleton<GameManager> {
 
 	public List<IBombable> bombables = new List<IBombable>();
 
+	public GameObject GetPlayerObject()
+	{
+		return interactionComponent.gameObject;
+	}
+
 	public void RegisterDamageable(Damageable damageable)
 	{
 		damagebales.Add (damageable);

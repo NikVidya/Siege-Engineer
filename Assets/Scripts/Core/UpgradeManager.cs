@@ -15,6 +15,9 @@ public class UpgradeManager : Singleton<UpgradeManager>
     [Header("UI References")]
     public Text currencyUI;
 
+	public BaseUpgrade[] upgrades;
+
+
     [Tooltip("The Object containing the UI to display when showing upgrades")]
     public GameObject UpgradeWindow;
     [Tooltip("The first entry in the list, to be focused when UI is displayed")]
@@ -24,7 +27,7 @@ public class UpgradeManager : Singleton<UpgradeManager>
     public int currencyAmount = 0;
     void Start()
     {
-
+		
     }
 
     void Update()
