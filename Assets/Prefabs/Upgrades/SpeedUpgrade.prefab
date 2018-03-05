@@ -53,5 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeName: Fleet of Foot
   UpgradeCost: 50
+  EntryListTemplate: {fileID: 1967026868004394, guid: 61be058f0fb959a47a5e0da81a7b9127,
+    type: 2}
   UpgradeDuration: 15
   maxSpeedMod: 0.05
