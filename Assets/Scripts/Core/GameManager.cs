@@ -19,6 +19,11 @@ public class GameManager : Singleton<GameManager> {
 
 	public List<IBombable> bombables = new List<IBombable>();
 
+	public GameObject GetPlayerObject()
+	{
+		return interactionComponent.gameObject;
+	}
+
 	public void RegisterDamageable(Damageable damageable)
 	{
 		damagebales.Add (damageable);
@@ -45,7 +50,7 @@ public class GameManager : Singleton<GameManager> {
 
 	void InitializeInteractables()
 	{
-		_interactables = new List<IInteractable>[InteractionPriority.GetValues(typeof(InteractionPriority)).Length];
+		_interactables = new List<IInteractable>[InteractableType.GetValues(typeof(InteractableType)).Length];
 		for(int i=0; i < _interactables.Length; i++)
 		{
 			_interactables[i] = new List<IInteractable>();
@@ -63,20 +68,20 @@ public class GameManager : Singleton<GameManager> {
         resource.gameObject.SetActive(false);
     }
 
-    public void RegisterInteractable(IInteractable interactable, InteractionPriority priority)
+    public void RegisterInteractable(IInteractable interactable)
 	{
-        Interactables[(int)priority].Add(interactable);
+        Interactables[(int)interactable.InteractableType].Add(interactable);
     }
-    public void DeRegisterInteractable(IInteractable interactable, InteractionPriority priority)
+    public void DeRegisterInteractable(IInteractable interactable)
     {
-        Interactables[(int)priority].Remove(interactable);
+        Interactables[(int)interactable.InteractableType].Remove(interactable);
     }
 
-    public IInteractable GetNearestInteractableInRange(Transform t, InteractionPriority priority, float range)
+    public IInteractable GetNearestInteractableInRange(Transform t, InteractableType type, float range)
     {
         float dist = float.MaxValue;
         IInteractable ret = null;
-        foreach (IInteractable i in Interactables[(int)priority])
+        foreach (IInteractable i in Interactables[(int)type])
         {
             float checkDist = Vector3.Distance(t.position, i.gameObject.transform.position);
             if (checkDist < dist && checkDist < range && i.InteractState == InteractionState.Ready)
@@ -88,13 +93,13 @@ public class GameManager : Singleton<GameManager> {
         return ret;
     }
 
-    public IInteractable[] GetNearestInteractableInRange(Transform t, float range)
+    public IInteractable[] GetNearestInteractablesFromEachTypeInRange(Transform t, float range)
     {
         IInteractable[] ret = new IInteractable[Interactables.Length];
 
         for(int i = 0; i < Interactables.Length; i++)
         {
-            ret[i] = GetNearestInteractableInRange(t, (InteractionPriority)i, range);
+            ret[i] = GetNearestInteractableInRange(t, (InteractableType)i, range);
         }
 
         return ret;
@@ -102,7 +107,7 @@ public class GameManager : Singleton<GameManager> {
 
     public IInteractable GetHighestPriorityNearestInteractableInRange(Transform t, float range)
     {
-        IInteractable[] dat = GetNearestInteractableInRange(t, range);
+        IInteractable[] dat = GetNearestInteractablesFromEachTypeInRange(t, range);
         for (int i = 0; i < dat.Length; i++)
         {
             if (dat[i] != null)
@@ -116,7 +121,7 @@ public class GameManager : Singleton<GameManager> {
     public List<GameResource> GetResourcesInRange(Transform t, float range)
     {
         List<GameResource> ret = new List<GameResource>();
-		foreach(IInteractable interact in Interactables[(int)InteractionPriority.RESOURCE])
+		foreach(IInteractable interact in Interactables[(int)InteractableType.PICKUP])
         {
             GameResource gr = interact as GameResource; // Try and cast down the tree to a GameResource
 			if (gr != null && ((IHoldable)gr).HeldState != HoldState.Held && Vector3.Distance(gr.transform.position, t.position) <= range)
@@ -148,4 +153,24 @@ public class GameManager : Singleton<GameManager> {
 		}
 		return ret;
 	}
+
+    public void DisableAvatar()
+    {
+        interactionComponent.DisableInteraction();
+        CharacterMovement movementComponent = interactionComponent.gameObject.GetComponent<CharacterMovement>();
+        if (movementComponent != null)
+        {
+            movementComponent.DisableMovement();
+        }
+    }
+
+    public void EnableAvatar()
+    {
+        interactionComponent.EnableInteraction();
+        CharacterMovement movementComponent = interactionComponent.gameObject.GetComponent<CharacterMovement>();
+        if (movementComponent != null)
+        {
+            movementComponent.EnableMovement();
+        }
+    }
 }
