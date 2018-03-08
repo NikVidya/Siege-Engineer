@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mainmenu.unity
     guid: 4d16b3d182befbb49932192e0576681d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/protoLevel.unity
     guid: ae5930d14411d634bab24160c78f0014
   - enabled: 1
@@ -20,3 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VictoryScreen.unity
     guid: 398edc6cef3c7a443b2c8f154b979441
+  - enabled: 1
+    path: Assets/Scenes/Level02.unity
+    guid: 15498a614bf27394ba1ca030d524476a
+  - enabled: 1
+    path: Assets/Scenes/Level01.unity
+    guid: 7a6b7b5404acdc641915d1517bfe5b33

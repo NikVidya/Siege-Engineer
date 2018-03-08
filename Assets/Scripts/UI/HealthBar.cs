@@ -13,10 +13,12 @@ public class HealthBar : MonoBehaviour
     private Vector2 screenPos;
     private bool movingWithCamera = false;
     private Vector2 defaultPos;
+    private bool ready = false;
     void Start()
     {
         maxWidth = transform.localScale.x;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        ready = true;
 
     }
     void Update()
@@ -25,8 +27,12 @@ public class HealthBar : MonoBehaviour
     }
     public void changeWidth()
     {
-        transform.localScale = new Vector3(maxWidth * damageable.healthPercent, transform.localScale.y, transform.localScale.z);
-        spriteRenderer.color = gradient.Evaluate(damageable.healthPercent);
+        if (ready)
+        {
+            transform.localScale = new Vector3(maxWidth * damageable.healthPercent, transform.localScale.y, transform.localScale.z);
+            spriteRenderer.color = gradient.Evaluate(damageable.healthPercent);
+        }
     }
+
 
 }

@@ -22,10 +22,12 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher>
     [Header("Time")]
     public bool countDown = true;
     bool paused = false;
-    public float gameTimer = 151;
+    float gameTimer = 151;
+    public string nextLevel;
     // timeMinutes and timeSeconds used for the display time
-    int timeMinutes = 1;
-    float timeSeconds = 30; // Time in seconds after minute. for example, if minute = 1 and seconds = 30, timer is 1:30
+
+    public int timeMinutes = 1;
+    public float timeSeconds = 30; // Time in seconds after minute. for example, if minute = 1 and seconds = 30, timer is 1:30
     void Start()
     {
         gameTimer = (60 * timeMinutes) + timeSeconds;
@@ -98,7 +100,7 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher>
         }
         if (countDown && gameTimer <= 0.01)
         {
-            Win();
+            SceneManager.LoadScene(nextLevel);
         }
     }
     public void GameStart()
@@ -108,10 +110,6 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher>
     public void GameOver()
     {
         SceneManager.LoadScene("GameOver");
-    }
-    public void Win()
-    {
-        SceneManager.LoadScene("VictoryScreen");
     }
     public void EnterDialogue()
     {

@@ -27,8 +27,8 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
     [Header("Repair Parameters")]
     [Tooltip("The amount that the Damageable heals periodically")]
     public int healthRepairAmount = 10;
-	[Tooltip("The amount of time invoking repair will repair for")]
-	public float healthRepairTime = 1.0f;
+    [Tooltip("The amount of time invoking repair will repair for")]
+    public float healthRepairTime = 1.0f;
     [Tooltip("What resources are required for repair")]
     public Constants.Resource.ResourceType[] repairCost;
 
@@ -43,19 +43,22 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
     [HideInInspector]
     public float healthPercentChange;
     public UnityEvent healthChange;
-	[HideInInspector]
+    [HideInInspector]
     [System.NonSerialized]
-	public float damageDeBuff = 0f;
+    public float damageDeBuff = 0f;
 
     InteractionState _interactState = InteractionState.Ready;
-    public InteractionState InteractState {
-        get {
+    public InteractionState InteractState
+    {
+        get
+        {
             return _interactState;
         }
-        set {
+        set
+        {
             _interactState = value;
         }
-	}
+    }
 
     public InteractableType InteractableType
     {
@@ -66,7 +69,7 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
         set { }
     }
 
-	float timeSpentRepairing = 0;
+    float timeSpentRepairing = 0;
 
     //private
     void Start()
@@ -77,7 +80,6 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
         health = maxHealth;
         InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
 
-        healthChange.Invoke();
     }
 
     void Update()
@@ -97,17 +99,20 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
             healthPercent = 0;
         }
 
-		if (timeSpentRepairing > healthRepairTime) {
-			repairState = false;
-		} else if (repairState) {
-			timeSpentRepairing += Time.deltaTime;
-		}
+        if (timeSpentRepairing > healthRepairTime)
+        {
+            repairState = false;
+        }
+        else if (repairState)
+        {
+            timeSpentRepairing += Time.deltaTime;
+        }
     }
 
 
     void PeriodicHealthChange()
-	{
-        if(repairState)
+    {
+        if (repairState)
         {
             ChangeHealth(healthRepairAmount);
         }
@@ -131,9 +136,10 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
             Die();
         }
 
-        if (healthChange == null) { 
-			healthChange = new UnityEvent(); 
-		}
+        if (healthChange == null)
+        {
+            healthChange = new UnityEvent();
+        }
         healthPercent = (float)health / (float)maxHealth;
         // Debug.Log("current health is " + health);
         // Debug.Log("Damage debuff is: " + damageDeBuff);
@@ -148,15 +154,16 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
         }
     }
 
-	public void OnBombed(Bombardment instigator){
-		Debug.LogFormat ("Bombed {0} for {1} damage", gameObject.name, instigator.damage);
-		this.health -= instigator.damage;
-	}
+    public void OnBombed(Bombardment instigator)
+    {
+        Debug.LogFormat("Bombed {0} for {1} damage", gameObject.name, instigator.damage);
+        this.health -= instigator.damage;
+    }
 
-	public float GetDistanceToTransform(Transform t)
-	{
-		return Vector3.Distance (t.position, transform.position);
-	}
+    public float GetDistanceToTransform(Transform t)
+    {
+        return Vector3.Distance(t.position, transform.position);
+    }
 
     public void OnInteract(CharacterInteraction instigator)
     {
@@ -168,13 +175,13 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
 
         // Find nearby resources
         List<GameResource> nearbyResources = GameManager.Instance.GetResourcesInRange(instigator.transform, instigator.interactDistance);
-        foreach(GameResource gr in nearbyResources)
+        foreach (GameResource gr in nearbyResources)
         {
             availableResources[gr.type] = gr; // This is set to be used
         }
 
         // Find resources in player inventory
-        foreach(GameResource gr in instigator.InventoryComponent.heldInventory)
+        foreach (GameResource gr in instigator.InventoryComponent.heldInventory)
         {
             availableResources[gr.type] = gr; // This is set to be used
         }
@@ -194,10 +201,10 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
             foreach (Constants.Resource.ResourceType cost in repairCost)
             {
                 GameManager.Instance.ConsumeResource(availableResources[cost]);
-			}
-			repairState = true;
+            }
+            repairState = true;
             Debug.Log("Start Repair");
-			timeSpentRepairing = 0;
+            timeSpentRepairing = 0;
         }
     }
 
