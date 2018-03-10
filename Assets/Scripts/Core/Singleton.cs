@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
+    /*
 	public static bool IsApplicationQuitting {
 		get {
 			return applicationIsQuitting;
 		}
 	}
+    */
     private static T _instance;
     private static object _lock = new object();
 
@@ -16,11 +18,13 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
+            /*
             if (applicationIsQuitting)
             {
                 Debug.LogWarning("[Singleton] Attempting to create instance of " + typeof(T) + " after application quit. Denied.");
                 return null;
             }
+            */
 
             lock (_lock)
             {
@@ -39,7 +43,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                         _instance = singleton.AddComponent<T>();
                         singleton.name = "{singleton} " + typeof(T).ToString();
 
-                        DontDestroyOnLoad(singleton);
+                        //DontDestroyOnLoad(singleton);
 
                         Debug.Log("[Singleton] Initialized singleton of type " + typeof(T));
                     }
@@ -50,9 +54,11 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
+    /*
     private static bool applicationIsQuitting = false;
     public void OnDestroy()
     {
-        applicationIsQuitting = true;
+        //applicationIsQuitting = true;
     }
+    */
 }
