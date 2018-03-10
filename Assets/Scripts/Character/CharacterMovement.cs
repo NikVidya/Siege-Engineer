@@ -143,56 +143,6 @@ public class CharacterMovement : MonoBehaviour
             }
         }
 
-
-        /*
-        if(dir.x > Mathf.Epsilon)
-        { // Has east movement
-            if(dir.y < Mathf.Epsilon)
-            {   // Has south movement
-                dirVal = 5;
-            }
-            else if(dir.y > Mathf.Epsilon)
-            {   // Has north movement
-                dirVal = 3;
-            }
-            else
-            {   // Has no vertical movement
-                dirVal = 4;
-            }
-        }
-        else if(dir.x < Mathf.Epsilon)
-        { // Has west movement
-            if (dir.y < Mathf.Epsilon)
-            {   // Has south movement
-                dirVal = 7;
-            }
-            else if (dir.y > Mathf.Epsilon)
-            {   // Has north movement
-                dirVal = 1;
-            }
-            else
-            {   // Has no vertical movement
-                dirVal = 0;
-            }
-
-        }
-        else
-        { // Has no horizontal movement
-            if (dir.y < Mathf.Epsilon)
-            {   // Has south movement
-                dirVal = 6;
-            }
-            else if (dir.y > Mathf.Epsilon)
-            {   // Has north movement
-                dirVal = 2;
-            }
-            else
-            {   // Has no vertical movement
-                dirVal = 0;
-            }
-        }
-        */
-
         animator.SetInteger(ANIMATOR_DIRECTION_TAG, dirVal);
     }
 

@@ -31,11 +31,6 @@ public class CharacterInventory : MonoBehaviour, IBombable
 
     void Update()
     {
-        /*if (Vector3.Distance(repairTarget.gameObject.transform.position, transform.position) < 3)
-        {
-            RepairGate();
-        }*/
-
         if (heldInventory.Count <= 0)
         {
             animator.SetBool(ANIMATOR_CARRYING_TAG, false);

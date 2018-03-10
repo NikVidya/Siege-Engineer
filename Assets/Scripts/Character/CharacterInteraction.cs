@@ -56,8 +56,13 @@ public class CharacterInteraction : MonoBehaviour
         {
             // TODO: When art supports it, set the text on the prompt based on the type
             GameObject prompt = GameObject.Instantiate(interactionPrompt);
+            InteractionPromptIcon promptScript = prompt.GetComponent<InteractionPromptIcon>();
+            if(promptScript != null)
+            {
+                promptScript.SetPromptType(type);
+            }
             prompt.SetActive(true);
-            prompt.transform.position = target.gameObject.transform.position + new Vector3(0.0f, 0.0f, 0.0f);
+            prompt.transform.position = target.gameObject.transform.position + new Vector3(0.0f, 0.2f, 0.0f);
 			prompt.transform.parent = target.gameObject.transform;
             prompts.Add(target, prompt);
         }
