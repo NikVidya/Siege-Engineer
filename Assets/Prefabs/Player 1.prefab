@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldContainer: {fileID: 114760228916130374}
+  animator: {fileID: 95933642854581308}
 --- !u!114 &114432667328690284
 MonoBehaviour:
   m_ObjectHideFlags: 1

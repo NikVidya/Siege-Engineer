@@ -136,10 +136,13 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
         health += changeAmount;
         health = Mathf.Clamp(health, 0, maxHealth);
 
-        if (health <= 0)
-        {
-            Die();
-        }
+		if (health <= 0) {
+			Die ();
+		} else {
+			if (animator != null) {
+				animator.SetBool ("IsDead", false);
+			}
+		}
 
         if (healthChange == null)
         {
@@ -224,10 +227,3 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
     {
     }
 }
-		if (health <= 0) {
-			Die ();
-		} else {
-			if (animator != null) {
-				animator.SetBool ("IsDead", false);
-			}
-		}
