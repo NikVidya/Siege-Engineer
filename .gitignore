@@ -36,3 +36,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+Assets/UnityVS/
+
+Assets/UnityVS\.meta
