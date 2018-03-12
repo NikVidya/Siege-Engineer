@@ -54,7 +54,8 @@ public class UpgradeManager : Singleton<UpgradeManager>
 			Button upgradeEntryButtonComponent = entry.GetComponent<Button> ();
 			if (upgradeEntryButtonComponent != null) {
 				int upgradeToPurchase = i; // Note, need to capture 'i' properly for the lambda below
-				upgradeEntryButtonComponent.onClick.AddListener (() => PurchaseUpgrade(upgradeToPurchase));
+                Button entityButton = upgradeEntryButtonComponent;
+				upgradeEntryButtonComponent.onClick.AddListener (() => PurchaseUpgrade(upgradeToPurchase, entityButton));
 			}
 		}
     }
@@ -67,13 +68,15 @@ public class UpgradeManager : Singleton<UpgradeManager>
         }
     }
 
-    void PurchaseUpgrade(int upgradeIndex)
+    void PurchaseUpgrade(int upgradeIndex, Button entryButton)
     {
 		if (currencyAmount >= upgrades [upgradeIndex].UpgradeCost) {
 			Debug.LogFormat ("Purchasing upgrade: {0}", upgrades [upgradeIndex].UpgradeName);
 			upgrades [upgradeIndex].ApplyUpgrade (GameManager.Instance.GetPlayerObject());
 			ChangeCurrencyAmount ((int) -(upgrades [upgradeIndex].UpgradeCost));
-		}else{
+            entryButton.interactable = false;
+        }
+        else{
 			Debug.LogFormat("Not enough currency for upgrade: {0}", upgrades[upgradeIndex].UpgradeName);
 		}
     }
@@ -85,6 +88,17 @@ public class UpgradeManager : Singleton<UpgradeManager>
 		if (upgrades.Length > 0) {
 			upgrades [0].SetEntrySelected ();
 		}
+
+        // Set the enabled state of the upgrade
+        foreach(BaseUpgrade upgrade in upgrades)
+        {
+            GameObject entry = upgrade.GetListEntryObject();
+            Button entryButton = entry.GetComponent<Button>();
+            if (entryButton != entry)
+            {
+                entryButton.interactable = !upgrade.IsApplied;
+            }
+        }
 
         GameManager.Instance.DisableAvatar();
     }
