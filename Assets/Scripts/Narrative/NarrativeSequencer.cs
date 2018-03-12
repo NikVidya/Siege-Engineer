@@ -55,10 +55,33 @@ public class NarrativeSequencer : MonoBehaviour
     float elapsedAdvanceWaitTime = 0;
     float scrollSpeed = 0;
 
+#if UNITY_EDITOR
+    // Just a little debug thing to add a camera to the scene if there isn't one, so we can test the narrative in it's own scene without having the camera interfere when we add it to another scene
+    private void Awake()
+    {
+        if(Camera.main == null)
+        {
+            GameObject cam = new GameObject();
+            Camera camComponent = cam.AddComponent<Camera>();
+            camComponent.backgroundColor = new Color(0, 0, 0);
+        }
+    }
+#endif
+
     void Start()
     {   // Loading the scene should play the sequence
         curSequence = sequenceQueue[0];
         GotoState(SequenceState.SHOWING_DIALOG);
+    }
+
+    void CompleteNarrativeSequence()
+    {
+        if(curSequence != null)
+        {
+            curSequence.OnSequenceEnd();
+        }
+        curSequence = null;
+        CinematicManager.Instance.OnCinematicFinished();
     }
 
     void AdvanceSequence()
@@ -139,7 +162,7 @@ public class NarrativeSequencer : MonoBehaviour
                 controller.DialogTextArea.text = ""; // Clear the text before hiding
                 controller.HideDialog(() =>
                 {
-                    curSequence.OnSequenceEnd();
+                    CompleteNarrativeSequence();
                 });
                 break;
         }

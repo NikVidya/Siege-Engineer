@@ -26,6 +26,8 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher>
     public string nextLevel;
     // timeMinutes and timeSeconds used for the display time
 
+    public string DebugStartupNarrativeScene;
+
     public int timeMinutes = 1;
     public float timeSeconds = 30; // Time in seconds after minute. for example, if minute = 1 and seconds = 30, timer is 1:30
     void Start()
@@ -48,6 +50,10 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher>
         else
         {
             pauseUI.gameObject.SetActive(false);
+        }
+        if(!string.IsNullOrEmpty(DebugStartupNarrativeScene))
+        {
+            CinematicManager.Instance.EnqueueCinematic(DebugStartupNarrativeScene);
         }
     }
     void Update()
