@@ -39,13 +39,15 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
     [HideInInspector]
     public int health;
     [HideInInspector]
-    public float healthPercent = 100.0f;
+    public float healthPercent = 1.0f;
     [HideInInspector]
     public float healthPercentChange;
     public UnityEvent healthChange;
     [HideInInspector]
     [System.NonSerialized]
     public float damageDeBuff = 0f;
+
+	Animator animator;
 
     InteractionState _interactState = InteractionState.Ready;
     public InteractionState InteractState
@@ -77,7 +79,10 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
         // Register this game object so it can be interacted with.
         GameManager.Instance.RegisterInteractable(this);
 
+		animator = GetComponent<Animator> ();
+
         health = maxHealth;
+		healthPercent = 1;
         InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
 
     }
@@ -131,10 +136,13 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
         health += changeAmount;
         health = Mathf.Clamp(health, 0, maxHealth);
 
-        if (health <= 0)
-        {
-            Die();
-        }
+		if (health <= 0) {
+			Die ();
+		} else {
+			if (animator != null) {
+				animator.SetBool ("IsDead", false);
+			}
+		}
 
         if (healthChange == null)
         {
@@ -152,6 +160,9 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
         {
             GameStateSwitcher.Instance.GameOver();
         }
+		if (animator != null) {
+			animator.SetBool ("IsDead", true);
+		}
     }
 
     public void OnBombed(Bombardment instigator)

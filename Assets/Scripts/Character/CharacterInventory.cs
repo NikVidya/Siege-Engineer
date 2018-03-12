@@ -8,6 +8,12 @@ public class CharacterInventory : MonoBehaviour, IBombable
     [Tooltip("The in world container for the inventory. Leave as none to have no visible inventory")]
     public ResourceWorldContainer worldContainer;
 
+    [Header("Visuals")]
+    [Tooltip("The animator component which controls the sprite animation")]
+    public Animator animator;
+
+    private const string ANIMATOR_CARRYING_TAG = "isCarrying";
+
     public int NumHeldItems
     {
         get
@@ -25,16 +31,18 @@ public class CharacterInventory : MonoBehaviour, IBombable
 
     void Update()
     {
-        /*if (Vector3.Distance(repairTarget.gameObject.transform.position, transform.position) < 3)
+        if (heldInventory.Count <= 0)
         {
-            RepairGate();
-        }*/
+            animator.SetBool(ANIMATOR_CARRYING_TAG, false);
+        }
     }
 
     public void AddHoldable(IHoldable holdable)
     {
         worldContainer.PlaceInContainer(holdable.gameObject);
         heldInventory.Add(holdable);
+        animator.SetBool(ANIMATOR_CARRYING_TAG, true);
+
     }
 
     public void DropFirstHeld()
