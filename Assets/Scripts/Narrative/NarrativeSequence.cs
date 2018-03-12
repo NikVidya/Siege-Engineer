@@ -9,7 +9,9 @@ public class NarrativeSequence : MonoBehaviour {
     public Font dialogFont;
     [Tooltip("The animation controller for the talker")]
     public RuntimeAnimatorController talkerAnimatorController;
-    
+    [Tooltip("The type of dialog to use for this sequence")]
+    public NarrativeSequencer.DialogStructure dialogType;
+
     [Header("Dialog Parameters")]
     [SerializeField]
     [TextArea(1,10)]
@@ -17,6 +19,10 @@ public class NarrativeSequence : MonoBehaviour {
     public string dialogText;
     [Tooltip("The speed to print out the characters. (characters per second)")]
     public float scrollSpeed = 25.0f;
+    [Tooltip("Should this sequence auto advance to the next one")]
+    public bool autoAdvance = false;
+    [Tooltip("Delay before advancing if auto advance is enabled")]
+    public float advanceDelay = 3.0f;
 
     private BaseNarrativeAction[] actions;
 
@@ -26,18 +32,42 @@ public class NarrativeSequence : MonoBehaviour {
         actions = GetComponents<BaseNarrativeAction>();
     }
 
-    public void StartSequence()
+    public bool NeedsNewDialog(NarrativeSequence prev)
     {
+        // Different character?
+        if(prev.talkerAnimatorController != talkerAnimatorController)
+        {
+            return true;
+        }
 
+        // Different type?
+        if (prev.dialogType != dialogType)
+        {
+            return true;
+        }
+
+        // Different font?
+        if(prev.dialogFont != dialogFont)
+        {
+            return true;
+        }
+
+        return false;
     }
 
-    public void AccelerateSequence()
+    public void OnSequenceStart()
     {
-
+        foreach(BaseNarrativeAction action in actions)
+        {
+            action.OnSequenceStart();
+        }
     }
 
-    public void TerminateSequence()
+    public void OnSequenceEnd()
     {
-
+        foreach (BaseNarrativeAction action in actions)
+        {
+            action.OnSequenceEnd();
+        }
     }
 }
