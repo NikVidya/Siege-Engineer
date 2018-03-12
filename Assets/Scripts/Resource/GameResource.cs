@@ -76,10 +76,6 @@ public class GameResource : MonoBehaviour, IHoldable, IBombable
 
     private void OnDestroy()
     {
-        if (!GameManager.IsApplicationQuitting)
-        {
-            GameManager.Instance.DeRegisterInteractable(this);
-        }
     }
 
     public void OnInteract(CharacterInteraction instigator)
