@@ -14,12 +14,12 @@ public class DialogUIController : MonoBehaviour {
 
     Animator UIAnimator;
     const string ANIMATOR_SHOW_DIALOG_TAG = "showDialog";
+    const string ANIMATOR_EMOTION_STATE_TAG = "emotionState";
 
     AnimationFinishedDelegate showCallback = null;
     AnimationFinishedDelegate hideCallback = null;
-
-    // Use this for initialization
-    void Start () {
+    
+    void Awake () {
         UIAnimator = GetComponent<Animator>();
         if(UIAnimator == null)
         {
@@ -29,7 +29,13 @@ public class DialogUIController : MonoBehaviour {
 
     public void Initialize(NarrativeSequence sequence)
     {
+        DialogTextArea.font = sequence.dialogFont;
+        CharacterPortrait.runtimeAnimatorController = sequence.talkerAnimatorController;
+    }
 
+    public void PlayPortraitEmotionAnim(NarrativeSequencer.CharacterEmotion emotion)
+    {
+        CharacterPortrait.SetInteger(ANIMATOR_EMOTION_STATE_TAG, (int)emotion);
     }
 
     public void ShowDialog(AnimationFinishedDelegate callback)

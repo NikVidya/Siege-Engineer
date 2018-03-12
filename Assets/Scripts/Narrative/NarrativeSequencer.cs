@@ -21,6 +21,12 @@ public class NarrativeSequencer : MonoBehaviour
         FINISHED        // All sequences have been completed and the dialog is exiting or has exited
     }
 
+    public enum CharacterEmotion
+    {
+        NEUTRAL = 0,
+        HAPPY = 1
+    }
+
     [Header("UI References")]
     [Tooltip("Controller for left side character dialog")]
     public DialogUIController leftController;
@@ -109,6 +115,7 @@ public class NarrativeSequencer : MonoBehaviour
                 controller.DialogTextArea.text = ""; // Clear the text for printing
                 scrollSpeed = curSequence.scrollSpeed;
                 curSequence.OnSequenceStart();
+                controller.PlayPortraitEmotionAnim(curSequence.emotionState);
                 break;
 
             case SequenceState.PRINTING_FAST:
@@ -120,17 +127,19 @@ public class NarrativeSequencer : MonoBehaviour
                 break;
 
             case SequenceState.HIDING_DIALOG:
-                curSequence.OnSequenceEnd();
+                controller.DialogTextArea.text = ""; // Clear the text before hiding
                 controller.HideDialog(() =>
                 {
+                    curSequence.OnSequenceEnd();
                     GotoState(SequenceState.SHOWING_DIALOG);
                 });
                 break;
 
             case SequenceState.FINISHED:
+                controller.DialogTextArea.text = ""; // Clear the text before hiding
                 controller.HideDialog(() =>
                 {
-
+                    curSequence.OnSequenceEnd();
                 });
                 break;
         }
@@ -158,7 +167,7 @@ public class NarrativeSequencer : MonoBehaviour
                 {
                     if (curSequenceCharacterIndex + charsToAdd >= curSequence.dialogText.Length)
                     {
-                        charsToAdd = curSequenceCharacterIndex - (curSequence.dialogText.Length - 1);
+                        charsToAdd = curSequence.dialogText.Length - curSequenceCharacterIndex;
                         GotoState(SequenceState.WAITING_FOR_PROMPT);
                     }
                     controller.DialogTextArea.text = controller.DialogTextArea.text + curSequence.dialogText.Substring(curSequenceCharacterIndex, charsToAdd);

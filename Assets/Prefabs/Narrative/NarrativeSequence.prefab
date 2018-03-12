@@ -25,7 +25,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4181076259144448
 Transform:
@@ -55,4 +55,6 @@ MonoBehaviour:
   talkerAnimatorController: {fileID: 0}
   dialogType: 0
   dialogText: 
-  scrollSpeed: 0
+  scrollSpeed: 25
+  autoAdvance: 0
+  advanceDelay: 3

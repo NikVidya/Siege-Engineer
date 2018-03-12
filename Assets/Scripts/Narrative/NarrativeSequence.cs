@@ -11,18 +11,20 @@ public class NarrativeSequence : MonoBehaviour {
     public RuntimeAnimatorController talkerAnimatorController;
     [Tooltip("The type of dialog to use for this sequence")]
     public NarrativeSequencer.DialogStructure dialogType;
-
-    [Header("Dialog Parameters")]
-    [SerializeField]
-    [TextArea(1,10)]
-    [Tooltip("The text to display in the dialog box")]
-    public string dialogText;
     [Tooltip("The speed to print out the characters. (characters per second)")]
     public float scrollSpeed = 25.0f;
     [Tooltip("Should this sequence auto advance to the next one")]
     public bool autoAdvance = false;
     [Tooltip("Delay before advancing if auto advance is enabled")]
     public float advanceDelay = 3.0f;
+
+    [Header("Dialog Parameters")]
+    [SerializeField]
+    [TextArea(1,10)]
+    [Tooltip("The text to display in the dialog box")]
+    public string dialogText;
+    [Tooltip("The emotional state of the character")]
+    public NarrativeSequencer.CharacterEmotion emotionState;
 
     private BaseNarrativeAction[] actions;
 
