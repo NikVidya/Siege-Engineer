@@ -7,12 +7,12 @@ public class CinematicManager : Singleton<CinematicManager> {
 
     Queue<string> cinematicQueue = new Queue<string>();
 
-    Scene? activeCinematic = null;
+    string activeCinematicSceneName = null;
 
     void AdvanceCinematicQueue()
     {
         // Only advance if there is no active cinematic
-        if (activeCinematic == null)
+        if (string.IsNullOrEmpty(activeCinematicSceneName))
         {
             LoadCinematic(cinematicQueue.Dequeue());
         }
@@ -20,9 +20,8 @@ public class CinematicManager : Singleton<CinematicManager> {
 
     void LoadCinematic(string sceneName)
     {
-        Scene cinematic = SceneManager.GetSceneByName(sceneName);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive); // Add the cinematic onto the scene
-        activeCinematic = cinematic;
+        activeCinematicSceneName = sceneName;
     }
 
     public void EnqueueCinematic(string narrativeSceneName)
@@ -34,15 +33,15 @@ public class CinematicManager : Singleton<CinematicManager> {
     public void OnCinematicFinished()
     {
         // Unload cinematic
-        if(activeCinematic != null)
+        if(!string.IsNullOrEmpty(activeCinematicSceneName))
         {
-            SceneManager.UnloadSceneAsync(activeCinematic.GetValueOrDefault());
+            SceneManager.UnloadSceneAsync(activeCinematicSceneName);
         }
         else
         {
             Debug.LogError("Finished a cinematic while there was no active scene!");
         }
-        activeCinematic = null;
+        activeCinematicSceneName = null;
         AdvanceCinematicQueue();
     }
 }
