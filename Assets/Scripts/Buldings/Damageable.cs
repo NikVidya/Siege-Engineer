@@ -20,6 +20,7 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable {
     public Constants.Resource.ResourceType[] repairCost;
 
     public bool ShouldEndGame = false;
+    public bool bombable = true;
 
     [HideInInspector]
     public int health;
@@ -55,6 +56,9 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable {
     void Start () {
         // Register this game object so it can be interacted with.
         GameManager.Instance.RegisterInteractable (this);
+        if (bombable) {
+            GameManager.Instance.RegisterBombable (this);
+        }
 
         animator = GetComponent<Animator> ();
 
@@ -81,7 +85,6 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable {
 	*/
     public void ChangeHealth (int changeAmount) {
         health += changeAmount;
-        Debug.Log("I got damaged! current health: " + health);
         health = Mathf.Clamp (health, 0, maxHealth);
 
         if (health <= 0) {
@@ -147,7 +150,7 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable {
             foreach (Constants.Resource.ResourceType cost in repairCost) {
                 GameManager.Instance.ConsumeResource (availableResources[cost]);
             }
-            ChangeHealth(healthRepairAmount);
+            ChangeHealth (healthRepairAmount);
         }
     }
 

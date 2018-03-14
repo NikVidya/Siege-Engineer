@@ -41,7 +41,8 @@ public class Wave : MonoBehaviour {
     public Damageable[] trebuchets;
     [Tooltip ("The amount of damage the trebuchets take per second")]
     public int trebuchetDamage = 3;
-
+    [Tooltip ("If this is a BARRAGE wave, this determines time between each bombardment")]
+    public float timeBetweenBombardments = 0.7f;
     public UnityEvent finish;
     public enum WaveState {
         WAITING,
@@ -78,7 +79,7 @@ public class Wave : MonoBehaviour {
                 InvokeRepeating ("StructureDamage", gracePeriod, 1);
                 break;
             case WaveType.BARRAGE:
-                InvokeRepeating ("Barrage", gracePeriod, 0.5f);
+                InvokeRepeating ("Barrage", gracePeriod, timeBetweenBombardments);
                 break;
         }
     }

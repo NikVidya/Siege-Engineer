@@ -214,6 +214,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: bombable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthRepairAmount
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
   m_IsPrefabParent: 0
@@ -539,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250a2b19acdd63544b8a767eb60962bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveDuration: 10
+  waveDuration: 15
   gracePeriod: 5
   waveDurationUI: {fileID: 1703811771}
   typeOfWave: 1
@@ -549,6 +559,7 @@ MonoBehaviour:
   - {fileID: 893947308}
   - {fileID: 1119844998}
   trebuchetDamage: -7
+  timeBetweenBombardments: 0.7
   finish:
     m_PersistentCalls:
       m_Calls:
@@ -592,16 +603,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250a2b19acdd63544b8a767eb60962bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveDuration: 10
-  gracePeriod: 5
+  waveDuration: 60
+  gracePeriod: 15
   waveDurationUI: {fileID: 1703811771}
   typeOfWave: 0
   gate: {fileID: 470092404}
-  gateDamage: 6
+  gateDamage: 3
   trebuchets:
   - {fileID: 893947308}
   - {fileID: 1119844998}
-  trebuchetDamage: 6
+  trebuchetDamage: 2
+  timeBetweenBombardments: 0.7
   finish:
     m_PersistentCalls:
       m_Calls:
@@ -745,6 +757,7 @@ MonoBehaviour:
   waves:
   - {fileID: 648175827}
   - {fileID: 1967902177}
+  - {fileID: 646742300}
 --- !u!4 &892926940
 Transform:
   m_ObjectHideFlags: 0
@@ -26239,6 +26252,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 114432667328690284, guid: 1fb55088715988c4fbb3a77da4125278,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432667328690284, guid: 1fb55088715988c4fbb3a77da4125278,
+        type: 2}
+      propertyPath: stunDuration
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fb55088715988c4fbb3a77da4125278, type: 2}
   m_IsPrefabParent: 0
@@ -26518,6 +26541,11 @@ Prefab:
       propertyPath: damageable
       value: 
       objectReference: {fileID: 1119844998}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthRepairAmount
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
   m_IsPrefabParent: 0
@@ -26586,6 +26614,7 @@ MonoBehaviour:
   - {fileID: 893947308}
   - {fileID: 1119844998}
   trebuchetDamage: -7
+  timeBetweenBombardments: 0.7
   finish:
     m_PersistentCalls:
       m_Calls:
@@ -26659,6 +26688,11 @@ Prefab:
       propertyPath: damageable
       value: 
       objectReference: {fileID: 893947308}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthRepairAmount
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
   m_IsPrefabParent: 0
