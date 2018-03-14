@@ -8,34 +8,20 @@ using UnityEngine.Events;
 		- Alternatively, ditch the healthbar and use Damageable damage sprites
 	2. Placeholder sprites
  */
-public class Damageable : MonoBehaviour, IInteractable, IBombable
-{
-    [Header("Health Parameters")]
-    [Tooltip("The maximum health of the building")]
+public class Damageable : MonoBehaviour, IInteractable, IBombable {
+    [Header ("Health Parameters")]
+    [Tooltip ("The maximum health of the building")]
     public int maxHealth = 100;
 
-    [Header("Damage Parameters")]
-    [Tooltip("Whether this object takes periodic damage")]
-    public bool periodicDamage = true;
-    [Tooltip("The rate at which the Damageable heals or damages periodically")]
-    public int healthDecreaseRate = 1;
-    [Tooltip("Delay before incremental health decrease begins")]
-    public int gracePeriod = 5;
-    [Tooltip("The amount of damage the Damageable receives periodically")]
-    public int healthDecreaseAmount = -3;
-
-    [Header("Repair Parameters")]
-    [Tooltip("The amount that the Damageable heals periodically")]
-    public int healthRepairAmount = 10;
-    [Tooltip("The amount of time invoking repair will repair for")]
-    public float healthRepairTime = 1.0f;
-    [Tooltip("What resources are required for repair")]
+    [Header ("Repair Parameters")]
+    [Tooltip ("The amount that the Damageable heals")]
+    public int healthRepairAmount = 30;
+    [Tooltip ("What resources are required for repair")]
     public Constants.Resource.ResourceType[] repairCost;
 
     public bool ShouldEndGame = false;
+    public bool bombable = true;
 
-    [HideInInspector]
-    public bool repairState = false;
     [HideInInspector]
     public int health;
     [HideInInspector]
@@ -47,183 +33,128 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable
     [System.NonSerialized]
     public float damageDeBuff = 0f;
 
-	Animator animator;
+    Animator animator;
 
     InteractionState _interactState = InteractionState.Ready;
-    public InteractionState InteractState
-    {
-        get
-        {
+    public InteractionState InteractState {
+        get {
             return _interactState;
         }
-        set
-        {
+        set {
             _interactState = value;
         }
     }
 
-    public InteractableType InteractableType
-    {
-        get
-        {
+    public InteractableType InteractableType {
+        get {
             return InteractableType.REPAIR;
         }
         set { }
     }
 
-    float timeSpentRepairing = 0;
-
     //private
-    void Start()
-    {
+    void Start () {
         // Register this game object so it can be interacted with.
-        GameManager.Instance.RegisterInteractable(this);
+        GameManager.Instance.RegisterInteractable (this);
+        if (bombable) {
+            GameManager.Instance.RegisterBombable (this);
+        }
 
-		animator = GetComponent<Animator> ();
+        animator = GetComponent<Animator> ();
 
         health = maxHealth;
-		healthPercent = 1;
-        InvokeRepeating("PeriodicHealthChange", gracePeriod, healthDecreaseRate);
+        healthPercent = 1;
 
     }
 
-    void Update()
-    {
+    void Update () {
 
-        if (health > maxHealth)
-        {
+        if (health > maxHealth) {
             health = maxHealth;
         }
 
-        if (health > 0)
-        {
+        if (health > 0) {
             healthPercent = (maxHealth / health) * 100;
-        }
-        else
-        {
+        } else {
             healthPercent = 0;
-        }
-
-        if (timeSpentRepairing > healthRepairTime)
-        {
-            repairState = false;
-        }
-        else if (repairState)
-        {
-            timeSpentRepairing += Time.deltaTime;
-        }
-    }
-
-
-    void PeriodicHealthChange()
-    {
-        if (repairState)
-        {
-            ChangeHealth(healthRepairAmount);
-        }
-        else if (periodicDamage && !repairState)
-        {
-            int calcChangeAmount = Mathf.RoundToInt(healthDecreaseAmount * (1 - damageDeBuff));
-            ChangeHealth(calcChangeAmount);
         }
     }
 
     /* 
 	Change the health of the Damageable
 	*/
-    public void ChangeHealth(int changeAmount)
-    {
+    public void ChangeHealth (int changeAmount) {
         health += changeAmount;
-        health = Mathf.Clamp(health, 0, maxHealth);
+        health = Mathf.Clamp (health, 0, maxHealth);
 
-		if (health <= 0) {
-			Die ();
-		} else {
-			if (animator != null) {
-				animator.SetBool ("IsDead", false);
-			}
-		}
-
-        if (healthChange == null)
-        {
-            healthChange = new UnityEvent();
+        if (health <= 0) {
+            Die ();
+        } else {
+            if (animator != null) {
+                animator.SetBool ("IsDead", false);
+            }
         }
-        healthPercent = (float)health / (float)maxHealth;
-        // Debug.Log("current health is " + health);
-        // Debug.Log("Damage debuff is: " + damageDeBuff);
-        healthChange.Invoke();
-    }
 
-    void Die()
-    {
-        if (ShouldEndGame)
-        {
-            GameStateSwitcher.Instance.GameOver();
+        if (healthChange == null) {
+            healthChange = new UnityEvent ();
         }
-		if (animator != null) {
-			animator.SetBool ("IsDead", true);
-		}
+        healthPercent = (float) health / (float) maxHealth;
+        healthChange.Invoke ();
     }
 
-    public void OnBombed(Bombardment instigator)
-    {
-        Debug.LogFormat("Bombed {0} for {1} damage", gameObject.name, instigator.damage);
-        this.health -= instigator.damage;
+    void Die () {
+        if (ShouldEndGame) {
+            GameStateSwitcher.Instance.GameOver ();
+        }
+        if (animator != null) {
+            animator.SetBool ("IsDead", true);
+        }
     }
 
-    public float GetDistanceToTransform(Transform t)
-    {
-        return Vector3.Distance(t.position, transform.position);
+    public void OnBombed (Bombardment instigator) {
+        Debug.LogFormat ("Bombed {0} for {1} damage", gameObject.name, instigator.damage);
+        ChangeHealth (-instigator.damage);
     }
 
-    public void OnInteract(CharacterInteraction instigator)
-    {
-        Dictionary<Constants.Resource.ResourceType, GameResource> availableResources = new Dictionary<Constants.Resource.ResourceType, GameResource>();
+    public float GetDistanceToTransform (Transform t) {
+        return Vector3.Distance (t.position, transform.position);
+    }
+
+    public void OnInteract (CharacterInteraction instigator) {
+        Dictionary<Constants.Resource.ResourceType, GameResource> availableResources = new Dictionary<Constants.Resource.ResourceType, GameResource> ();
 
         // Note: If it where possible for multiple instances of resources to be on the map at once, the order 
         //  that the next two sections are in will determine if resources are used out of the player's inventory
         //  first, or off the ground first.
 
         // Find nearby resources
-        List<GameResource> nearbyResources = GameManager.Instance.GetResourcesInRange(instigator.transform, instigator.interactDistance);
-        foreach (GameResource gr in nearbyResources)
-        {
+        List<GameResource> nearbyResources = GameManager.Instance.GetResourcesInRange (instigator.transform, instigator.interactDistance);
+        foreach (GameResource gr in nearbyResources) {
             availableResources[gr.type] = gr; // This is set to be used
         }
 
         // Find resources in player inventory
-        foreach (GameResource gr in instigator.InventoryComponent.heldInventory)
-        {
+        foreach (GameResource gr in instigator.InventoryComponent.heldInventory) {
             availableResources[gr.type] = gr; // This is set to be used
         }
 
         bool canRepair = true;
-        foreach (Constants.Resource.ResourceType cost in repairCost)
-        {
-            canRepair = availableResources.ContainsKey(cost);
-            if (!canRepair)
-            {   // No sense continuing, we can't repair
+        foreach (Constants.Resource.ResourceType cost in repairCost) {
+            canRepair = availableResources.ContainsKey (cost);
+            if (!canRepair) { // No sense continuing, we can't repair
                 return;
             }
         }
 
-        if (canRepair)
-        {
-            foreach (Constants.Resource.ResourceType cost in repairCost)
-            {
-                GameManager.Instance.ConsumeResource(availableResources[cost]);
+        if (canRepair) {
+            foreach (Constants.Resource.ResourceType cost in repairCost) {
+                GameManager.Instance.ConsumeResource (availableResources[cost]);
             }
-            repairState = true;
-            Debug.Log("Start Repair");
-            timeSpentRepairing = 0;
+            ChangeHealth (healthRepairAmount);
         }
     }
 
-    public void OnFocus(CharacterInteraction focuser)
-    {
-    }
+    public void OnFocus (CharacterInteraction focuser) { }
 
-    public void OnDefocus(CharacterInteraction focuser)
-    {
-    }
+    public void OnDefocus (CharacterInteraction focuser) { }
 }

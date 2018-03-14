@@ -22,7 +22,7 @@ public class BattleManager : Singleton<BattleManager>
 		Gizmos.DrawWireCube (battleArea.center, battleArea.size);
 	}
 
-	void SpawnBombardment()
+	public void SpawnBombardment()
 	{
 		GameObject spawned = GameObject.Instantiate (bombardment);
 		spawned.transform.position = transform.position + new Vector3 (Random.Range (battleArea.xMin, battleArea.xMax), Random.Range (battleArea.yMin, battleArea.yMax), 0.0f);

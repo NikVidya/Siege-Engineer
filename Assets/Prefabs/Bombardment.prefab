@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveTime: 3
   hitDelay: 0.5
-  moveRate: 3
+  moveRate: 2
   bombardmentArea: 1.5
   damage: 20
 --- !u!212 &212030072141698950
