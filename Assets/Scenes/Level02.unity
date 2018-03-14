@@ -420,6 +420,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa3687d120367594d9bed1c5dcbc8a35, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &470092404 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+    type: 2}
+  m_PrefabInternal: {fileID: 166924877}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
 --- !u!1 &515556306 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1359294121176734, guid: 1fb55088715988c4fbb3a77da4125278,
@@ -493,6 +499,72 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9478e1bfc1a4a684da0714d2560aa56b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &648175826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 648175828}
+  - component: {fileID: 648175827}
+  m_Layer: 0
+  m_Name: FirstWave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &648175827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648175826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250a2b19acdd63544b8a767eb60962bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveDuration: 10
+  gracePeriod: 5
+  waveDurationUI: {fileID: 1703811771}
+  typeOfWave: 0
+  gate: {fileID: 470092404}
+  gateDamage: -7
+  trebuchets:
+  - {fileID: 893947308}
+  - {fileID: 1119844998}
+  trebuchetDamage: -7
+  finish:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 892926939}
+        m_MethodName: NextWave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &648175828
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648175826}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 892926940}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &666683587 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1926882169857134, guid: cf1f9ea6f3fad9c4695c0e88202f19b8,
@@ -577,6 +649,57 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!1 &892926938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 892926940}
+  - component: {fileID: 892926939}
+  m_Layer: 0
+  m_Name: WaveSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &892926939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 892926938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00441c75fc3373d4c9cb0adbc9c8afe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - {fileID: 648175827}
+  - {fileID: 1967902177}
+--- !u!4 &892926940
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 892926938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9300885, y: 0.263858, z: 0.027343746}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 648175828}
+  - {fileID: 1967902178}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &893947308 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 2042534618}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
 --- !u!1 &957625910
 GameObject:
   m_ObjectHideFlags: 0
@@ -25949,9 +26072,25 @@ Prefab:
       propertyPath: objectToTrack
       value: 
       objectReference: {fileID: 515556306}
+    - target: {fileID: 224258302843905472, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224258302843905472, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 586.94
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1119844998 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1571805795}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
 --- !u!1001 &1123807557
 Prefab:
   m_ObjectHideFlags: 0
@@ -26307,6 +26446,11 @@ Prefab:
       propertyPath: m_Name
       value: Trebuchet (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114318328293609752, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: damageable
+      value: 
+      objectReference: {fileID: 1119844998}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
   m_IsPrefabParent: 0
@@ -26338,6 +26482,72 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1967902176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1967902178}
+  - component: {fileID: 1967902177}
+  m_Layer: 0
+  m_Name: SecondWave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1967902177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967902176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250a2b19acdd63544b8a767eb60962bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveDuration: 10
+  gracePeriod: 5
+  waveDurationUI: {fileID: 1703811771}
+  typeOfWave: 0
+  gate: {fileID: 470092404}
+  gateDamage: -7
+  trebuchets:
+  - {fileID: 893947308}
+  - {fileID: 1119844998}
+  trebuchetDamage: -7
+  finish:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 892926939}
+        m_MethodName: NextWave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &1967902178
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967902176}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 892926940}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2042534618
 Prefab:
   m_ObjectHideFlags: 0
@@ -26377,6 +26587,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114318328293609752, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: damageable
+      value: 
+      objectReference: {fileID: 893947308}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
   m_IsPrefabParent: 0
