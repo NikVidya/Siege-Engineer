@@ -110,7 +110,7 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable {
 
     public void OnBombed (Bombardment instigator) {
         Debug.LogFormat ("Bombed {0} for {1} damage", gameObject.name, instigator.damage);
-        this.health -= instigator.damage;
+        ChangeHealth (-instigator.damage);
     }
 
     public float GetDistanceToTransform (Transform t) {
