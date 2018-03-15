@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 661679344}
   - component: {fileID: 661679343}
   - component: {fileID: 661679342}
+  - component: {fileID: 661679345}
   m_Layer: 5
   m_Name: 'Level 4 Button '
   m_TagString: Untagged
@@ -143,7 +144,7 @@ RectTransform:
   m_Children:
   - {fileID: 2120153955}
   m_Father: {fileID: 1628444220}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -224,6 +225,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 661679340}
+--- !u!114 &661679345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 661679340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f51ec5da8b4be1ad8fa550dd726cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: Level04
 --- !u!1 &667113104
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,8 +248,9 @@ GameObject:
   - component: {fileID: 667113108}
   - component: {fileID: 667113107}
   - component: {fileID: 667113106}
+  - component: {fileID: 667113109}
   m_Layer: 5
-  m_Name: Exit Button
+  m_Name: Level 5 Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +268,7 @@ RectTransform:
   m_Children:
   - {fileID: 1472937323}
   m_Father: {fileID: 1628444220}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -346,6 +360,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 667113104}
+--- !u!114 &667113109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667113104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f51ec5da8b4be1ad8fa550dd726cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: Level05
 --- !u!1 &731675522
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +383,7 @@ GameObject:
   - component: {fileID: 731675526}
   - component: {fileID: 731675525}
   - component: {fileID: 731675524}
+  - component: {fileID: 731675527}
   m_Layer: 5
   m_Name: Level 3 Button
   m_TagString: Untagged
@@ -376,7 +403,7 @@ RectTransform:
   m_Children:
   - {fileID: 1751738408}
   m_Father: {fileID: 1628444220}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -457,6 +484,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 731675522}
+--- !u!114 &731675527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 731675522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f51ec5da8b4be1ad8fa550dd726cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: Level03
 --- !u!1 &879137169
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +569,7 @@ GameObject:
   - component: {fileID: 1308916117}
   - component: {fileID: 1308916116}
   - component: {fileID: 1308916115}
+  - component: {fileID: 1308916118}
   m_Layer: 5
   m_Name: Level 1 Button
   m_TagString: Untagged
@@ -641,6 +681,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1308916113}
+--- !u!114 &1308916118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1308916113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f51ec5da8b4be1ad8fa550dd726cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: Level01
 --- !u!1 &1377353931
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,10 +975,10 @@ RectTransform:
   m_Children:
   - {fileID: 2076621925}
   - {fileID: 1308916114}
-  - {fileID: 667113105}
   - {fileID: 1918401531}
   - {fileID: 731675523}
   - {fileID: 661679341}
+  - {fileID: 667113105}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1143,6 +1195,7 @@ GameObject:
   - component: {fileID: 1918401534}
   - component: {fileID: 1918401533}
   - component: {fileID: 1918401532}
+  - component: {fileID: 1918401535}
   m_Layer: 5
   m_Name: Level 2 Button
   m_TagString: Untagged
@@ -1162,7 +1215,7 @@ RectTransform:
   m_Children:
   - {fileID: 1852234224}
   m_Father: {fileID: 1628444220}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1204,10 +1257,21 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1918401533}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1852268531}
+        m_MethodName: GameStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1918401533
@@ -1243,6 +1307,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1918401530}
+--- !u!114 &1918401535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1918401530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f51ec5da8b4be1ad8fa550dd726cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: Level02
 --- !u!1 &2076621924
 GameObject:
   m_ObjectHideFlags: 0
