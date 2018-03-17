@@ -175,6 +175,9 @@ public class NarrativeSequencer : MonoBehaviour
         {
             case SequenceState.PRINTING:
             case SequenceState.PRINTING_FAST:
+                /*
+                 * Disable dialog advancement from anykey as per current design
+                 * 
                 if (curState == SequenceState.PRINTING)
                 {   // Check if the user want's to speed things up
                     if (Input.anyKeyDown)
@@ -182,6 +185,7 @@ public class NarrativeSequencer : MonoBehaviour
                         GotoState(SequenceState.PRINTING_FAST);
                     }
                 }
+                */
 
                 timeSinceCharAdded += Time.deltaTime;
                 int charsToAdd = Mathf.RoundToInt(scrollSpeed * timeSinceCharAdded); // (chars/second) * (seconds since last character was added)
@@ -202,7 +206,11 @@ public class NarrativeSequencer : MonoBehaviour
 
             case SequenceState.WAITING_FOR_PROMPT:
                 elapsedAdvanceWaitTime += Time.deltaTime;
+                /*
+                 * No longer require player input to advance
                 if ((curSequence.autoAdvance && elapsedAdvanceWaitTime >= curSequence.advanceDelay) || Input.anyKeyDown)
+                */
+                if(elapsedAdvanceWaitTime >= curSequence.advanceDelay)
                 {
                     AdvanceSequence();
                 }
