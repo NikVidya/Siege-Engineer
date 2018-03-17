@@ -34,60 +34,10 @@ public class LevelSelector : MonoBehaviour {
 
     public void ButtonHover (Button button)
     {
-//        if (button.name == "Level01")
-//        {
-//            level01.transform.SetAsLastSibling();
-//    
-//        }
-//        else if (button.name == "Level02")
-//        {
-//            level02.transform.SetAsLastSibling();
-//        }
-//        else if (button.name == "Level03")
-//        {
-//            level03.transform.SetAsLastSibling();
-//        }
-//
-//        else if (button.name == "Level04")
-//        {
-//            level04.transform.SetAsLastSibling();
-//        }
-//
-//        else if (button.name == "Level05")
-//        {
-//            level05.transform.SetAsLastSibling();
-//        }
+      
     }
     public void ButtonClick (Button button)
     {
-//        if (button.name == "Level01")
-//        {
-//            Application.LoadLevel("Level01");
-//            Debug.Log("Load Level01");
-//        }
-//        else if (button.name == "Level02")
-//        {
-//            Application.LoadLevel("Level02");
-//            Debug.Log("Load Level02");
-//        }
-//        else if (button.name == "Level03")
-//        {
-//            Application.LoadLevel("Level03");
-//            Debug.Log("Load Level03");
-//        }
-//    
-//
-//        else if (button.name == "Level04")
-//        {
-//            Application.LoadLevel("Level04");
-//            Debug.Log("Load Level04");
-//        }
-//
-//        else if (button.name == "Level05")
-//        {
-//            Application.LoadLevel("Level05");
-//            Debug.Log("Load Level05");
-//        }
 
 		Application.LoadLevel (level);
 
