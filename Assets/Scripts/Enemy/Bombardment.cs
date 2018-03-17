@@ -18,6 +18,9 @@ public class Bombardment : MonoBehaviour {
 
 	float timeAlive = 0.0f;
 
+    const string ANIMATOR_DETONATE_TAG = "detonate";
+    Animator animator;
+
 	void OnDrawGizmos()
 	{
 		Gizmos.color = new Color(255f,0f,0f,0.3f);
@@ -27,6 +30,7 @@ public class Bombardment : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		timeAlive = 0.0f;
+        animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -40,8 +44,16 @@ public class Bombardment : MonoBehaviour {
 			foreach (IBombable bombable in bombables) {
 				bombable.OnBombed (this);
 			}
-			Destroy (gameObject); // Commit suicide
+            if(animator != null)
+            {
+                animator.SetTrigger(ANIMATOR_DETONATE_TAG);
+            }
 		}
 		timeAlive += Time.deltaTime;
 	}
+
+    public void EndDetonateAnim()
+    {
+        Destroy(gameObject); // Commit suicide
+    }
 }

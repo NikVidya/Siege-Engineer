@@ -22,6 +22,8 @@ public class ResourceSpawner : MonoBehaviour {
     private bool resourceIsSpawned = false;
     private float timeSinceLastDespawn = 0.0f;
 
+    Animator animator;
+    private const string ANIMATOR_HAS_RESOURCE_TAG = "hasResource";
 
     void OnDrawGizmos()
     {
@@ -31,6 +33,9 @@ public class ResourceSpawner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        // Acquire a reference to an animator component if there is one to be had
+        animator = GetComponent<Animator>();
+
 		if(resourcePrefab && !resourceInstance)
         {   // Resource instance needs to be created
             resourceInstance = GameObject.Instantiate(resourcePrefab, transform.TransformPoint(spawnPosition), new Quaternion(), null);
@@ -58,6 +63,10 @@ public class ResourceSpawner : MonoBehaviour {
 		if (!resourceInstance.activeInHierarchy && resourceIsSpawned) {
 			resourceIsSpawned = false;
 			timeSinceLastDespawn = 0.0f;
+            if(animator != null)
+            {
+                animator.SetBool(ANIMATOR_HAS_RESOURCE_TAG, false);
+            }
 		}
     }
 
@@ -66,5 +75,9 @@ public class ResourceSpawner : MonoBehaviour {
 		resourceIsSpawned = true;
         resourceInstance.SetActive(true);
         resourceInstance.transform.position = transform.TransformPoint(spawnPosition);
+        if (animator != null)
+        {
+            animator.SetBool(ANIMATOR_HAS_RESOURCE_TAG, true);
+        }
     }
 }

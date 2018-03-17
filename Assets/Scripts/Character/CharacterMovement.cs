@@ -99,25 +99,48 @@ public class CharacterMovement : MonoBehaviour
 
     void SetAnimatorDirection(Vector2 dir)
     {
-        int dirVal = 0;
-        Vector2 abs = new Vector2(Mathf.Abs(dir.x), Mathf.Abs(dir.y));
+        int dirVal = 6;
 
-        if (dir.x > Mathf.Epsilon && abs.x >= abs.y)
-        {
-            dirVal = 2;
+        if(dir.y > Mathf.Epsilon)
+        {   // Moving North
+            if(dir.x < -Mathf.Epsilon)
+            {   // Moving West
+                dirVal = 1;
+            }
+            else if(dir.x > Mathf.Epsilon)
+            {   // Moving East
+                dirVal = 3;
+            }
+            else
+            {   // Not East or West
+                dirVal = 2;
+            }
         }
-        else if (dir.x < Mathf.Epsilon && abs.x >= abs.y)
-        {
-            dirVal = 0;
+        else if(dir.y < -Mathf.Epsilon)
+        {   // Moving South
+            if(dir.x > Mathf.Epsilon)
+            {   // Moving East
+                dirVal = 5;
+            }
+            else if(dir.x < -Mathf.Epsilon)
+            {   // Moving West
+                dirVal = 7;
+            }
+            else
+            {
+                dirVal = 6;
+            }
         }
-
-        if (dir.y > Mathf.Epsilon && abs.y > abs.x)
-        {
-            dirVal = 1;
-        }
-        else if (dir.y < Mathf.Epsilon && abs.y > abs.x)
-        {
-            dirVal = 3;
+        else
+        {   // Not South or North
+            if(dir.x < -Mathf.Epsilon)
+            {   // Moving West
+                dirVal = 0;
+            }
+            else if(dir.x > Mathf.Epsilon)
+            {   // Moving East
+                dirVal = 4;
+            }
         }
 
         animator.SetInteger(ANIMATOR_DIRECTION_TAG, dirVal);

@@ -35,13 +35,16 @@ public abstract class BaseUpgrade : MonoBehaviour
 
 	public virtual GameObject GetListEntryObject()
 	{
-		_entryListInstance = GameObject.Instantiate (EntryListTemplate);
-		UpgradeListEntry listEntryComponent = _entryListInstance.GetComponent<UpgradeListEntry> ();
-		if (listEntryComponent != null)
-		{
-			listEntryComponent.DisplayNameText.text = UpgradeName;
-			listEntryComponent.CostText.text = string.Format ("${0:F2}", UpgradeCost);
-		}
+        if(_entryListInstance == null)
+        {
+            _entryListInstance = GameObject.Instantiate(EntryListTemplate);
+            UpgradeListEntry listEntryComponent = _entryListInstance.GetComponent<UpgradeListEntry>();
+            if (listEntryComponent != null)
+            {
+                listEntryComponent.DisplayNameText.text = UpgradeName;
+                listEntryComponent.CostText.text = string.Format("${0:F2}", UpgradeCost);
+            }
+        }
 		return _entryListInstance;
 	}
 
