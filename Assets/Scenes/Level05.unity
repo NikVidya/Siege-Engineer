@@ -256,15 +256,13 @@ Prefab:
       propertyPath: objectToTrack
       value: 
       objectReference: {fileID: 1048596296}
+    - target: {fileID: 1053133184118060, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &617693965 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114911596826849802, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
-    type: 2}
-  m_PrefabInternal: {fileID: 617693964}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &631506092
 Prefab:
   m_ObjectHideFlags: 0
@@ -3511,7 +3509,7 @@ Prefab:
         type: 2}
       propertyPath: currencyUI
       value: 
-      objectReference: {fileID: 617693965}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ce8cb8602c39a488c3dea1e22b42d3, type: 2}
   m_IsPrefabParent: 0
