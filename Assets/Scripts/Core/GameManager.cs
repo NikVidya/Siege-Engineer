@@ -65,6 +65,7 @@ public class GameManager : Singleton<GameManager> {
     public void ConsumeResource(GameResource resource)
     {
 		interactionComponent.InventoryComponent.DropHeld(resource);
+        resource.State = GameResource.ResourceState.Consumed;
         resource.gameObject.SetActive(false);
     }
 
@@ -124,7 +125,7 @@ public class GameManager : Singleton<GameManager> {
 		foreach(IInteractable interact in Interactables[(int)InteractableType.PICKUP])
         {
             GameResource gr = interact as GameResource; // Try and cast down the tree to a GameResource
-			if (gr != null && ((IHoldable)gr).HeldState != HoldState.Held && Vector3.Distance(gr.transform.position, t.position) <= range)
+			if (gr != null && ((IHoldable)gr).HeldState != HoldState.Held && Vector3.Distance(gr.transform.position, t.position) <= range && gr.State == GameResource.ResourceState.Ready)
             {   // This interactable was a resource, and is close enough to be included
                 ret.Add(gr);
             }
