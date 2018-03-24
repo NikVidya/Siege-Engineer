@@ -42,20 +42,15 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher> {
         }
     }
     public void Victory () {
+        Saver.Instance.SavePlayerCurrency(UpgradeManager.Instance.currencyAmount);
         Debug.Log ("Victory!!!");
-        // SceneManager.LoadScene (nextLevel);
+        SceneManager.LoadScene ("VictoryScreen");
     }
     public void GameStart () {
         SceneManager.LoadScene ("Level01");
     }
     public void GameOver () {
         SceneManager.LoadScene ("GameOver");
-    }
-    public void EnterDialogue () {
-
-    }
-    public void ExitDialogue () {
-
     }
 
     public void Pause () {
