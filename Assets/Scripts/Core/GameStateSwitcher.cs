@@ -48,10 +48,34 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher> {
     public void GameStart () {
         SceneManager.LoadScene ("Level01");
     }
-    public void GameOver () {
-        SceneManager.LoadScene ("GameOver");
+
+	public void LoadLevel2()
+	{
+		SceneManager.LoadScene("Level02");
+	}
+
+	public void LoadLevel3()
+	{
+		SceneManager.LoadScene("Level03");
+	}
+
+	public void LoadLevel4()
+	{
+		SceneManager.LoadScene("Level04");
+	}
+
+	public void LoadLevel5()
+	{
+		SceneManager.LoadScene("Level05");
+	}
+
+
+	public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
-    public void EnterDialogue () {
+    public void EnterDialogue()
+    {
 
     }
     public void ExitDialogue () {
