@@ -75,6 +75,11 @@ public class ResourceSpawner : MonoBehaviour {
 		resourceIsSpawned = true;
         resourceInstance.SetActive(true);
         resourceInstance.transform.position = transform.TransformPoint(spawnPosition);
+        GameResource resourceComponent = resourceInstance.GetComponent<GameResource>();
+        if(resourceComponent != null)
+        {
+            resourceComponent.State = GameResource.ResourceState.Ready;
+        }
         if (animator != null)
         {
             animator.SetBool(ANIMATOR_HAS_RESOURCE_TAG, true);
