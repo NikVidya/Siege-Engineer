@@ -17,6 +17,7 @@ public class Bombardment : MonoBehaviour {
 	public int damage = 10;
 
 	float timeAlive = 0.0f;
+    bool canExplode = true;
 
     const string ANIMATOR_DETONATE_TAG = "detonate";
     Animator animator;
@@ -39,8 +40,9 @@ public class Bombardment : MonoBehaviour {
 			Vector3 movement = Vector3.ClampMagnitude(GameManager.Instance.interactionComponent.transform.position - transform.position, moveRate * Time.deltaTime);
 
 			transform.position = transform.position + movement;
-		} else if (timeAlive > moveTime + hitDelay) {
-			List<IBombable> bombables = GameManager.Instance.GetBombablesInRange (transform, bombardmentArea);
+		} else if (timeAlive > moveTime + hitDelay && canExplode) {
+            canExplode = false;
+            List<IBombable> bombables = GameManager.Instance.GetBombablesInRange (transform, bombardmentArea);
 			foreach (IBombable bombable in bombables) {
 				bombable.OnBombed (this);
 			}
