@@ -64,6 +64,6 @@ public class EndLevelValues : MonoBehaviour {
     }
 
     void Continue () {
-        SceneManager.LoadScene ("mainmenu");
+        SceneManager.LoadScene ("levelmenu");
     }
 }

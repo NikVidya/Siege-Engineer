@@ -209,7 +209,7 @@ public class CharacterMovement : MonoBehaviour
                 break;
         }
         float curEncumbranceMultiplier = 1 - encumbranceMultiplier * encumbranceCurve.Evaluate(_inventory.NumHeldItems / (float)encumbranceMaxCount);
-        float total_vel = (vel_normal + vel_dash) * curEncumbranceMultiplier;
+        float total_vel = (vel_normal + vel_dash) * curEncumbranceMultiplier * Time.deltaTime;
 
         animator.SetFloat(ANIMATOR_SPEED_TAG, total_vel);
 

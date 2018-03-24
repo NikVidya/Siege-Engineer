@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bea992806c3c77c468642422b0ce3dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0.1
+  maxSpeed: 5
   dashAdd: 0.09
   dashCurve:
     serializedVersion: 2
