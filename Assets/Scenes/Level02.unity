@@ -434,7 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 400
   healthRepairAmount: 50
-  repairCost: 0000000001000000
+  repairCost: 000000000000000001000000
   ShouldEndGame: 1
   bombable: 0
   health: 0
