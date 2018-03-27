@@ -11,9 +11,9 @@ menu, exit, and entering/exiting dialogue
 TODO:
 * Expand functionality to save currency/stats between games
  */
-public class GameStateSwitcher : Singleton<GameStateSwitcher> {
+public class GameStateSwitcher : Singleton<GameStateSwitcher>
+{
     public CharacterMovement player;
-    [HideInInspector]
     public GameObject pauseUI;
     bool paused = false;
     public string nextLevel;
@@ -21,87 +21,109 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher> {
 
     public string DebugStartupNarrativeScene;
 
-    void Start () {
-        if (pauseUI == null) {
-            Debug.LogWarning ("Pause UI not assigned to Game StateSwitcher");
-        } else {
-            pauseUI.gameObject.SetActive (false);
+    void Start()
+    {
+        if (pauseUI == null)
+        {
+            Debug.LogWarning("Pause UI not assigned to Game StateSwitcher");
         }
-        if (!string.IsNullOrEmpty (DebugStartupNarrativeScene)) {
-            CinematicManager.Instance.EnqueueCinematic (DebugStartupNarrativeScene);
+        else
+        {
+            pauseUI.gameObject.SetActive(false);
+        }
+        if (!string.IsNullOrEmpty(DebugStartupNarrativeScene))
+        {
+            CinematicManager.Instance.EnqueueCinematic(DebugStartupNarrativeScene);
         }
     }
-    void Update () {
-        if (Input.GetButtonDown (Constants.InputNames.PAUSE)) {
-            if (!paused) {
-                Pause ();
-                Debug.Log ("PAUSED");
-            } else {
-                UnPause ();
+    void Update()
+    {
+        if (Input.GetButtonDown(Constants.InputNames.PAUSE))
+        {
+            if (!paused)
+            {
+                Pause();
+                Debug.Log("PAUSED");
+            }
+            else
+            {
+                UnPause();
             }
         }
     }
-    public void Victory () {
+    public void Victory()
+    {
         Saver.Instance.SavePlayerCurrency(UpgradeManager.Instance.currencyAmount);
-        Debug.Log ("Victory!!!");
-        SceneManager.LoadScene ("VictoryScreen");
+        Debug.Log("Victory!!!");
+        SceneManager.LoadScene("VictoryScreen");
     }
-    public void GameStart () {
-        SceneManager.LoadScene ("Level01");
+    public void GameStart()
+    {
+        SceneManager.LoadScene("Level01");
     }
 
-	public void LoadLevel2()
-	{
-		SceneManager.LoadScene("Level02");
-	}
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Level02");
+    }
 
-	public void LoadLevel3()
-	{
-		SceneManager.LoadScene("Level03");
-	}
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene("Level03");
+    }
 
-	public void LoadLevel4()
-	{
-		SceneManager.LoadScene("Level04");
-	}
+    public void LoadLevel4()
+    {
+        SceneManager.LoadScene("Level04");
+    }
 
-	public void LoadLevel5()
-	{
-		SceneManager.LoadScene("Level05");
-	}
+    public void LoadLevel5()
+    {
+        SceneManager.LoadScene("Level05");
+    }
 
 
-	public void GameOver()
+    public void GameOver()
     {
         SceneManager.LoadScene("GameOver");
     }
 
-    public void Pause () {
+    public void Pause()
+    {
         Time.timeScale = 0;
-        if (player != null) {
+        if (player != null)
+        {
             player.paused = true;
-        } else {
-            Debug.LogWarning ("Player Movement script was not passed to GameStateSwitcher, player can still move when paused");
         }
-        if (pauseUI != null) {
-            pauseUI.gameObject.SetActive (true);
+        else
+        {
+            Debug.LogWarning("Player Movement script was not passed to GameStateSwitcher, player can still move when paused");
+        }
+        if (pauseUI != null)
+        {
+            pauseUI.gameObject.SetActive(true);
         }
         paused = true;
     }
-    public void UnPause () {
+    public void UnPause()
+    {
         Time.timeScale = 1;
-        if (player != null) {
+        if (player != null)
+        {
             player.paused = false;
         }
-        if (pauseUI != null) {
-            pauseUI.gameObject.SetActive (false);
+        if (pauseUI != null)
+        {
+            pauseUI.gameObject.SetActive(false);
         }
         paused = false;
     }
-    public void QuitToMenu () {
-        SceneManager.LoadScene ("mainmenu");
+    public void QuitToMenu()
+    {
+        SceneManager.LoadScene("mainmenu");
     }
-    public void Quit () {
-        Application.Quit ();
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

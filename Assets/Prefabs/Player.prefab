@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1359294121176734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9300885, y: -0.18464199, z: 0.02734375}
+  m_LocalPosition: {x: -1.25, y: 1.43, z: 0.02734375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4674956012054956}
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
-  dashAdd: 0.09
+  dashAdd: 5
   dashCurve:
     serializedVersion: 2
     m_Curve:

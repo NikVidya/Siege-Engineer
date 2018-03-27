@@ -1539,6 +1539,11 @@ Prefab:
       propertyPath: repairCost.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4104064779847682, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.01
@@ -1580,6 +1585,31 @@ Prefab:
         type: 2}
       propertyPath: repairCost.Array.data[1]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2125297336}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: changeWidth
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
@@ -18373,3 +18403,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e5d15a0115bd2d49aca020c99a5e5cf, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2125297336 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114198743771359026, guid: 3e5d15a0115bd2d49aca020c99a5e5cf,
+    type: 2}
+  m_PrefabInternal: {fileID: 2125297333}
+  m_Script: {fileID: 11500000, guid: ddc8c314bef20c043b6bc004dcc19d4a, type: 3}
