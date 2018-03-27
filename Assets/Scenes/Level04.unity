@@ -29122,7 +29122,7 @@ Prefab:
         type: 2}
       propertyPath: pauseUI
       value: 
-      objectReference: {fileID: 1581574909}
+      objectReference: {fileID: 0}
     - target: {fileID: 114544091058215852, guid: d4c35cde4319fca49959b33e37f1e2eb,
         type: 2}
       propertyPath: player
@@ -29305,24 +29305,16 @@ Prefab:
       propertyPath: objectToTrack
       value: 
       objectReference: {fileID: 38425354}
+    - target: {fileID: 1053133184118060, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1581574909 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114976821089843386, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
-    type: 2}
-  m_PrefabInternal: {fileID: 1581574908}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1581574910 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114257036676270074, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
-    type: 2}
-  m_PrefabInternal: {fileID: 1581574908}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &1581574911 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114911596826849802, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
     type: 2}
   m_PrefabInternal: {fileID: 1581574908}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -30229,7 +30221,7 @@ Prefab:
         type: 2}
       propertyPath: currencyUI
       value: 
-      objectReference: {fileID: 1581574911}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ce8cb8602c39a488c3dea1e22b42d3, type: 2}
   m_IsPrefabParent: 0

@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1148001552166314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.941, z: 0}
+  m_LocalPosition: {x: -1.01, y: 4.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4545352288835286}
@@ -180,15 +180,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 400
-  periodicDamage: 1
-  healthDecreaseRate: 1
-  gracePeriod: 0
-  healthDecreaseAmount: -5
-  healthRepairAmount: 10
-  healthRepairTime: 4
-  repairCost: 0000000001000000
+  healthRepairAmount: 30
+  repairCost: 00000000
   ShouldEndGame: 1
-  repairState: 0
+  bombable: 1
   health: 0
   healthPercent: 0
   healthPercentChange: 0
