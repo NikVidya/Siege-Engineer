@@ -1537,7 +1537,7 @@ Prefab:
     - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
         type: 2}
       propertyPath: repairCost.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
         type: 2}
@@ -1584,7 +1584,7 @@ Prefab:
     - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
         type: 2}
       propertyPath: repairCost.Array.data[1]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
         type: 2}
