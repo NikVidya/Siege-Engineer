@@ -26,6 +26,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level01.unity
     guid: 7a6b7b5404acdc641915d1517bfe5b33
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Narrative/TestNarrativeScene.unity
     guid: f44938ad1c76ced4797a12e0fc230c0d
+  - enabled: 1
+    path: Assets/Scenes/levelmenu.unity
+    guid: 5ff52a9822bca4f18bb315b0f2f00441
+  - enabled: 1
+    path: Assets/Scenes/Level03.unity
+    guid: fe83f51c608a9704b856b3b66b85af72
+  - enabled: 1
+    path: Assets/Scenes/Level04.unity
+    guid: b703c0d489487f042b1261d66a531e3c
+  - enabled: 1
+    path: Assets/Scenes/Level05.unity
+    guid: d416ce06f2cffac41976d3a029bcdae0
