@@ -29,5 +29,5 @@ public class Saver : Singleton<Saver> {
         PlayerPrefs.SetInt(Constants.PlayerPrefsKeys.PLAYER_SCORE, newAmount);
         PlayerPrefs.Save();
     }
-
+    
 }
