@@ -24,7 +24,15 @@ public class NarrativeSequencer : MonoBehaviour
     public enum CharacterEmotion
     {
         NEUTRAL = 0,
-        HAPPY = 1
+        HAPPY = 1,
+        ANGRY = 2,
+        EXHAUSTED = 3,
+        SMUG = 4,
+        LAUGHING = 5,
+        SHIFTY = 6,
+        SATISFIED = 7,
+        SCARED = 8,
+        SUPPRISED = 9
     }
 
     [Header("UI References")]
