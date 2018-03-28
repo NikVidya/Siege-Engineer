@@ -6,4 +6,10 @@ public abstract class BaseNarrativeAction : MonoBehaviour {
 
     public abstract void OnSequenceStart();
     public abstract void OnSequenceEnd();
+    public abstract void OnUpdate();
+
+    void Update()
+    {
+        OnUpdate();
+    }
 }

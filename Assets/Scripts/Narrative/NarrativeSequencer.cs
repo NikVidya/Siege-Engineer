@@ -70,8 +70,10 @@ public class NarrativeSequencer : MonoBehaviour
         if(Camera.main == null)
         {
             GameObject cam = new GameObject();
+            cam.transform.position = new Vector3(0, 0, -11);
             Camera camComponent = cam.AddComponent<Camera>();
             camComponent.backgroundColor = new Color(0, 0, 0);
+            cam.tag = "MainCamera";
         }
     }
 #endif
@@ -99,6 +101,11 @@ public class NarrativeSequencer : MonoBehaviour
         {   // No states remain. Finish the sequence and stop
             GotoState(SequenceState.FINISHED);
             return;
+        }
+
+        if (curSequence != null)
+        {
+            curSequence.OnSequenceEnd();
         }
 
         NarrativeSequence nextSequence = sequenceQueue[++curSequenceIndex];
