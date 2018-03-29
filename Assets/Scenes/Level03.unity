@@ -113,57 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &90713462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 90713464}
-  - component: {fileID: 90713463}
-  m_Layer: 0
-  m_Name: WaveSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &90713463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 90713462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00441c75fc3373d4c9cb0adbc9c8afe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - {fileID: 264826695}
-  - {fileID: 1618467946}
-  - {fileID: 671986930}
-  - {fileID: 1825191812}
-  - {fileID: 2020314436}
---- !u!4 &90713464
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 90713462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.7857437, y: -0.069120705, z: -0.04296875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 264826696}
-  - {fileID: 1618467945}
-  - {fileID: 671986929}
-  - {fileID: 1825191811}
-  - {fileID: 2020314435}
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &177344470 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114296928144942672, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
@@ -240,61 +189,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38d6770b1fba80a409dc9313944b1341, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &264826694
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 264826696}
-  - component: {fileID: 264826695}
-  m_Layer: 0
-  m_Name: Wave1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &264826695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 264826694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 250a2b19acdd63544b8a767eb60962bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveDuration: 15
-  gracePeriod: 5
-  waveDurationUI: {fileID: 888602242}
-  typeOfWave: 2
-  gate: {fileID: 1734799071}
-  gateDamage: 3
-  trebuchets:
-  - {fileID: 1023615290}
-  trebuchetDamage: 3
-  timeBetweenBombardments: 0.7
-  finish:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!4 &264826696
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 264826694}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 90713464}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &374200839
 Prefab:
   m_ObjectHideFlags: 0
@@ -1115,61 +1009,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6f23f2a3789f5242b135ecd9bd6b1d1, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &671986928
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 671986929}
-  - component: {fileID: 671986930}
-  m_Layer: 0
-  m_Name: Wave3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &671986929
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 671986928}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 90713464}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &671986930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 671986928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 250a2b19acdd63544b8a767eb60962bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveDuration: 15
-  gracePeriod: 5
-  waveDurationUI: {fileID: 888602242}
-  typeOfWave: 2
-  gate: {fileID: 1734799071}
-  gateDamage: 3
-  trebuchets:
-  - {fileID: 1023615290}
-  trebuchetDamage: 3
-  timeBetweenBombardments: 0.7
-  finish:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &685102160
 Prefab:
   m_ObjectHideFlags: 0
@@ -53378,6 +53217,53 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!1001 &1393876238
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.944651
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.3546714
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.01171875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114101491034527538, guid: 53aceac2470a94044803cd6506b1fdd5,
+        type: 2}
+      propertyPath: interactionComponent
+      value: 
+      objectReference: {fileID: 1895933500}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1397395786
 Prefab:
   m_ObjectHideFlags: 0
@@ -53533,164 +53419,12 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
---- !u!1 &1618467944
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1618467945}
-  - component: {fileID: 1618467946}
-  m_Layer: 0
-  m_Name: Wave2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1618467945
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1618467944}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 90713464}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1618467946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1618467944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 250a2b19acdd63544b8a767eb60962bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveDuration: 45
-  gracePeriod: 5
-  waveDurationUI: {fileID: 888602242}
-  typeOfWave: 0
-  gate: {fileID: 1734799071}
-  gateDamage: 15
-  trebuchets:
-  - {fileID: 1023615290}
-  trebuchetDamage: 3
-  timeBetweenBombardments: 0.7
-  finish:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1734799071 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
     type: 2}
   m_PrefabInternal: {fileID: 1240268934}
   m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
---- !u!1 &1823773210
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1823773212}
-  - component: {fileID: 1823773211}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1823773211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1823773210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0b1dee448f05f468ed02c5cb216f40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionComponent: {fileID: 1895933500}
-  damagebales: []
---- !u!4 &1823773212
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1823773210}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.944651, y: -0.3546714, z: 0.01171875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1825191810
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1825191811}
-  - component: {fileID: 1825191812}
-  m_Layer: 0
-  m_Name: Wave4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1825191811
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1825191810}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 90713464}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1825191812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1825191810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 250a2b19acdd63544b8a767eb60962bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveDuration: 15
-  gracePeriod: 5
-  waveDurationUI: {fileID: 888602242}
-  typeOfWave: 1
-  gate: {fileID: 1734799071}
-  gateDamage: 0
-  trebuchets:
-  - {fileID: 1023615290}
-  trebuchetDamage: 0
-  timeBetweenBombardments: 1.5
-  finish:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1895933497
 Prefab:
   m_ObjectHideFlags: 0
@@ -53750,6 +53484,128 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1895933497}
   m_Script: {fileID: 11500000, guid: e09659b24005e8448bb3e5ad3c84996b, type: 3}
+--- !u!1001 &1975746159
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4238673507250050, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.7857437
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238673507250050, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.069120705
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238673507250050, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.04296875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238673507250050, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238673507250050, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238673507250050, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238673507250050, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238673507250050, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114533403194495262, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDurationUI
+      value: 
+      objectReference: {fileID: 888602242}
+    - target: {fileID: 114533403194495262, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 1734799071}
+    - target: {fileID: 114533403194495262, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1023615290}
+    - target: {fileID: 114926442778668076, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDurationUI
+      value: 
+      objectReference: {fileID: 888602242}
+    - target: {fileID: 114926442778668076, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 1734799071}
+    - target: {fileID: 114926442778668076, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1023615290}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDurationUI
+      value: 
+      objectReference: {fileID: 888602242}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 1734799071}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1023615290}
+    - target: {fileID: 114033161501322254, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDurationUI
+      value: 
+      objectReference: {fileID: 888602242}
+    - target: {fileID: 114033161501322254, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 1734799071}
+    - target: {fileID: 114033161501322254, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1023615290}
+    - target: {fileID: 114320455465537968, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDurationUI
+      value: 
+      objectReference: {fileID: 888602242}
+    - target: {fileID: 114320455465537968, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 1734799071}
+    - target: {fileID: 114320455465537968, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1023615290}
+    - target: {fileID: 114320455465537968, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: finish.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1571767347}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1988257222
 Prefab:
   m_ObjectHideFlags: 0
@@ -53807,69 +53663,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4c35cde4319fca49959b33e37f1e2eb, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2020314434
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2020314435}
-  - component: {fileID: 2020314436}
-  m_Layer: 0
-  m_Name: Wave5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2020314435
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2020314434}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 90713464}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2020314436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2020314434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 250a2b19acdd63544b8a767eb60962bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveDuration: 30
-  gracePeriod: 5
-  waveDurationUI: {fileID: 888602242}
-  typeOfWave: 0
-  gate: {fileID: 1734799071}
-  gateDamage: 20
-  trebuchets:
-  - {fileID: 1023615290}
-  trebuchetDamage: 5
-  timeBetweenBombardments: 0.7
-  finish:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1571767347}
-        m_MethodName: Victory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null

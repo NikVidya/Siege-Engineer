@@ -40,7 +40,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeName: Open Gate 02
   UpgradeCost: 20
-  EntryListTemplate: {fileID: 0}
+  EntryListTemplate: {fileID: 1080763141026864, guid: a7bce9c2bdc0c6946bddeb5144529c84,
+    type: 2}
 --- !u!224 &224296869332860140
 RectTransform:
   m_ObjectHideFlags: 1
