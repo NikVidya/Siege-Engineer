@@ -120,6 +120,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: repairCost.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4104064779847682, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.38
@@ -151,6 +156,26 @@ Prefab:
     - target: {fileID: 4104064779847682, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: repairCost.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: repairCost.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: repairCost.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: repairCost.Array.data[3]
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
@@ -335,6 +360,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: repairCost.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4580239612821286, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.86
@@ -366,6 +396,11 @@ Prefab:
     - target: {fileID: 4580239612821286, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: repairCost.Array.data[1]
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
@@ -780,6 +815,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: repairCost.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4580239612821286, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.13
@@ -815,6 +855,11 @@ Prefab:
     - target: {fileID: 1962277460842726, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
       propertyPath: m_Name
       value: Trebuchet (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: repairCost.Array.data[1]
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
@@ -53635,6 +53680,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: repairCost.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4580239612821286, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.97
@@ -53670,6 +53720,11 @@ Prefab:
     - target: {fileID: 1962277460842726, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
       propertyPath: m_Name
       value: Trebuchet (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: repairCost.Array.data[1]
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
@@ -53728,6 +53783,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: repairCost.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4580239612821286, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.38
@@ -53763,6 +53823,11 @@ Prefab:
     - target: {fileID: 1962277460842726, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
       propertyPath: m_Name
       value: Trebuchet (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: repairCost.Array.data[1]
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
