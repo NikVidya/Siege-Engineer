@@ -1550,7 +1550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4104064779847682, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.89
+      value: 5.11
       objectReference: {fileID: 0}
     - target: {fileID: 4104064779847682, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2032,6 +2032,52 @@ Tilemap:
     e32: 0
     e33: 1
   m_TileRefreshArray: []
+--- !u!1001 &570231237
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4802996503751266, guid: 084fc27cebb17694dbe49a87eca7b2eb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.21249
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802996503751266, guid: 084fc27cebb17694dbe49a87eca7b2eb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.999731
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802996503751266, guid: 084fc27cebb17694dbe49a87eca7b2eb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.13769531
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802996503751266, guid: 084fc27cebb17694dbe49a87eca7b2eb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802996503751266, guid: 084fc27cebb17694dbe49a87eca7b2eb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802996503751266, guid: 084fc27cebb17694dbe49a87eca7b2eb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802996503751266, guid: 084fc27cebb17694dbe49a87eca7b2eb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802996503751266, guid: 084fc27cebb17694dbe49a87eca7b2eb, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151420749318260, guid: 084fc27cebb17694dbe49a87eca7b2eb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.23
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 084fc27cebb17694dbe49a87eca7b2eb, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &586153707
 MonoBehaviour:
   m_ObjectHideFlags: 0
