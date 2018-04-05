@@ -21,7 +21,7 @@ public class Wave : MonoBehaviour {
         REGULAR,
         BARRAGE,
         REST,
-        HOLDOUT
+        CUTSCENE
     }
     public WaveType Type {
         get {
@@ -43,6 +43,7 @@ public class Wave : MonoBehaviour {
     public int trebuchetDamage = 3;
     [Tooltip ("If this is a BARRAGE wave, this determines time between each bombardment")]
     public float timeBetweenBombardments = 0.7f;
+    public bool triggersMidpointCinematic = false;
     public UnityEvent finish;
     public enum WaveState {
         WAITING,
@@ -55,8 +56,8 @@ public class Wave : MonoBehaviour {
         }
         set { }
     }
-    private WaveState waveState = WaveState.WAITING;
     //private
+    private WaveState waveState = WaveState.WAITING;
     private string timerText;
     private int timeMinutes;
     private float timeSeconds;
@@ -69,7 +70,7 @@ public class Wave : MonoBehaviour {
     public void BeginWave () {
         waveState = WaveState.BEGUN;
         Debug.Log (name + " Wave Begun!");
-        if (typeOfWave != WaveType.HOLDOUT) {
+        if (typeOfWave != WaveType.CUTSCENE) {
             timeMinutes = (int) Mathf.Floor (waveDuration / 60);
             timeSeconds = waveDuration - (timeMinutes * 60);
             waveDurationUI.text = timeMinutes + ":" + timeSeconds;
@@ -81,6 +82,9 @@ public class Wave : MonoBehaviour {
             case WaveType.BARRAGE:
                 InvokeRepeating ("Barrage", gracePeriod, timeBetweenBombardments);
                 break;
+        }
+        if (triggersMidpointCinematic) {
+            GameStateSwitcher.Instance.TriggerMidCinematic ();
         }
     }
     void Update () {
@@ -95,8 +99,8 @@ public class Wave : MonoBehaviour {
                 case WaveType.REST:
                     TimerLogicRest ();
                     break;
-                case WaveType.HOLDOUT:
-                    TimerLogicHoldout ();
+                case WaveType.CUTSCENE:
+                    TimerLogicCutscene ();
                     break;
 
             }
@@ -139,14 +143,16 @@ public class Wave : MonoBehaviour {
             Finish ();
         }
     }
-    void TimerLogicHoldout () {
+    void TimerLogicCutscene () {
         waveDuration += Time.deltaTime;
         // timer ui code
         timeMinutes = (int) Mathf.Floor (waveDuration / 60);
         timeSeconds = waveDuration - (timeMinutes * 60);
         string zero = "";
         if (timeSeconds < 10) { zero = "0"; } else { zero = ""; }
-        waveDurationUI.text = timeMinutes + ":" + zero + Mathf.Floor (timeSeconds);
+        if (waveDurationUI != null) {
+            waveDurationUI.text = timeMinutes + ":" + zero + Mathf.Floor (timeSeconds);
+        }
     }
 
     // Damage occurs per second
@@ -162,7 +168,7 @@ public class Wave : MonoBehaviour {
         BattleManager.Instance.SpawnBombardment ();
     }
 
-    void Finish () {
+    public void Finish () {
         CancelInvoke ("StructureDamage");
         waveState = WaveState.FINISHED;
         if (finish == null) {

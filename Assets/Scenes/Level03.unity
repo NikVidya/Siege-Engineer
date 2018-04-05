@@ -54028,6 +54028,16 @@ Prefab:
       propertyPath: finish.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1571767347}
+    - target: {fileID: 114926442778668076, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: triggersMidpointCinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114926442778668076, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDuration
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
   m_IsPrefabParent: 0
@@ -54085,6 +54095,16 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1895933499}
+    - target: {fileID: 114544091058215852, guid: d4c35cde4319fca49959b33e37f1e2eb,
+        type: 2}
+      propertyPath: IntroCinematicScene
+      value: Level3Intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544091058215852, guid: d4c35cde4319fca49959b33e37f1e2eb,
+        type: 2}
+      propertyPath: VictoryScene
+      value: Level3EndScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4c35cde4319fca49959b33e37f1e2eb, type: 2}
   m_IsPrefabParent: 0

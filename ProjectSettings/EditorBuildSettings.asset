@@ -26,8 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level01.unity
     guid: 7a6b7b5404acdc641915d1517bfe5b33
-  - enabled: 0
-    path: Assets/Scenes/Narrative/TestNarrativeScene.unity
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Tutorial/TutorialIntro.unity
     guid: f44938ad1c76ced4797a12e0fc230c0d
   - enabled: 1
     path: Assets/Scenes/levelmenu.unity
@@ -41,3 +41,60 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level05.unity
     guid: d416ce06f2cffac41976d3a029bcdae0
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level1/Level1EndScene.unity
+    guid: 93b6dcbf048e9854d82b01c91bb81ad0
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level1/Level1Intro.unity
+    guid: 1e1df5d80c8d94448858c3bbe091d429
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level1/Level1Mid.unity
+    guid: 12918310cda75bf4a83d4cc778b1f2f9
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level1/Level1Vic.unity
+    guid: cd435278c1f3c294bacae74219a04c76
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Tutorial/TutorialVic.unity
+    guid: faccb5e494353324bb900e7e879479f8
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Tutorial/TutorialEndScene.unity
+    guid: 1bfde9d0e4e7fb14fb2a08f04845db7a
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level2/Level2Vic.unity
+    guid: 9595ebedceee1ec4497326a07701e0f3
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level2/Level2EndScene.unity
+    guid: 08861027afc3722459c060ae9ae417cc
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level2/Level2Intro.unity
+    guid: a73e378bb1f55264cb3bfd40317502bb
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level2/Level2Mid.unity
+    guid: 19ab6813241dbe14e876bb7c78ffebae
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level3/Level3Vic.unity
+    guid: 3def3d518ba9b42479d11d049e6c83c3
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level3/Level3Intro.unity
+    guid: c9449bec16430294fa91ea90bef17f40
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level3/Level3EndScene.unity
+    guid: e5f9b5d3feb318e429277d0e12d6d9a4
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level4/Level4EndScene.unity
+    guid: 64d1ecca2caa2f44e93e406687b96864
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level4/Level4Intro.unity
+    guid: e12452ecaec69d74c894f93d7a457522
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level4/Level4Vic.unity
+    guid: 17b9c466a76cbc94eb19274b0b7e4f32
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level5/Level5EndScene.unity
+    guid: fed43a89c3921e04a80e3da29b56e2d4
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level5/Level5Intro.unity
+    guid: be37d7d9a5036d44892e8c4466985bee
+  - enabled: 1
+    path: Assets/Scenes/Narrative/Level5/Level5Vic.unity
+    guid: 41311f79e48582a4ea50da2cd0ccf7df

@@ -2,27 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NarrativeSequencer : MonoBehaviour
-{
+public class NarrativeSequencer : MonoBehaviour {
 
-    public enum DialogStructure
-    {
+    public enum DialogStructure {
         LEFT,
         RIGHT
     }
-    public enum SequenceState
-    {
-        NOT_STARTED,    // Sequence has not been triggered, Dialog not visible
+    public enum SequenceState {
+        NOT_STARTED, // Sequence has not been triggered, Dialog not visible
         SHOWING_DIALOG, // Dialog entry animations playing
-        PRINTING,       // Dialog is displayed, printing text
-        PRINTING_FAST,  // Dialog is displayed, printing text at a faster rate
+        PRINTING, // Dialog is displayed, printing text
+        PRINTING_FAST, // Dialog is displayed, printing text at a faster rate
         WAITING_FOR_PROMPT, // Dialog is displayed, waiting for user confirmation
-        HIDING_DIALOG,  // Dialog exit animations playing, will show the next dialog when complete
-        FINISHED        // All sequences have been completed and the dialog is exiting or has exited
+        HIDING_DIALOG, // Dialog exit animations playing, will show the next dialog when complete
+        FINISHED // All sequences have been completed and the dialog is exiting or has exited
     }
 
-    public enum CharacterEmotion
-    {
+    public enum CharacterEmotion {
         NEUTRAL = 0,
         HAPPY = 1,
         ANGRY = 2,
@@ -35,20 +31,18 @@ public class NarrativeSequencer : MonoBehaviour
         SUPPRISED = 9
     }
 
-    [Header("UI References")]
-    [Tooltip("Controller for left side character dialog")]
+    [Header ("UI References")]
+    [Tooltip ("Controller for left side character dialog")]
     public DialogUIController leftController;
-    [Tooltip("Controller for right side character dialog")]
+    [Tooltip ("Controller for right side character dialog")]
     public DialogUIController rightController;
 
-    [Header("Sequence Queue")]
-    [Tooltip("The NarrativeSequences to play, in order of playback")]
+    [Header ("Sequence Queue")]
+    [Tooltip ("The NarrativeSequences to play, in order of playback")]
     public NarrativeSequence[] sequenceQueue;
-
-    public SequenceState State
-    {
-        get
-        {
+    public bool standaloneScene = false;
+    public SequenceState State {
+        get {
             return curState;
         }
         set { }
@@ -65,73 +59,69 @@ public class NarrativeSequencer : MonoBehaviour
 
 #if UNITY_EDITOR
     // Just a little debug thing to add a camera to the scene if there isn't one, so we can test the narrative in it's own scene without having the camera interfere when we add it to another scene
-    private void Awake()
-    {
-        if(Camera.main == null)
-        {
-            GameObject cam = new GameObject();
-            cam.transform.position = new Vector3(0, 0, -11);
-            Camera camComponent = cam.AddComponent<Camera>();
-            camComponent.backgroundColor = new Color(0, 0, 0);
+    private void Awake () {
+        if (Camera.main == null) {
+            GameObject cam = new GameObject ();
+            cam.transform.position = new Vector3 (0, 0, -11);
+            Camera camComponent = cam.AddComponent<Camera> ();
+            camComponent.backgroundColor = new Color (0, 0, 0);
             cam.tag = "MainCamera";
         }
     }
 #endif
 
-    void Start()
-    {   // Loading the scene should play the sequence
+    void Start () { // Loading the scene should play the sequence
         curSequence = sequenceQueue[0];
-        GotoState(SequenceState.SHOWING_DIALOG);
+        GotoState (SequenceState.SHOWING_DIALOG);
     }
 
-    void CompleteNarrativeSequence()
-    {
-        if(curSequence != null)
-        {
-            curSequence.OnSequenceEnd();
+    void CompleteNarrativeSequence () {
+        if (standaloneScene) {
+            CinematicManager.Instance.EnqueueCinematic ("VictoryScreen", false);
+            if (curSequence != null) {
+                curSequence.OnSequenceEnd ();
+            }
+            curSequence = null;
+            CinematicManager.Instance.OnCinematicFinished (false);
+        } else {
+            if (curSequence != null) {
+                curSequence.OnSequenceEnd ();
+            }
+            curSequence = null;
+            CinematicManager.Instance.OnCinematicFinished ();
         }
-        curSequence = null;
-        CinematicManager.Instance.OnCinematicFinished();
+
     }
 
-    void AdvanceSequence()
-    {
+    void AdvanceSequence () {
         // Check if there are remaining states
-        if (curSequenceIndex + 1 >= sequenceQueue.Length)
-        {   // No states remain. Finish the sequence and stop
-            GotoState(SequenceState.FINISHED);
+        if (curSequenceIndex + 1 >= sequenceQueue.Length) { // No states remain. Finish the sequence and stop
+            GotoState (SequenceState.FINISHED);
             return;
         }
 
-        if (curSequence != null)
-        {
-            curSequence.OnSequenceEnd();
+        if (curSequence != null) {
+            curSequence.OnSequenceEnd ();
         }
 
         NarrativeSequence nextSequence = sequenceQueue[++curSequenceIndex];
 
-        bool newDialogNeeded = nextSequence.NeedsNewDialog(curSequence);
+        bool newDialogNeeded = nextSequence.NeedsNewDialog (curSequence);
 
         curSequence = nextSequence;
 
-        if (newDialogNeeded)
-        {
-            GotoState(SequenceState.HIDING_DIALOG);
-        }
-        else
-        {
-            GotoState(SequenceState.PRINTING);
+        if (newDialogNeeded) {
+            GotoState (SequenceState.HIDING_DIALOG);
+        } else {
+            GotoState (SequenceState.PRINTING);
         }
     }
 
-    void GotoState(SequenceState state)
-    {
-        switch (state)
-        {
+    void GotoState (SequenceState state) {
+        switch (state) {
             case SequenceState.SHOWING_DIALOG:
                 controller = leftController;
-                switch (curSequence.dialogType)
-                {
+                switch (curSequence.dialogType) {
                     case DialogStructure.LEFT:
                         controller = leftController;
                         break;
@@ -140,10 +130,9 @@ public class NarrativeSequencer : MonoBehaviour
                         controller = rightController;
                         break;
                 }
-                controller.Initialize(curSequence);
-                controller.ShowDialog(() =>
-                {
-                    GotoState(SequenceState.PRINTING);
+                controller.Initialize (curSequence);
+                controller.ShowDialog (() => {
+                    GotoState (SequenceState.PRINTING);
                 });
                 break;
 
@@ -152,8 +141,8 @@ public class NarrativeSequencer : MonoBehaviour
                 timeSinceCharAdded = 0;
                 controller.DialogTextArea.text = ""; // Clear the text for printing
                 scrollSpeed = curSequence.scrollSpeed;
-                curSequence.OnSequenceStart();
-                controller.PlayPortraitEmotionAnim(curSequence.emotionState);
+                curSequence.OnSequenceStart ();
+                controller.PlayPortraitEmotionAnim (curSequence.emotionState);
                 break;
 
             case SequenceState.PRINTING_FAST:
@@ -166,28 +155,24 @@ public class NarrativeSequencer : MonoBehaviour
 
             case SequenceState.HIDING_DIALOG:
                 controller.DialogTextArea.text = ""; // Clear the text before hiding
-                controller.HideDialog(() =>
-                {
-                    curSequence.OnSequenceEnd();
-                    GotoState(SequenceState.SHOWING_DIALOG);
+                controller.HideDialog (() => {
+                    curSequence.OnSequenceEnd ();
+                    GotoState (SequenceState.SHOWING_DIALOG);
                 });
                 break;
 
             case SequenceState.FINISHED:
                 controller.DialogTextArea.text = ""; // Clear the text before hiding
-                controller.HideDialog(() =>
-                {
-                    CompleteNarrativeSequence();
+                controller.HideDialog (() => {
+                    CompleteNarrativeSequence ();
                 });
                 break;
         }
         curState = state;
     }
 
-    void Update()
-    {
-        switch (curState)
-        {
+    void Update () {
+        switch (curState) {
             case SequenceState.PRINTING:
             case SequenceState.PRINTING_FAST:
                 /*
@@ -203,16 +188,14 @@ public class NarrativeSequencer : MonoBehaviour
                 */
 
                 timeSinceCharAdded += Time.deltaTime;
-                int charsToAdd = Mathf.RoundToInt(scrollSpeed * timeSinceCharAdded); // (chars/second) * (seconds since last character was added)
+                int charsToAdd = Mathf.RoundToInt (scrollSpeed * timeSinceCharAdded); // (chars/second) * (seconds since last character was added)
 
-                if (charsToAdd > 0)
-                {
-                    if (curSequenceCharacterIndex + charsToAdd >= curSequence.dialogText.Length)
-                    {
+                if (charsToAdd > 0) {
+                    if (curSequenceCharacterIndex + charsToAdd >= curSequence.dialogText.Length) {
                         charsToAdd = curSequence.dialogText.Length - curSequenceCharacterIndex;
-                        GotoState(SequenceState.WAITING_FOR_PROMPT);
+                        GotoState (SequenceState.WAITING_FOR_PROMPT);
                     }
-                    controller.DialogTextArea.text = controller.DialogTextArea.text + curSequence.dialogText.Substring(curSequenceCharacterIndex, charsToAdd);
+                    controller.DialogTextArea.text = controller.DialogTextArea.text + curSequence.dialogText.Substring (curSequenceCharacterIndex, charsToAdd);
                     curSequenceCharacterIndex += charsToAdd;
                     timeSinceCharAdded = 0;
                 }
@@ -225,9 +208,8 @@ public class NarrativeSequencer : MonoBehaviour
                  * No longer require player input to advance
                 if ((curSequence.autoAdvance && elapsedAdvanceWaitTime >= curSequence.advanceDelay) || Input.anyKeyDown)
                 */
-                if(elapsedAdvanceWaitTime >= curSequence.advanceDelay)
-                {
-                    AdvanceSequence();
+                if (elapsedAdvanceWaitTime >= curSequence.advanceDelay) {
+                    AdvanceSequence ();
                 }
                 break;
         }
