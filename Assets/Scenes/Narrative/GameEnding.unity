@@ -113,28 +113,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &413702334
+--- !u!1 &334444046
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 413702336}
-  - component: {fileID: 413702335}
+  - component: {fileID: 334444048}
+  - component: {fileID: 334444047}
   m_Layer: 0
-  m_Name: 6
+  m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &413702335
+--- !u!212 &334444047
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 413702334}
+  m_GameObject: {fileID: 334444046}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -163,7 +163,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4c7e7c9da2031c744bc1a6e7994a81ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93969568875acec4cb0abe83df5a342b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -173,14 +173,14 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!4 &413702336
+--- !u!4 &334444048
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 413702334}
+  m_GameObject: {fileID: 334444046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.33, y: -0.03, z: 0}
+  m_LocalPosition: {x: 0.07, y: 0.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 1367397583}
+  - {fileID: 0}
 --- !u!4 &1290420257
 Transform:
   m_ObjectHideFlags: 0
@@ -275,8 +276,8 @@ MonoBehaviour:
   finish:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1731968669}
-        m_MethodName: Victory
+      - m_Target: {fileID: 1290420256}
+        m_MethodName: NextWave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -344,27 +345,16 @@ Prefab:
     - target: {fileID: 114544091058215852, guid: d4c35cde4319fca49959b33e37f1e2eb,
         type: 2}
       propertyPath: IntroCinematicScene
-      value: Level5Vic
+      value: GameEndingDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 114544091058215852, guid: d4c35cde4319fca49959b33e37f1e2eb,
         type: 2}
       propertyPath: VictoryScene
-      value: GameEnding
-      objectReference: {fileID: 0}
-    - target: {fileID: 114544091058215852, guid: d4c35cde4319fca49959b33e37f1e2eb,
-        type: 2}
-      propertyPath: MidCinematicScene
-      value: 
+      value: VictoryScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4c35cde4319fca49959b33e37f1e2eb, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1731968669 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114544091058215852, guid: d4c35cde4319fca49959b33e37f1e2eb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1384151449}
-  m_Script: {fileID: 11500000, guid: 5b85c1a8d5652df43a76067c45e64873, type: 3}
 --- !u!1 &2104035150
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +396,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.04411763, g: 0.04411763, b: 0.04411763, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

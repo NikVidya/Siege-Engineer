@@ -22,7 +22,7 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher> {
 
     void Start () {
         if (pauseUI == null) {
-            Debug.LogWarning ("Pause UI not assigned to Game StateSwitcher");
+            Debug.LogWarning ("Pause UI not assigned to Game State Switcher");
         } else {
             pauseUI.gameObject.SetActive (false);
         }
@@ -72,6 +72,10 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher> {
 
     public void LoadLevel5 () {
         SceneManager.LoadScene ("Level05");
+    }
+
+    public void LoadTutorial () {
+        SceneManager.LoadScene ("Tutorial");
     }
 
     public void GameOver () {

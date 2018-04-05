@@ -53868,6 +53868,16 @@ Prefab:
       propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1787719555}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeWidth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
   m_IsPrefabParent: 0
@@ -53878,6 +53888,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114320455465537968, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4238673507250050, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.7857437
@@ -53955,6 +53975,51 @@ Prefab:
       propertyPath: gracePeriod
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114533403194495262, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 927976984}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 927976984}
+    - target: {fileID: 114926442778668076, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 927976984}
+    - target: {fileID: 114033161501322254, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 927976984}
+    - target: {fileID: 114320455465537968, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 927976984}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1283540591}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[1]
+      value: 
+      objectReference: {fileID: 1777877332}
+    - target: {fileID: 114320455465537968, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1283540591}
+    - target: {fileID: 114320455465537968, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[1]
+      value: 
+      objectReference: {fileID: 1777877332}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
   m_IsPrefabParent: 0
@@ -54223,9 +54288,25 @@ Prefab:
       propertyPath: repairCost.Array.data[1]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1438772734}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeWidth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &927976984 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+    type: 2}
+  m_PrefabInternal: {fileID: 150188794}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
 --- !u!1001 &995595909
 Prefab:
   m_ObjectHideFlags: 0
@@ -54411,6 +54492,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1223920256}
   m_Script: {fileID: 11500000, guid: 5b85c1a8d5652df43a76067c45e64873, type: 3}
+--- !u!114 &1283540591 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1678924471}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
 --- !u!1001 &1420156031
 Prefab:
   m_ObjectHideFlags: 0
@@ -54453,6 +54540,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9478e1bfc1a4a684da0714d2560aa56b, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1438772734 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114318328293609752, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 905788948}
+  m_Script: {fileID: 11500000, guid: ddc8c314bef20c043b6bc004dcc19d4a, type: 3}
 --- !u!1 &1490463190
 GameObject:
   m_ObjectHideFlags: 0
@@ -54776,9 +54869,37 @@ Prefab:
       propertyPath: repairCost.Array.data[1]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1742238821}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeWidth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1742238821 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114318328293609752, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1678924471}
+  m_Script: {fileID: 11500000, guid: ddc8c314bef20c043b6bc004dcc19d4a, type: 3}
+--- !u!114 &1777877332 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 905788948}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
+--- !u!114 &1787719555 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114201011549324522, guid: 6df3e560297633e4c8762f5f9740c24e,
+    type: 2}
+  m_PrefabInternal: {fileID: 150188794}
+  m_Script: {fileID: 11500000, guid: ddc8c314bef20c043b6bc004dcc19d4a, type: 3}
 --- !u!1001 &1808839807
 Prefab:
   m_ObjectHideFlags: 0

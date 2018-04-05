@@ -205,7 +205,7 @@ Prefab:
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
       propertyPath: advanceDelay
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}

@@ -77,7 +77,7 @@ public class NarrativeSequencer : MonoBehaviour {
 
     void CompleteNarrativeSequence () {
         if (standaloneScene) {
-            CinematicManager.Instance.EnqueueCinematic ("VictoryScreen", false);
+            CinematicManager.Instance.EnqueueCinematic (GameStateSwitcher.Instance.VictoryScene, false);
             if (curSequence != null) {
                 curSequence.OnSequenceEnd ();
             }

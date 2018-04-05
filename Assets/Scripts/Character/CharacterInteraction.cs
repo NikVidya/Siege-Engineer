@@ -128,19 +128,19 @@ public class CharacterInteraction : MonoBehaviour
         // Check the pickup key response
         if (Input.GetButtonDown(Constants.InputNames.PICKUP))
         {
-            if (interactablePool[(int)InteractableType.PICKUP] == null)
-            { // No pickup to interact with
-                canDrop = true;
-            }
-            else
+            // if (interactablePool[(int)InteractableType.PICKUP] == null)
+            // { // No pickup to interact with
+            //     canDrop = true;
+            // }
+            // else
             {
-                canDrop = false;
+                // canDrop = true;
                 interactablePool[(int)InteractableType.PICKUP].OnInteract(this);
             }
         }
-        else if (Input.GetButtonUp(Constants.InputNames.PICKUP) && canDrop)
+        else if (Input.GetButtonDown(Constants.InputNames.UICANCEL) && canDrop)
         {   // Nothing was close enough to pickup when pressing the key, releasing should drop one
-            canDrop = false;
+            // canDrop = false;
             InventoryComponent.DropFirstHeld();
         }
 

@@ -113,6 +113,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &97194872 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+    type: 2}
+  m_PrefabInternal: {fileID: 1507751164}
+  m_Script: {fileID: 11500000, guid: 6714864d4e330cf4fad4516430279f02, type: 3}
+--- !u!4 &97194873 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99,
+    type: 2}
+  m_PrefabInternal: {fileID: 1507751164}
 --- !u!224 &320219516 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224261575741673514, guid: c8acb2eff840ab74c83e2640cead3e73,
@@ -124,116 +135,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1516790744}
   m_Script: {fileID: 11500000, guid: e7fae77a83cbd4140aa90b102fc184c9, type: 3}
---- !u!1001 &384534736
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 730567857}
-    m_Modifications:
-    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
-        type: 2}
-      propertyPath: dialogText
-      value: Well, this castle's a bit more complicated. You'll need all three resources
-        to repair the gate here! Should be no problem for you though. Good luck!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
-        type: 2}
-      propertyPath: scrollSpeed
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
-        type: 2}
-      propertyPath: talkerAnimatorController
-      value: 
-      objectReference: {fileID: 9100000, guid: efeb1b7c498fb5a4e9d5fa45cba5b857, type: 2}
-    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
-        type: 2}
-      propertyPath: dialogFont
-      value: 
-      objectReference: {fileID: 12800000, guid: 68eb9dacf8cee864e940532835e85874,
-        type: 3}
-    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
-        type: 2}
-      propertyPath: emotionState
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
-        type: 2}
-      propertyPath: advanceDelay
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
-        type: 2}
-      propertyPath: autoAdvance
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &384534737 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99,
-    type: 2}
-  m_PrefabInternal: {fileID: 384534736}
---- !u!114 &384534738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 384534737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 458d0805f9d3c774ab06a437b743a42b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartObjectName: 
-  TargetObjectName: target1
-  LerpTime: 1
-  ReturnToPosition: 1
---- !u!114 &480560822 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
-    type: 2}
-  m_PrefabInternal: {fileID: 384534736}
-  m_Script: {fileID: 11500000, guid: 6714864d4e330cf4fad4516430279f02, type: 3}
---- !u!4 &480560823 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99,
-    type: 2}
-  m_PrefabInternal: {fileID: 384534736}
 --- !u!1 &532064239
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,8 +394,12 @@ MonoBehaviour:
   leftController: {fileID: 320219517}
   rightController: {fileID: 1004726976}
   sequenceQueue:
-  - {fileID: 480560822}
-  standaloneScene: 0
+  - {fileID: 97194872}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  standaloneScene: 1
 --- !u!4 &730567857
 Transform:
   m_ObjectHideFlags: 0
@@ -505,7 +410,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 480560823}
+  - {fileID: 97194873}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -570,12 +475,104 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1474668755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -3, z: 0}
+  m_LocalPosition: {x: -3.3, y: 0.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1507751164
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 730567857}
+    m_Modifications:
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_Name
+      value: NarrativeSequence (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: dialogText
+      value: 'Yes, John spits his threats, and we celebrate victory! I''ve got a twice-as-big
+        kingdom to run now! Ha Ha!
+
+        Now, Engineer. I gave you a king''s promise that you''d be rewaeded, and here
+        it is. You get your own castle in our newly embiggened kingdom! How''s that
+        for a king''s promise eh? Also, I formally declare thee: Royal Engineer! Your
+        name be praised forever!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: dialogType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: scrollSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: talkerAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: e5b48e495e3f1b2409ce057d905029a1, type: 2}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: dialogFont
+      value: 
+      objectReference: {fileID: 12800000, guid: 68eb9dacf8cee864e940532835e85874,
+        type: 3}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: emotionState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: advanceDelay
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1516790744
 Prefab:
   m_ObjectHideFlags: 0
@@ -831,6 +828,11 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114237974661228344, guid: c8acb2eff840ab74c83e2640cead3e73,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8acb2eff840ab74c83e2640cead3e73, type: 2}

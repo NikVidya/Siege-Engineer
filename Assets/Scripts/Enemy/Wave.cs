@@ -68,6 +68,7 @@ public class Wave : MonoBehaviour {
         graceTime = gracePeriod;
     }
     public void BeginWave () {
+        CancelInvoke("Barrage");
         waveState = WaveState.BEGUN;
         Debug.Log (name + " Wave Begun!");
         if (typeOfWave != WaveType.CUTSCENE) {

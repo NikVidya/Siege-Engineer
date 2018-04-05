@@ -291,7 +291,7 @@ Prefab:
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
       propertyPath: advanceDelay
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
@@ -595,8 +595,8 @@ Transform:
   m_Children:
   - {fileID: 97194873}
   - {fileID: 480560823}
-  - {fileID: 388569349}
   - {fileID: 1325407962}
+  - {fileID: 388569349}
   - {fileID: 1377409873}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -717,16 +717,21 @@ Prefab:
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
       propertyPath: emotionState
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
       propertyPath: advanceDelay
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
       propertyPath: m_Name
       value: NarrativeSequence (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: autoAdvance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}

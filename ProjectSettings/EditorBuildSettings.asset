@@ -98,3 +98,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Narrative/Level5/Level5Vic.unity
     guid: 41311f79e48582a4ea50da2cd0ccf7df
+  - enabled: 1
+    path: Assets/Scenes/Narrative/GameEnding.unity
+    guid: 507c3700010ec2144b5ee9c64336a8ad
+  - enabled: 1
+    path: Assets/Scenes/Narrative/GameEndingDialogue.unity
+    guid: 183e8469ba421df48bd17cb84c3a77e5
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: c9c6eac152b584442ac47e1d367e872e
+  - enabled: 1
+    path: Assets/Scenes/Level02.unity
+    guid: 634247d4d23b2c944b885f04f60531f6

@@ -125,6 +125,11 @@ Prefab:
       propertyPath: repairCost.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4104064779847682, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.38
@@ -177,9 +182,50 @@ Prefab:
       propertyPath: repairCost.Array.data[3]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1032951913}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: changeWidth
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 587035994}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeWidth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &66185141 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+    type: 2}
+  m_PrefabInternal: {fileID: 66185140}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
 --- !u!1001 &191288183
 Prefab:
   m_ObjectHideFlags: 0
@@ -253,12 +299,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveDuration: 30
   gracePeriod: 5
-  waveDurationUI: {fileID: 0}
+  waveDurationUI: {fileID: 1753367465}
   typeOfWave: 0
-  gate: {fileID: 0}
+  gate: {fileID: 66185141}
   gateDamage: 20
   trebuchets:
-  - {fileID: 0}
+  - {fileID: 337888287}
+  - {fileID: 1883767974}
+  - {fileID: 1332287764}
+  - {fileID: 2088875393}
   trebuchetDamage: 5
   timeBetweenBombardments: 0.7
   triggersMidpointCinematic: 0
@@ -364,6 +413,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4c35cde4319fca49959b33e37f1e2eb, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &337888287 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 403049586}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
 --- !u!1001 &403049586
 Prefab:
   m_ObjectHideFlags: 0
@@ -413,9 +468,25 @@ Prefab:
       propertyPath: repairCost.Array.data[1]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 612280104}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeWidth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &587035994 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114201011549324522, guid: 6df3e560297633e4c8762f5f9740c24e,
+    type: 2}
+  m_PrefabInternal: {fileID: 66185140}
+  m_Script: {fileID: 11500000, guid: ddc8c314bef20c043b6bc004dcc19d4a, type: 3}
 --- !u!1001 &598424565
 Prefab:
   m_ObjectHideFlags: 0
@@ -509,6 +580,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4c3c74b56a810a4d96abc8267701259, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &612280104 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114318328293609752, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 403049586}
+  m_Script: {fileID: 11500000, guid: ddc8c314bef20c043b6bc004dcc19d4a, type: 3}
 --- !u!1001 &617693964
 Prefab:
   m_ObjectHideFlags: 0
@@ -602,9 +679,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveDuration: 15
   gracePeriod: 5
-  waveDurationUI: {fileID: 0}
+  waveDurationUI: {fileID: 1753367465}
   typeOfWave: 1
-  gate: {fileID: 0}
+  gate: {fileID: 66185141}
   gateDamage: 20
   trebuchets:
   - {fileID: 0}
@@ -725,6 +802,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1032951913 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114296928144942672, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 617693964}
+  m_Script: {fileID: 11500000, guid: ddc8c314bef20c043b6bc004dcc19d4a, type: 3}
+--- !u!114 &1043492808 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114318328293609752, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1780724257}
+  m_Script: {fileID: 11500000, guid: ddc8c314bef20c043b6bc004dcc19d4a, type: 3}
 --- !u!1001 &1048596295
 Prefab:
   m_ObjectHideFlags: 0
@@ -872,6 +961,16 @@ Prefab:
         type: 2}
       propertyPath: repairCost.Array.data[1]
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2003712555}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeWidth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
@@ -1060,6 +1159,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38d6770b1fba80a409dc9313944b1341, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1332287764 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1780724257}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
 --- !u!1001 &1399543647
 Prefab:
   m_ObjectHideFlags: 0
@@ -61225,6 +61330,12 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!114 &1602433074 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114318328293609752, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 2008756398}
+  m_Script: {fileID: 11500000, guid: ddc8c314bef20c043b6bc004dcc19d4a, type: 3}
 --- !u!1001 &1677086431
 Prefab:
   m_ObjectHideFlags: 0
@@ -61390,6 +61501,16 @@ Prefab:
       propertyPath: repairCost.Array.data[1]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1043492808}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeWidth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
   m_IsPrefabParent: 0
@@ -61440,6 +61561,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcc54aafd42f7e84983f313107c6b786, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1883767974 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1089798575}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
+--- !u!114 &2003712555 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114318328293609752, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1089798575}
+  m_Script: {fileID: 11500000, guid: ddc8c314bef20c043b6bc004dcc19d4a, type: 3}
 --- !u!1001 &2008756398
 Prefab:
   m_ObjectHideFlags: 0
@@ -61493,9 +61626,25 @@ Prefab:
       propertyPath: repairCost.Array.data[1]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1602433074}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeWidth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2088875393 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 2008756398}
+  m_Script: {fileID: 11500000, guid: ced75aea99ebbdb4aa6929d67083c577, type: 3}
 --- !u!1001 &2117769191
 Prefab:
   m_ObjectHideFlags: 0
@@ -61553,6 +61702,11 @@ Prefab:
         type: 2}
       propertyPath: waves.Array.size
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114533403194495262, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
         type: 2}
@@ -61736,6 +61890,76 @@ Prefab:
       propertyPath: finish.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextWave
       objectReference: {fileID: 0}
+    - target: {fileID: 114533403194495262, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 66185141}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 66185141}
+    - target: {fileID: 114926442778668076, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 66185141}
+    - target: {fileID: 114033161501322254, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 66185141}
+    - target: {fileID: 114320455465537968, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 66185141}
+    - target: {fileID: 114533403194495262, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDurationUI
+      value: 
+      objectReference: {fileID: 1753367465}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDurationUI
+      value: 
+      objectReference: {fileID: 1753367465}
+    - target: {fileID: 114926442778668076, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDurationUI
+      value: 
+      objectReference: {fileID: 1753367465}
+    - target: {fileID: 114033161501322254, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDurationUI
+      value: 
+      objectReference: {fileID: 1753367465}
+    - target: {fileID: 114320455465537968, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: waveDurationUI
+      value: 
+      objectReference: {fileID: 1753367465}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[0]
+      value: 
+      objectReference: {fileID: 337888287}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[1]
+      value: 
+      objectReference: {fileID: 1883767974}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[2]
+      value: 
+      objectReference: {fileID: 1332287764}
+    - target: {fileID: 114045808169557054, guid: e2d8c901e3dfe30449f8e85f9f9e3538,
+        type: 2}
+      propertyPath: trebuchets.Array.data[3]
+      value: 
+      objectReference: {fileID: 2088875393}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2d8c901e3dfe30449f8e85f9f9e3538, type: 2}
   m_IsPrefabParent: 0

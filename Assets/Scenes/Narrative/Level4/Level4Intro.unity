@@ -168,7 +168,7 @@ Prefab:
       propertyPath: dialogText
       value: I guess the cold's gotten to our friend! Oh well. We'll have to make
         due without the pleasure of frustrating him! If only we had some terretory
-        in the tropics... A, wars for another time, eh? Hop to it!
+        in the tropics... Ah, wars for another time, eh? Hop to it!
       objectReference: {fileID: 0}
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
