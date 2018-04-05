@@ -82,6 +82,9 @@ public class GameStateSwitcher : Singleton<GameStateSwitcher> {
         SceneManager.LoadScene ("GameOver");
     }
 
+    public void LevelSelect () {
+        SceneManager.LoadScene ("levelmenu");
+    }
     public void Pause () {
         Time.timeScale = 0;
         if (player != null) {
