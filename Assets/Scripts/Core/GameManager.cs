@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager> {
 
 	public CharacterInteraction interactionComponent;
+    public BattleMusic battleMusic;
+    public int battleMusicIndex = 0;
 
 	public List<IInteractable>[] Interactables {
 		get {
@@ -59,7 +61,10 @@ public class GameManager : Singleton<GameManager> {
 
     private void Start()
     {
-		
+        if (battleMusic == null) {
+            battleMusic = (BattleMusic) FindObjectOfType(typeof(BattleMusic));
+        }
+		battleMusic.PlaySong(battleMusicIndex);
     }
 
     public void ConsumeResource(GameResource resource)

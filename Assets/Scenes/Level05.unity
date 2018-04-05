@@ -834,6 +834,11 @@ Prefab:
       propertyPath: damagebales.Array.data[0]
       value: 
       objectReference: {fileID: 66185141}
+    - target: {fileID: 114101491034527538, guid: 53aceac2470a94044803cd6506b1fdd5,
+        type: 2}
+      propertyPath: battleMusicIndex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
   m_IsPrefabParent: 0

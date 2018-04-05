@@ -1433,6 +1433,73 @@ Tilemap:
     m_DirtyIndex: 0
   - serializedVersion: 1
     m_DirtyIndex: 0
+--- !u!1001 &142926016
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114101491034527538, guid: 53aceac2470a94044803cd6506b1fdd5,
+        type: 2}
+      propertyPath: damagebales.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.944651
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.3546714
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.01171875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048082909455320, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114101491034527538, guid: 53aceac2470a94044803cd6506b1fdd5,
+        type: 2}
+      propertyPath: battleMusicIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114101491034527538, guid: 53aceac2470a94044803cd6506b1fdd5,
+        type: 2}
+      propertyPath: damagebales.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114101491034527538, guid: 53aceac2470a94044803cd6506b1fdd5,
+        type: 2}
+      propertyPath: damagebales.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114101491034527538, guid: 53aceac2470a94044803cd6506b1fdd5,
+        type: 2}
+      propertyPath: interactionComponent
+      value: 
+      objectReference: {fileID: 1581547684}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 53aceac2470a94044803cd6506b1fdd5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &234754097
 Prefab:
   m_ObjectHideFlags: 0
@@ -4590,6 +4657,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1359294121176734, guid: 1fb55088715988c4fbb3a77da4125278,
     type: 2}
   m_PrefabInternal: {fileID: 1916348039}
+--- !u!114 &1581547684 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114121837638974892, guid: 1fb55088715988c4fbb3a77da4125278,
+    type: 2}
+  m_PrefabInternal: {fileID: 1916348039}
+  m_Script: {fileID: 11500000, guid: e09659b24005e8448bb3e5ad3c84996b, type: 3}
 --- !u!1 &1657489405
 GameObject:
   m_ObjectHideFlags: 0
