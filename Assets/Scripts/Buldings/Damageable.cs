@@ -73,9 +73,7 @@ public class Damageable : MonoBehaviour, IInteractable, IBombable {
             health = maxHealth;
         }
 
-        if (health > 0) {
-            healthPercent = (maxHealth / health) * 100;
-        } else {
+        if (health < 0) {
             healthPercent = 0;
         }
     }
