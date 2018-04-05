@@ -228,7 +228,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0.75, b: 0.25344837, a: 0}
+  m_BackGroundColor: {r: 0.23615915, g: 0.6533947, b: 0.8235294, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1170,8 +1170,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   pauseUI: {fileID: 0}
-  nextLevel: Level02
-  DebugStartupNarrativeScene: 
+  IntroCinematicScene: 
+  MidCinematicScene: 
+  VictoryScene: 
 --- !u!4 &1782037053
 Transform:
   m_ObjectHideFlags: 0

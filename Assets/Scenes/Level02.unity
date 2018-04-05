@@ -630,6 +630,7 @@ MonoBehaviour:
   - {fileID: 1119844998}
   trebuchetDamage: -7
   timeBetweenBombardments: 0.7
+  triggersMidpointCinematic: 0
   finish:
     m_PersistentCalls:
       m_Calls:
@@ -674,7 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveDuration: 60
-  gracePeriod: 15
+  gracePeriod: 40
   waveDurationUI: {fileID: 1703811771}
   typeOfWave: 0
   gate: {fileID: 470092404}
@@ -684,6 +685,7 @@ MonoBehaviour:
   - {fileID: 1119844998}
   trebuchetDamage: 2
   timeBetweenBombardments: 0.7
+  triggersMidpointCinematic: 0
   finish:
     m_PersistentCalls:
       m_Calls:
@@ -1055,6 +1057,21 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1163757803}
+    - target: {fileID: 114544091058215852, guid: d4c35cde4319fca49959b33e37f1e2eb,
+        type: 2}
+      propertyPath: IntroCinematicScene
+      value: Level2Intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544091058215852, guid: d4c35cde4319fca49959b33e37f1e2eb,
+        type: 2}
+      propertyPath: MidCinematicScene
+      value: Level2Mid
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544091058215852, guid: d4c35cde4319fca49959b33e37f1e2eb,
+        type: 2}
+      propertyPath: VictoryScene
+      value: Level2EndScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4c35cde4319fca49959b33e37f1e2eb, type: 2}
   m_IsPrefabParent: 0
@@ -57651,7 +57668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250a2b19acdd63544b8a767eb60962bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveDuration: 15
+  waveDuration: 30
   gracePeriod: 5
   waveDurationUI: {fileID: 1703811771}
   typeOfWave: 2
@@ -57662,6 +57679,7 @@ MonoBehaviour:
   - {fileID: 1119844998}
   trebuchetDamage: -7
   timeBetweenBombardments: 0.7
+  triggersMidpointCinematic: 1
   finish:
     m_PersistentCalls:
       m_Calls:

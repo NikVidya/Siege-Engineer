@@ -124,26 +124,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99,
     type: 2}
   m_PrefabInternal: {fileID: 1507751164}
---- !u!1 &108247071 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99,
-    type: 2}
-  m_PrefabInternal: {fileID: 1507751164}
---- !u!114 &108247072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 108247071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 458d0805f9d3c774ab06a437b743a42b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartObjectName: 
-  TargetObjectName: target2
-  LerpTime: 1
-  ReturnToPosition: 0
 --- !u!224 &320219516 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224261575741673514, guid: c8acb2eff840ab74c83e2640cead3e73,
@@ -197,10 +177,8 @@ Prefab:
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
       propertyPath: dialogText
-      value: "Ahh, what a lovely kingdom I\u2019ve built! Yes, a castle for summer,
-        winter and\u2026  Uhh\u2026 the other two\u2026 Either way, their grandiosity
-        will be a testament to my greatness! Ha ha!\r\nWhat\u2019s this\u2026 a letter
-        from the King of Geola\u2026\r\nIt reads:\r"
+      value: Here we are, me meadow castle. This is one of me favourites! It seems
+        we're ahead of wotisname. Oh bugger, speaking of the devil, here he is!
       objectReference: {fileID: 0}
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
@@ -221,6 +199,16 @@ Prefab:
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
       propertyPath: emotionState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: autoAdvance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: advanceDelay
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -499,6 +487,9 @@ MonoBehaviour:
   - {fileID: 480560822}
   - {fileID: 97194872}
   - {fileID: 1328332619}
+  - {fileID: 915495574}
+  - {fileID: 808493521}
+  standaloneScene: 0
 --- !u!4 &730567857
 Transform:
   m_ObjectHideFlags: 0
@@ -512,9 +503,212 @@ Transform:
   - {fileID: 480560823}
   - {fileID: 97194873}
   - {fileID: 1328332620}
+  - {fileID: 915495571}
+  - {fileID: 808493520}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &808493519
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 730567857}
+    m_Modifications:
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_Name
+      value: NarrativeSequence (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: dialogText
+      value: Well that's set him off. Sorry about that! You'll have to work a bit
+        harder to drive them off this time. I'll be inside taking a bath. Good luck!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: scrollSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: talkerAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: efeb1b7c498fb5a4e9d5fa45cba5b857, type: 2}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: dialogFont
+      value: 
+      objectReference: {fileID: 12800000, guid: 68eb9dacf8cee864e940532835e85874,
+        type: 3}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: emotionState
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: advanceDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: autoAdvance
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &808493520 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99,
+    type: 2}
+  m_PrefabInternal: {fileID: 808493519}
+--- !u!114 &808493521 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+    type: 2}
+  m_PrefabInternal: {fileID: 808493519}
+  m_Script: {fileID: 11500000, guid: 6714864d4e330cf4fad4516430279f02, type: 3}
+--- !u!1001 &915495570
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 730567857}
+    m_Modifications:
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_Name
+      value: NarrativeSequence (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: dialogText
+      value: What?!? You'll pay for that along with your outstanding balance! Prepare
+        yourselves!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: dialogType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: scrollSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: talkerAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: 5ee69bcc6b33dab4bbc2c177b9e0b817, type: 2}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: dialogFont
+      value: 
+      objectReference: {fileID: 12800000, guid: 68eb9dacf8cee864e940532835e85874,
+        type: 3}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: emotionState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: advanceDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: autoAdvance
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &915495571 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99,
+    type: 2}
+  m_PrefabInternal: {fileID: 915495570}
+--- !u!114 &915495574 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+    type: 2}
+  m_PrefabInternal: {fileID: 915495570}
+  m_Script: {fileID: 11500000, guid: 6714864d4e330cf4fad4516430279f02, type: 3}
 --- !u!114 &1004726976 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114600432225042302, guid: 150022e55d1deb6448e6c34eeda0de3a,
@@ -639,12 +833,7 @@ Prefab:
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
       propertyPath: dialogText
-      value: "Dear Oswald King of Lanconia,\r\nYou\u2019ve borrowed inordinate sums
-        of my gold in the past year, and while we appreciate your patronage, debts
-        must be payed. Our interest rates are quite lax, and we expect a payment of
-        10,000 gold coins by tomorrow!\r\nIf you fail to make this payment, I\u2019m
-        afraid those shiny castles of yours will be MY shiny castles in the very near
-        future.\r\nI remain,\r\nJohn, King of Geola.\r\n"
+      value: Oswald! I've come to collect my debt! I hope you have a full coin purse!
       objectReference: {fileID: 0}
     - target: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -664,17 +853,27 @@ Prefab:
         type: 2}
       propertyPath: talkerAnimatorController
       value: 
-      objectReference: {fileID: 9100000, guid: f2c4a015d77bd2149bc8d4b5870b3424, type: 2}
+      objectReference: {fileID: 9100000, guid: 5ee69bcc6b33dab4bbc2c177b9e0b817, type: 2}
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
       propertyPath: dialogFont
       value: 
-      objectReference: {fileID: 12800000, guid: b6a1c448634ca2c4c9d6c5fddd996447,
+      objectReference: {fileID: 12800000, guid: 68eb9dacf8cee864e940532835e85874,
         type: 3}
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
       propertyPath: emotionState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: advanceDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: autoAdvance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
@@ -1046,11 +1245,8 @@ Prefab:
     - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
         type: 2}
       propertyPath: dialogText
-      value: "Bloody hell! That wotsisname is coming for me castles? I can\u2019t
-        scrape up 10,000 bloody gold in one bloody day! I suppose I\u2019ll have to
-        get some help defending me castles from all them Geolan moneygrubbers.\r\nDraft
-        a letter for me will ya? I need the engineer to drag me rump out of the fire
-        this time!\r\n"
+      value: Oh, it's you! I do apologize to yer mother for not returning the messages...
+        Being King's a busy business after all!"
       objectReference: {fileID: 0}
     - target: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -1076,6 +1272,16 @@ Prefab:
         type: 2}
       propertyPath: emotionState
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: advanceDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114559265140278282, guid: e857d0a16972a924aaf9745ae9170f99,
+        type: 2}
+      propertyPath: autoAdvance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e857d0a16972a924aaf9745ae9170f99, type: 2}

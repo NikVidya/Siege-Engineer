@@ -11,6 +11,7 @@ public static class Constants {
         public const string REPAIR = "Repair";
         public const string PAUSE = "Pause";
         public const string UICANCEL = "UICancel";
+        public const string AUTOVICTORY = "AutoVictory";
     }
 
     public static class Resource {
