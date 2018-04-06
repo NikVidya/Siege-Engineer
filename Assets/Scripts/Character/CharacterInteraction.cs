@@ -12,9 +12,9 @@ public class CharacterInteraction : MonoBehaviour
     public float interactDistance = 1.0f;
     [Tooltip("The GameObject or prefab to use as indication that an object can be picked up")]
     public GameObject interactionPrompt;
-    
-	bool canDrop = true;
-	Dictionary<IInteractable, GameObject> prompts = new Dictionary<IInteractable, GameObject>();
+
+    bool canDrop = true;
+    Dictionary<IInteractable, GameObject> prompts = new Dictionary<IInteractable, GameObject>();
 
     public CharacterInventory InventoryComponent { get { return _inv; } }
     CharacterInventory _inv;
@@ -40,8 +40,8 @@ public class CharacterInteraction : MonoBehaviour
     }
 
     private void Start()
-	{
-		GameManager.Instance.interactionComponent = this;
+    {
+        GameManager.Instance.interactionComponent = this;
         _inv = gameObject.GetComponent<CharacterInventory>();
         if (!interactionPrompt)
         {
@@ -57,17 +57,17 @@ public class CharacterInteraction : MonoBehaviour
             // TODO: When art supports it, set the text on the prompt based on the type
             GameObject prompt = GameObject.Instantiate(interactionPrompt);
             InteractionPromptIcon promptScript = prompt.GetComponent<InteractionPromptIcon>();
-            if(promptScript != null)
+            if (promptScript != null)
             {
                 promptScript.SetPromptType(type);
             }
             prompt.SetActive(true);
             prompt.transform.position = target.gameObject.transform.position + new Vector3(0.0f, 0.2f, 0.0f);
-			prompt.transform.parent = target.gameObject.transform;
+            prompt.transform.parent = target.gameObject.transform;
             prompts.Add(target, prompt);
         }
     }
-	void RemovePrompt(IInteractable target)
+    void RemovePrompt(IInteractable target)
     {
         GameObject.Destroy(prompts[target]);
     }
@@ -76,55 +76,60 @@ public class CharacterInteraction : MonoBehaviour
     {
         IInteractable[] interactables = GameManager.Instance.GetNearestInteractablesFromEachTypeInRange(gameObject.transform, interactDistance);
 
-        foreach(IInteractable interactable in interactables)
+        foreach (IInteractable interactable in interactables)
         {
             if (interactable != null)
             {
                 AddPrompt(interactable, interactable.InteractableType);
-				interactable.OnFocus(this);
+                interactable.OnFocus(this);
             }
         }
 
-		// Defocus prompts which are no longer valid
-		List<IInteractable> keysToRemove = new List<IInteractable>();
-		foreach (KeyValuePair<IInteractable, GameObject> entry in prompts) {
-			// Foreach entry in the prompts dictionary
-			bool found = false;
-			foreach (IInteractable interactable in interactables) {
-				// Foreach interactable that IS in range
-				if (interactable != null && interactable == entry.Key) {
-					// If this entry was in the nearby list, we won't defocus it
-					found = true;
-					break;
-				}
-			}
-			if(!found) {
-				// This prompt is no longer close enough to use
-				keysToRemove.Add (entry.Key);
-				RemovePrompt (entry.Key);
-				entry.Key.OnDefocus (this);
-			}
-		}
+        // Defocus prompts which are no longer valid
+        List<IInteractable> keysToRemove = new List<IInteractable>();
+        foreach (KeyValuePair<IInteractable, GameObject> entry in prompts)
+        {
+            // Foreach entry in the prompts dictionary
+            bool found = false;
+            foreach (IInteractable interactable in interactables)
+            {
+                // Foreach interactable that IS in range
+                if (interactable != null && interactable == entry.Key)
+                {
+                    // If this entry was in the nearby list, we won't defocus it
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                // This prompt is no longer close enough to use
+                keysToRemove.Add(entry.Key);
+                RemovePrompt(entry.Key);
+                entry.Key.OnDefocus(this);
+            }
+        }
 
-		// Clear the old prompts from the dictionary
-		foreach (IInteractable key in keysToRemove) {
-			prompts.Remove (key);
-		}
+        // Clear the old prompts from the dictionary
+        foreach (IInteractable key in keysToRemove)
+        {
+            prompts.Remove(key);
+        }
 
         return interactables;
     }
 
     void Update()
     {
-		IInteractable[] interactables = HighlightNearestInteractables();
-		if (interactionEnabled)
-		{
-        	CheckIfInteracting(interactables);
-		}
+        IInteractable[] interactables = HighlightNearestInteractables();
+        if (interactionEnabled)
+        {
+            CheckIfInteracting(interactables);
+        }
     }
 
     void CheckIfInteracting(IInteractable[] interactablePool)
-	{
+    {
         // Check the pickup key response
         if (Input.GetButtonDown(Constants.InputNames.PICKUP))
         {
@@ -133,6 +138,7 @@ public class CharacterInteraction : MonoBehaviour
             //     canDrop = true;
             // }
             // else
+            if (interactablePool[(int)InteractableType.PICKUP] != null && interactablePool[(int)InteractableType.PICKUP].InteractState == InteractionState.Ready)
             {
                 // canDrop = true;
                 interactablePool[(int)InteractableType.PICKUP].OnInteract(this);
@@ -148,7 +154,7 @@ public class CharacterInteraction : MonoBehaviour
         if (Input.GetButtonUp(Constants.InputNames.REPAIR))
         {
             // Trigger a repair on the nearest repairable
-            if(interactablePool[(int)InteractableType.REPAIR] != null)
+            if (interactablePool[(int)InteractableType.REPAIR] != null)
             {
                 interactablePool[(int)InteractableType.REPAIR].OnInteract(this);
             }

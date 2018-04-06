@@ -53863,6 +53863,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114225481245294040, guid: 0acc530508062ea4fb881bad69cfc3c8,
+        type: 2}
+      propertyPath: battleArea.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225481245294040, guid: 0acc530508062ea4fb881bad69cfc3c8,
+        type: 2}
+      propertyPath: battleArea.height
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225481245294040, guid: 0acc530508062ea4fb881bad69cfc3c8,
+        type: 2}
+      propertyPath: battleArea.x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225481245294040, guid: 0acc530508062ea4fb881bad69cfc3c8,
+        type: 2}
+      propertyPath: battleArea.y
+      value: -10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0acc530508062ea4fb881bad69cfc3c8, type: 2}
   m_IsPrefabParent: 0
@@ -53959,6 +53979,11 @@ Prefab:
         type: 2}
       propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: changeWidth
+      objectReference: {fileID: 0}
+    - target: {fileID: 114837128739990008, guid: 6df3e560297633e4c8762f5f9740c24e,
+        type: 2}
+      propertyPath: maxHealth
+      value: 700
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6df3e560297633e4c8762f5f9740c24e, type: 2}
@@ -54434,6 +54459,11 @@ Prefab:
         type: 2}
       propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: changeWidth
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: maxHealth
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}
@@ -54971,6 +55001,26 @@ Prefab:
       propertyPath: damageable
       value: 
       objectReference: {fileID: 927976984}
+    - target: {fileID: 114985270288193934, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1223920257}
+    - target: {fileID: 114985270288193934, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 114737726590725572, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1223920257}
+    - target: {fileID: 114737726590725572, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitToMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30c4ce8f1bfc1af4f949e44e5cd9e7ec, type: 2}
   m_IsPrefabParent: 0
@@ -55049,6 +55099,11 @@ Prefab:
         type: 2}
       propertyPath: healthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: changeWidth
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501476769809250, guid: 171beb2600730e945809762c2f9ccbc5,
+        type: 2}
+      propertyPath: maxHealth
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 171beb2600730e945809762c2f9ccbc5, type: 2}

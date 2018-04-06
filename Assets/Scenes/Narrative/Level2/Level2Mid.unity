@@ -124,26 +124,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4181076259144448, guid: e857d0a16972a924aaf9745ae9170f99,
     type: 2}
   m_PrefabInternal: {fileID: 1507751164}
---- !u!1 &108247071 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1669885975093394, guid: e857d0a16972a924aaf9745ae9170f99,
-    type: 2}
-  m_PrefabInternal: {fileID: 1507751164}
---- !u!114 &108247072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 108247071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 458d0805f9d3c774ab06a437b743a42b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartObjectName: 
-  TargetObjectName: target2
-  LerpTime: 1
-  ReturnToPosition: 0
 --- !u!224 &320219516 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224261575741673514, guid: c8acb2eff840ab74c83e2640cead3e73,

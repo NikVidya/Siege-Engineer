@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpgradeName: Open Gate 02
-  UpgradeCost: 20
+  UpgradeCost: 15
   EntryListTemplate: {fileID: 1080763141026864, guid: a7bce9c2bdc0c6946bddeb5144529c84,
     type: 2}
 --- !u!224 &224296869332860140

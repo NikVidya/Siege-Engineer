@@ -71,7 +71,7 @@ public class GameResource : MonoBehaviour, IHoldable, IBombable
     {
         // Register this resource with the game manager
         GameManager.Instance.RegisterInteractable(this);
-		GameManager.Instance.RegisterBombable (this);
+        GameManager.Instance.RegisterBombable(this);
     }
 
     private void OnDestroy()
@@ -87,23 +87,26 @@ public class GameResource : MonoBehaviour, IHoldable, IBombable
         }
     }
 
-	public void OnBombed(Bombardment instigator)
-	{
-		if (_holdState == HoldState.Held) {
-			Debug.LogFormat ("Bomb dropped {0} from the player's hand", gameObject.name);
-			// Drop if held
-			GameManager.Instance.interactionComponent.InventoryComponent.DropHeld (this);
-		} else if (_holdState == HoldState.Dropped) {
-			Debug.LogFormat ("Bomb destroyed {0} from the ground", gameObject.name);
-			// Destroy if on the ground
-			gameObject.SetActive (false);
-		}
-	}
+    public void OnBombed(Bombardment instigator)
+    {
+        if (_holdState == HoldState.Held)
+        {
+            Debug.LogFormat("Bomb dropped {0} from the player's hand", gameObject.name);
+            // Drop if held
+            GameManager.Instance.interactionComponent.InventoryComponent.DropHeld(this);
+        }
+        else if (_holdState == HoldState.Dropped)
+        {
+            Debug.LogFormat("Bomb destroyed {0} from the ground", gameObject.name);
+            // Destroy if on the ground
+            gameObject.SetActive(false);
+        }
+    }
 
-	public float GetDistanceToTransform(Transform t)
-	{
-		return Vector3.Distance (t.position, transform.position);
-	}
+    public float GetDistanceToTransform(Transform t)
+    {
+        return Vector3.Distance(t.position, transform.position);
+    }
 
     public void Pickup()
     {

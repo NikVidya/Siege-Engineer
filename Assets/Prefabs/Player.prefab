@@ -245,9 +245,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icons:
   - {fileID: 21300000, guid: c352fb41c37f9854a9d529c45d0c56f4, type: 3}
-  - {fileID: 21300000, guid: bd8de77f321b9384dac19bbca52f8f71, type: 3}
-  - {fileID: 21300000, guid: 627b83fa20765ac4a8cb2becb8df98fb, type: 3}
-  - {fileID: 21300000, guid: 04fbd1089a4358945a836d8675baa685, type: 3}
+  - {fileID: 21300000, guid: c352fb41c37f9854a9d529c45d0c56f4, type: 3}
+  - {fileID: 21300000, guid: c352fb41c37f9854a9d529c45d0c56f4, type: 3}
+  - {fileID: 21300000, guid: c352fb41c37f9854a9d529c45d0c56f4, type: 3}
   spriteRenderer: {fileID: 212034952701776790}
 --- !u!114 &114160917894919550
 MonoBehaviour:

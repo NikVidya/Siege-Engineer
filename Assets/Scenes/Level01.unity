@@ -1591,6 +1591,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114225481245294040, guid: 0acc530508062ea4fb881bad69cfc3c8,
+        type: 2}
+      propertyPath: battleArea.width
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225481245294040, guid: 0acc530508062ea4fb881bad69cfc3c8,
+        type: 2}
+      propertyPath: battleArea.height
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225481245294040, guid: 0acc530508062ea4fb881bad69cfc3c8,
+        type: 2}
+      propertyPath: battleArea.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225481245294040, guid: 0acc530508062ea4fb881bad69cfc3c8,
+        type: 2}
+      propertyPath: battleArea.y
+      value: -10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0acc530508062ea4fb881bad69cfc3c8, type: 2}
   m_IsPrefabParent: 0

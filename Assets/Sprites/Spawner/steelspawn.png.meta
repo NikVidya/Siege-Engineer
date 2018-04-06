@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a21e5cb50bf3e3f46bc6ba8ef779747e
-timeCreated: 1520202135
+timeCreated: 1522984288
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -85,10 +85,10 @@ TextureImporter:
       name: steelspawn_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 550
-        height: 550
+        x: 41
+        y: 21
+        width: 467
+        height: 525
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,10 +99,10 @@ TextureImporter:
       name: steelspawn_1
       rect:
         serializedVersion: 2
-        x: 550
-        y: 0
-        width: 550
-        height: 550
+        x: 577
+        y: 19
+        width: 482
+        height: 521
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

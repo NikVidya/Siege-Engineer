@@ -2,80 +2,87 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : Singleton<GameManager> {
+public class GameManager : Singleton<GameManager>
+{
 
-	public CharacterInteraction interactionComponent;
+    public CharacterInteraction interactionComponent;
     public BattleMusic battleMusic;
     public int battleMusicIndex = 0;
 
-	public List<IInteractable>[] Interactables {
-		get {
-			if (_interactables == null) {
-				InitializeInteractables ();
-			}
-			return _interactables;
-		}
-	}
-	public List<IInteractable>[] _interactables;
-	public List<Damageable> damagebales = new List<Damageable>();
+    public List<IInteractable>[] Interactables
+    {
+        get
+        {
+            if (_interactables == null)
+            {
+                InitializeInteractables();
+            }
+            return _interactables;
+        }
+    }
+    public List<IInteractable>[] _interactables;
+    public List<Damageable> damagebales = new List<Damageable>();
 
-	public List<IBombable> bombables = new List<IBombable>();
+    public List<IBombable> bombables = new List<IBombable>();
 
-	public GameObject GetPlayerObject()
-	{
-		return interactionComponent.gameObject;
-	}
+    public GameObject GetPlayerObject()
+    {
+        return interactionComponent.gameObject;
+    }
 
-	public void RegisterDamageable(Damageable damageable)
-	{
-		damagebales.Add (damageable);
-	}
+    public void RegisterDamageable(Damageable damageable)
+    {
+        damagebales.Add(damageable);
+    }
 
-	public void DeRegisterDamageable(Damageable damageable)
-	{
-		damagebales.Remove (damageable);
-	}
+    public void DeRegisterDamageable(Damageable damageable)
+    {
+        damagebales.Remove(damageable);
+    }
 
-	public void RemoveDamageDeBuff(Catapult defensiveStructure)
-	{
-		foreach (Damageable damageable in damagebales) {
-			damageable.damageDeBuff -= defensiveStructure.damageDebuf;
-		}
-	}
+    public void RemoveDamageDeBuff(Catapult defensiveStructure)
+    {
+        foreach (Damageable damageable in damagebales)
+        {
+            damageable.damageDeBuff -= defensiveStructure.damageDebuf;
+        }
+    }
 
-	public void AddDamageDeBuff(Catapult defensiveStructure)
-	{
-		foreach (Damageable damageable in damagebales) {
-			damageable.damageDeBuff += defensiveStructure.damageDebuf;
-		}
-	}
+    public void AddDamageDeBuff(Catapult defensiveStructure)
+    {
+        foreach (Damageable damageable in damagebales)
+        {
+            damageable.damageDeBuff += defensiveStructure.damageDebuf;
+        }
+    }
 
-	void InitializeInteractables()
-	{
-		_interactables = new List<IInteractable>[InteractableType.GetValues(typeof(InteractableType)).Length];
-		for(int i=0; i < _interactables.Length; i++)
-		{
-			_interactables[i] = new List<IInteractable>();
-		}
-	}
+    void InitializeInteractables()
+    {
+        _interactables = new List<IInteractable>[InteractableType.GetValues(typeof(InteractableType)).Length];
+        for (int i = 0; i < _interactables.Length; i++)
+        {
+            _interactables[i] = new List<IInteractable>();
+        }
+    }
 
     private void Start()
     {
-        if (battleMusic == null) {
-            battleMusic = (BattleMusic) FindObjectOfType(typeof(BattleMusic));
+        if (battleMusic == null)
+        {
+            battleMusic = (BattleMusic)FindObjectOfType(typeof(BattleMusic));
         }
-		battleMusic.PlaySong(battleMusicIndex);
+        battleMusic.PlaySong(battleMusicIndex);
     }
 
     public void ConsumeResource(GameResource resource)
     {
-		interactionComponent.InventoryComponent.DropHeld(resource);
+        interactionComponent.InventoryComponent.DropHeld(resource);
         resource.State = GameResource.ResourceState.Consumed;
         resource.gameObject.SetActive(false);
     }
 
     public void RegisterInteractable(IInteractable interactable)
-	{
+    {
         Interactables[(int)interactable.InteractableType].Add(interactable);
     }
     public void DeRegisterInteractable(IInteractable interactable)
@@ -103,7 +110,7 @@ public class GameManager : Singleton<GameManager> {
     {
         IInteractable[] ret = new IInteractable[Interactables.Length];
 
-        for(int i = 0; i < Interactables.Length; i++)
+        for (int i = 0; i < Interactables.Length; i++)
         {
             ret[i] = GetNearestInteractableInRange(t, (InteractableType)i, range);
         }
@@ -127,10 +134,10 @@ public class GameManager : Singleton<GameManager> {
     public List<GameResource> GetResourcesInRange(Transform t, float range)
     {
         List<GameResource> ret = new List<GameResource>();
-		foreach(IInteractable interact in Interactables[(int)InteractableType.PICKUP])
+        foreach (IInteractable interact in Interactables[(int)InteractableType.PICKUP])
         {
             GameResource gr = interact as GameResource; // Try and cast down the tree to a GameResource
-			if (gr != null && ((IHoldable)gr).HeldState != HoldState.Held && Vector3.Distance(gr.transform.position, t.position) <= range && gr.State == GameResource.ResourceState.Ready)
+            if (gr != null && ((IHoldable)gr).HeldState != HoldState.Held && Vector3.Distance(gr.transform.position, t.position) <= range && gr.State == GameResource.ResourceState.Ready)
             {   // This interactable was a resource, and is close enough to be included
                 ret.Add(gr);
             }
@@ -139,26 +146,28 @@ public class GameManager : Singleton<GameManager> {
         return ret;
     }
 
-	public void RegisterBombable(IBombable bombable)
-	{
-		bombables.Add (bombable);
-	}
+    public void RegisterBombable(IBombable bombable)
+    {
+        bombables.Add(bombable);
+    }
 
-	public void DeRegisterBombable(IBombable bombable)
-	{
-		bombables.Remove(bombable);
-	}
+    public void DeRegisterBombable(IBombable bombable)
+    {
+        bombables.Remove(bombable);
+    }
 
-	public List<IBombable> GetBombablesInRange(Transform t, float range)
-	{
-		List<IBombable> ret = new List<IBombable> ();
-		foreach (IBombable bombable in bombables) {
-			if (bombable.GetDistanceToTransform (t) < range) {
-				ret.Add (bombable);
-			}
-		}
-		return ret;
-	}
+    public List<IBombable> GetBombablesInRange(Transform t, float range)
+    {
+        List<IBombable> ret = new List<IBombable>();
+        foreach (IBombable bombable in bombables)
+        {
+            if (bombable.GetDistanceToTransform(t) < range)
+            {
+                ret.Add(bombable);
+            }
+        }
+        return ret;
+    }
 
     public void DisableAvatar()
     {
